@@ -1,0 +1,33 @@
+﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Help;
+using DoctorSupportSystem.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DoctorSupportSystem.Interfaces
+{
+    public partial class Login : Form
+    {
+        DataBaseOperator db = DataBaseOperator.GetInstance();
+        public Login()
+        {
+            InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            User user = db.getUser(txtUserName.Text,txtPassWord.Text);
+           
+            Form userForm = UserFactory.getUserInterface(user);
+            userForm.Show();
+            this.Close();
+        }
+    }
+}

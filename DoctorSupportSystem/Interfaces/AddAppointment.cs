@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoctorSupportSystem.AddAppointmentsGUI
+namespace DoctorSupportSystem.Interfaces
 {
     public partial class AddAppointment : Form
     {

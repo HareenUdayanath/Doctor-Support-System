@@ -1,4 +1,4 @@
-﻿namespace DoctorSupportSystem.AddAppointmentsGUI
+﻿namespace DoctorSupportSystem.Interfaces
 {
     partial class AddAppointment
     {
