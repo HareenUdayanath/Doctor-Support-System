@@ -13,37 +13,38 @@ using System.Windows.Forms;
 
 namespace DoctorSupportSystem.Interfaces
 {
-    public partial class Add_User : Form
+    public partial class UpdateUser : Form
     {
 
+        User user = null;
         DataBaseOperator db = DataBaseOperator.GetInstance();
 
-        public Add_User()
+        public UpdateUser(User user)
         {
+            this.user = user;
             InitializeComponent();
+            setUser();
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
+        private void setUser()
         {
-            User user = new User();
+            this.txtFullName.Text = user.Fullname;
+            this.txtNIC.Text = user.Nic;
+            this.txtCoNo.Text = user.ContactNo.ToString();
+            this.comboBoxGender.Text = user.Gender;
+            this.comboboxPosition.Text = user.Position;
+               
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
             user.Fullname = txtFullName.Text;
             user.Position = comboboxPosition.SelectedItem.ToString();
             user.Gender = comboBoxGender.SelectedItem.ToString();
-            user.Username = txtUserName.Text;
 
-            String err = "";
-
-            if (txtUserName.Text == "")
-                err += "User Name required\n";
-            if (txtPassword.Text == "")
-                err += "Password required\n";            
-            if (txtCPassword.Text == "")
-                err += "Confirm Password required\n";
-            if (txtPassword.Text != "" && txtCPassword.Text != ""
-                && txtCPassword.Text != txtPassword.Text)
-                err += "Confirm Password Does not match\n";
-            else
-                user.Password = txtPassword.Text;
+            String err = "";           
+          
             if (!Validator.nic(txtNIC.Text))
                 err += "Invalid NIC\n";
             else
@@ -59,27 +60,17 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
-                if (db.addUser(user) == -1)
+                if (db.updateUser(user) == -1)
                 {
                     MessageBox.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
                 }
                 else
                 {
-                    MessageBox.Show("The user successfully added to the database");
-                    new Add_User().Show();
+                    MessageBox.Show("The user profile successfully updated");
+                    //new Add_User().Show();
                     this.Close();
                 }
-            }
-               
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtCoNo.Text, "[^0-9]"))
-            {
-                //MessageBox.Show("Please enter only numbers.");
-                txtCoNo.Text = txtCoNo.Text.Remove(txtCoNo.Text.Length - 1);
             }
         }
     }

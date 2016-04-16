@@ -32,18 +32,21 @@
             this.selectedDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbNumber = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPName = new System.Windows.Forms.TextBox();
+            this.txtPNIC = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // calendar
             // 
-            this.calendar.Location = new System.Drawing.Point(9, 49);
+            this.calendar.Location = new System.Drawing.Point(9, 81);
+            this.calendar.MinDate = new System.DateTime(2016, 4, 13, 0, 0, 0, 0);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 1;
             this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
@@ -52,7 +55,7 @@
             // 
             this.selectedDate.AutoSize = true;
             this.selectedDate.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectedDate.Location = new System.Drawing.Point(107, 22);
+            this.selectedDate.Location = new System.Drawing.Point(121, 54);
             this.selectedDate.Name = "selectedDate";
             this.selectedDate.Size = new System.Drawing.Size(44, 21);
             this.selectedDate.TabIndex = 2;
@@ -61,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Location = new System.Drawing.Point(6, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 3;
@@ -70,14 +73,35 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbNumber);
             this.panel1.Controls.Add(this.calendar);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.selectedDate);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(15, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 220);
+            this.panel1.Size = new System.Drawing.Size(248, 254);
             this.panel1.TabIndex = 4;
             this.panel1.Tag = "H";
+            // 
+            // lbNumber
+            // 
+            this.lbNumber.AutoSize = true;
+            this.lbNumber.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumber.Location = new System.Drawing.Point(121, 12);
+            this.lbNumber.Name = "lbNumber";
+            this.lbNumber.Size = new System.Drawing.Size(70, 21);
+            this.lbNumber.TabIndex = 11;
+            this.lbNumber.Text = "Number";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Appointment Number:";
             // 
             // label2
             // 
@@ -91,53 +115,54 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 313);
+            this.label3.Location = new System.Drawing.Point(12, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Patient Name";
             // 
-            // textBox1
+            // txtPName
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 310);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtPName.Location = new System.Drawing.Point(113, 335);
+            this.txtPName.Name = "txtPName";
+            this.txtPName.Size = new System.Drawing.Size(216, 20);
+            this.txtPName.TabIndex = 7;
             // 
-            // textBox2
+            // txtPNIC
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 355);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtPNIC.Location = new System.Drawing.Point(113, 371);
+            this.txtPNIC.Name = "txtPNIC";
+            this.txtPNIC.Size = new System.Drawing.Size(216, 20);
+            this.txtPNIC.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 358);
+            this.label4.Location = new System.Drawing.Point(12, 374);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Patient NIC";
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(15, 416);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(15, 416);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 451);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtPNIC);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -158,9 +183,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPName;
+        private System.Windows.Forms.TextBox txtPNIC;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lbNumber;
+        private System.Windows.Forms.Label label6;
     }
 }

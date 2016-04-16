@@ -55,9 +55,26 @@ namespace DoctorSupportSystem.Interfaces
             Console.WriteLine(err);
 
             if (err != "")
+            {
                 MessageBox.Show(err);
+            }
             else
-                db.addPatient(patient);
+            {
+                if (db.addPatient(patient) == -1)
+                {
+                    MessageBox.Show("Duplicate NIC:\n"
+                        + "This NIC already exist in the database");
+                }
+                else
+                {
+                    MessageBox.Show("The patient successfully added to the database");
+                    new AddPatient().Show();
+                    this.Close();
+                }
+
+            }
+            
+                
         }
 
         private void txtYear_TextChanged(object sender, EventArgs e)
