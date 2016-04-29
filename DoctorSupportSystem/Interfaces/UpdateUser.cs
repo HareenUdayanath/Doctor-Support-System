@@ -30,7 +30,7 @@ namespace DoctorSupportSystem.Interfaces
         {
             this.txtFullName.Text = user.Fullname;
             this.txtNIC.Text = user.Nic;
-            this.txtCoNo.Text = user.ContactNo.ToString();
+            this.txtCoNo.Text = user.ContactNo;
             this.comboBoxGender.Text = user.Gender;
             this.comboboxPosition.Text = user.Position;
                
@@ -72,6 +72,11 @@ namespace DoctorSupportSystem.Interfaces
                     this.Close();
                 }
             }
+        }
+
+        private void btnChangeUP_Click(object sender, EventArgs e)
+        {
+            //new ChangeUP().ShowDialog();
         }
     }
 }

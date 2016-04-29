@@ -168,6 +168,7 @@
             this.btnChangeUP.TabIndex = 13;
             this.btnChangeUP.Text = "Change username passoword";
             this.btnChangeUP.UseVisualStyleBackColor = true;
+            this.btnChangeUP.Click += new System.EventHandler(this.btnChangeUP_Click);
             // 
             // UpdateUser
             // 
