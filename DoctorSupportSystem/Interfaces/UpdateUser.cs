@@ -16,12 +16,12 @@ namespace DoctorSupportSystem.Interfaces
     public partial class UpdateUser : Form
     {
 
-        User user = null;
+        public static User user = null;
         DataBaseOperator db = DataBaseOperator.GetInstance();
 
         public UpdateUser(User user)
         {
-            this.user = user;
+            UpdateUser.user = user;
             InitializeComponent();
             setUser();
         }
@@ -38,7 +38,7 @@ namespace DoctorSupportSystem.Interfaces
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            string oldNic = user.Nic;
             user.Fullname = txtFullName.Text;
             user.Position = comboboxPosition.SelectedItem.ToString();
             user.Gender = comboBoxGender.SelectedItem.ToString();
@@ -60,7 +60,7 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
-                if (db.updateUser(user) == -1)
+                if (db.updateUser(user,oldNic) == -1)
                 {
                     MessageBox.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
@@ -76,7 +76,7 @@ namespace DoctorSupportSystem.Interfaces
 
         private void btnChangeUP_Click(object sender, EventArgs e)
         {
-            //new ChangeUP().ShowDialog();
+            new ChangeUP(UpdateUser.user).ShowDialog();
         }
     }
 }
