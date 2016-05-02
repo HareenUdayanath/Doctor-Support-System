@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace DoctorSupportSystem.Models
 {
+
+    /*
+     * the Appointment class models the appointments of doctor which the assistance 
+     * add for the patient
+        */
     public class Appointment
     {
         private int number;
