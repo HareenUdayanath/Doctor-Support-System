@@ -24,11 +24,19 @@ namespace DoctorSupportSystem.Interfaces
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User user = db.getUser(txtUserName.Text,txtPassWord.Text);
-
-            //Form userForm = UserFactory.getUserInterface(user);
-            //userForm.Show();
-            new UpdateUser(user).Show();
-            this.Close();
+            if (user != null)
+            {
+                //Form userForm = UserFactory.getUserInterface(user);
+                //userForm.Show();
+                new UpdateUser(user).Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password");
+                this.txtPassWord.Text = "";
+                this.txtUserName.Text = "";
+            }
         }
     }
 }
