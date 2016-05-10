@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoctorSupportSystem.DataBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,16 @@ namespace DoctorSupportSystem.Interfaces
         private void button1_Click(object sender, EventArgs e)
         {
             new Add_User().ShowDialog();
+        }
+
+        private void btnLoadPatients_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = DataBaseOperator.GetInstance().getAllPatients();
+        }
+
+        private void btnLoadUsers_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllUser();
         }
     }
 }

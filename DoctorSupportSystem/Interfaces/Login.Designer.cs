@@ -78,7 +78,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,7 +130,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
