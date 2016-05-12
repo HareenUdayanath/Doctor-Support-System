@@ -30,20 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Patients = new System.Windows.Forms.TabPage();
+            this.btnLoadPatients = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Users = new System.Windows.Forms.TabPage();
+            this.btnLoadUsers = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnLoadPatients = new System.Windows.Forms.Button();
-            this.btnLoadUsers = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.Patients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.Users.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -68,6 +68,34 @@
             this.Patients.Text = "Patients";
             this.Patients.UseVisualStyleBackColor = true;
             // 
+            // btnLoadPatients
+            // 
+            this.btnLoadPatients.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLoadPatients.FlatAppearance.BorderSize = 0;
+            this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
+            this.btnLoadPatients.Location = new System.Drawing.Point(403, 252);
+            this.btnLoadPatients.Name = "btnLoadPatients";
+            this.btnLoadPatients.Size = new System.Drawing.Size(123, 29);
+            this.btnLoadPatients.TabIndex = 1;
+            this.btnLoadPatients.Text = "Load Patients";
+            this.btnLoadPatients.UseVisualStyleBackColor = false;
+            this.btnLoadPatients.Click += new System.EventHandler(this.btnLoadPatients_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 34);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(529, 212);
+            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
             // Users
             // 
             this.Users.Controls.Add(this.btnLoadUsers);
@@ -81,6 +109,22 @@
             this.Users.TabIndex = 1;
             this.Users.Text = "Users";
             this.Users.UseVisualStyleBackColor = true;
+            // 
+            // btnLoadUsers
+            // 
+            this.btnLoadUsers.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLoadUsers.FlatAppearance.BorderSize = 0;
+            this.btnLoadUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLoadUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadUsers.ForeColor = System.Drawing.Color.White;
+            this.btnLoadUsers.Location = new System.Drawing.Point(400, 248);
+            this.btnLoadUsers.Name = "btnLoadUsers";
+            this.btnLoadUsers.Size = new System.Drawing.Size(123, 28);
+            this.btnLoadUsers.TabIndex = 2;
+            this.btnLoadUsers.Text = "Load Users";
+            this.btnLoadUsers.UseVisualStyleBackColor = false;
+            this.btnLoadUsers.Click += new System.EventHandler(this.btnLoadUsers_Click);
             // 
             // button1
             // 
@@ -106,15 +150,6 @@
             this.panel2.Size = new System.Drawing.Size(517, 187);
             this.panel2.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(20, 439);
-            this.panel1.TabIndex = 1;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -126,48 +161,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(517, 187);
             this.dataGridView1.TabIndex = 0;
             // 
-            // dataGridView2
+            // panel1
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 34);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(529, 212);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // btnLoadPatients
-            // 
-            this.btnLoadPatients.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLoadPatients.FlatAppearance.BorderSize = 0;
-            this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(403, 252);
-            this.btnLoadPatients.Name = "btnLoadPatients";
-            this.btnLoadPatients.Size = new System.Drawing.Size(123, 29);
-            this.btnLoadPatients.TabIndex = 1;
-            this.btnLoadPatients.Text = "Load Patients";
-            this.btnLoadPatients.UseVisualStyleBackColor = false;
-            this.btnLoadPatients.Click += new System.EventHandler(this.btnLoadPatients_Click);
-            // 
-            // btnLoadUsers
-            // 
-            this.btnLoadUsers.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLoadUsers.FlatAppearance.BorderSize = 0;
-            this.btnLoadUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnLoadUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadUsers.ForeColor = System.Drawing.Color.White;
-            this.btnLoadUsers.Location = new System.Drawing.Point(400, 248);
-            this.btnLoadUsers.Name = "btnLoadUsers";
-            this.btnLoadUsers.Size = new System.Drawing.Size(123, 28);
-            this.btnLoadUsers.TabIndex = 2;
-            this.btnLoadUsers.Text = "Load Users";
-            this.btnLoadUsers.UseVisualStyleBackColor = false;
-            this.btnLoadUsers.Click += new System.EventHandler(this.btnLoadUsers_Click);
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(20, 439);
+            this.panel1.TabIndex = 1;
             // 
             // DoctorInterface
             // 
@@ -181,10 +182,10 @@
             this.Text = "DoctorInterface";
             this.tabControl1.ResumeLayout(false);
             this.Patients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.Users.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }

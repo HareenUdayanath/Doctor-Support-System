@@ -37,7 +37,7 @@ namespace DoctorSupportSystem.Interfaces
         {
             Appointment appointment = new Appointment();
             appointment.Date = new Date(calendar.SelectionStart);
-            appointment.Number = Convert.ToInt32(lbNumber.Text);
+            appointment.Number = Convert.ToInt32(lbNumber.Text)+1;
             appointment.PatientName = txtPName.Text;
             
             

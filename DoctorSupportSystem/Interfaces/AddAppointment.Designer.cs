@@ -40,7 +40,12 @@
             this.txtPNIC = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // calendar
@@ -78,7 +83,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.selectedDate);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(15, 50);
+            this.panel1.Location = new System.Drawing.Point(70, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 254);
             this.panel1.TabIndex = 4;
@@ -106,16 +111,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 34);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(16, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Choose the date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 338);
+            this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label3.Location = new System.Drawing.Point(70, 331);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 6;
@@ -123,14 +131,14 @@
             // 
             // txtPName
             // 
-            this.txtPName.Location = new System.Drawing.Point(113, 335);
+            this.txtPName.Location = new System.Drawing.Point(161, 328);
             this.txtPName.Name = "txtPName";
             this.txtPName.Size = new System.Drawing.Size(216, 20);
             this.txtPName.TabIndex = 7;
             // 
             // txtPNIC
             // 
-            this.txtPNIC.Location = new System.Drawing.Point(113, 371);
+            this.txtPNIC.Location = new System.Drawing.Point(161, 361);
             this.txtPNIC.Name = "txtPNIC";
             this.txtPNIC.Size = new System.Drawing.Size(216, 20);
             this.txtPNIC.TabIndex = 9;
@@ -138,7 +146,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 374);
+            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label4.Location = new System.Drawing.Point(70, 364);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 8;
@@ -146,31 +155,76 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(15, 416);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(70, 401);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(113, 38);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(50, 451);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(51, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(350, 44);
+            this.panel6.TabIndex = 21;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel5.Location = new System.Drawing.Point(51, 351);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(350, 39);
+            this.panel5.TabIndex = 22;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel9.Location = new System.Drawing.Point(51, 321);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(361, 34);
+            this.panel9.TabIndex = 21;
             // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 451);
+            this.ClientSize = new System.Drawing.Size(400, 451);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPNIC);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel5);
             this.Name = "AddAppointment";
             this.Tag = "";
             this.Text = "Add Appointment";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +243,9 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lbNumber;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel9;
     }
 }

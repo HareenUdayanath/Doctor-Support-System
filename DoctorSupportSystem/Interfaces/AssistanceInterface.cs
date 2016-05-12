@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoctorSupportSystem.DataBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace DoctorSupportSystem.Interfaces
         public AssistanceInterface()
         {
             InitializeComponent();
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
+        }
+
+        private void btnLoadPatients_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllPatients();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AddAppointment().ShowDialog();
         }
     }
 }

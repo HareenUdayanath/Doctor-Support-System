@@ -32,5 +32,10 @@ namespace DoctorSupportSystem.Interfaces
         {
             dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllUser();
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
