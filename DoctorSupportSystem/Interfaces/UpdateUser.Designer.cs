@@ -41,37 +41,39 @@
             this.comboboxPosition = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnChangeUP = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtCoNo);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.comboBoxGender);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtNIC);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtFullName);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.comboboxPosition);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Location = new System.Drawing.Point(53, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(382, 211);
+            this.panel2.Size = new System.Drawing.Size(382, 225);
             this.panel2.TabIndex = 11;
             // 
             // txtCoNo
             // 
-            this.txtCoNo.Location = new System.Drawing.Point(119, 87);
+            this.txtCoNo.Location = new System.Drawing.Point(119, 12);
             this.txtCoNo.Name = "txtCoNo";
-            this.txtCoNo.Size = new System.Drawing.Size(170, 20);
+            this.txtCoNo.Size = new System.Drawing.Size(248, 20);
             this.txtCoNo.TabIndex = 18;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 94);
+            this.label7.Location = new System.Drawing.Point(3, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 13);
             this.label7.TabIndex = 17;
@@ -79,20 +81,21 @@
             // 
             // comboBoxGender
             // 
+            this.comboBoxGender.BackColor = System.Drawing.SystemColors.Info;
             this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGender.FormattingEnabled = true;
             this.comboBoxGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBoxGender.Location = new System.Drawing.Point(119, 120);
+            this.comboBoxGender.Location = new System.Drawing.Point(119, 145);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(170, 21);
+            this.comboBoxGender.Size = new System.Drawing.Size(248, 21);
             this.comboBoxGender.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 128);
+            this.label8.Location = new System.Drawing.Point(7, 148);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 15;
@@ -100,15 +103,15 @@
             // 
             // txtNIC
             // 
-            this.txtNIC.Location = new System.Drawing.Point(119, 55);
+            this.txtNIC.Location = new System.Drawing.Point(119, 56);
             this.txtNIC.Name = "txtNIC";
-            this.txtNIC.Size = new System.Drawing.Size(170, 20);
+            this.txtNIC.Size = new System.Drawing.Size(248, 20);
             this.txtNIC.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 58);
+            this.label6.Location = new System.Drawing.Point(7, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 9;
@@ -133,7 +136,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 162);
+            this.label4.Location = new System.Drawing.Point(8, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 3;
@@ -141,40 +144,106 @@
             // 
             // comboboxPosition
             // 
+            this.comboboxPosition.BackColor = System.Drawing.SystemColors.Info;
             this.comboboxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxPosition.Items.AddRange(new object[] {
             "Assistance",
             "Lab Assistance"});
-            this.comboboxPosition.Location = new System.Drawing.Point(119, 154);
+            this.comboboxPosition.Location = new System.Drawing.Point(119, 11);
             this.comboboxPosition.Name = "comboboxPosition";
-            this.comboboxPosition.Size = new System.Drawing.Size(170, 21);
+            this.comboboxPosition.Size = new System.Drawing.Size(248, 21);
             this.comboboxPosition.TabIndex = 4;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(12, 245);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(53, 308);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(94, 40);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnChangeUP
             // 
-            this.btnChangeUP.Location = new System.Drawing.Point(216, 245);
+            this.btnChangeUP.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnChangeUP.FlatAppearance.BorderSize = 0;
+            this.btnChangeUP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnChangeUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeUP.ForeColor = System.Drawing.Color.White;
+            this.btnChangeUP.Location = new System.Drawing.Point(211, 308);
             this.btnChangeUP.Name = "btnChangeUP";
-            this.btnChangeUP.Size = new System.Drawing.Size(178, 23);
+            this.btnChangeUP.Size = new System.Drawing.Size(229, 40);
             this.btnChangeUP.TabIndex = 13;
             this.btnChangeUP.Text = "Change username passoword";
-            this.btnChangeUP.UseVisualStyleBackColor = true;
+            this.btnChangeUP.UseVisualStyleBackColor = false;
             this.btnChangeUP.Click += new System.EventHandler(this.btnChangeUP_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(47, 360);
+            this.panel1.TabIndex = 14;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.comboBoxGender);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(382, 223);
+            this.panel4.TabIndex = 20;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(382, 49);
+            this.panel6.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.Controls.Add(this.txtCoNo);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(0, 87);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(382, 44);
+            this.panel3.TabIndex = 21;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.Controls.Add(this.comboboxPosition);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Location = new System.Drawing.Point(0, 175);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(382, 47);
+            this.panel5.TabIndex = 22;
             // 
             // UpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 298);
+            this.ClientSize = new System.Drawing.Size(452, 360);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnChangeUP);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel2);
@@ -182,6 +251,14 @@
             this.Text = "Edit Profile";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +278,10 @@
         private System.Windows.Forms.ComboBox comboboxPosition;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnChangeUP;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
     }
 }
