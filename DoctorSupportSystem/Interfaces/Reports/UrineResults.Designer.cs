@@ -59,7 +59,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(47, 675);
+            this.panel1.Size = new System.Drawing.Size(47, 543);
             this.panel1.TabIndex = 10;
             // 
             // panel2
@@ -69,13 +69,13 @@
             this.panel2.Controls.Add(this.panel12);
             this.panel2.Location = new System.Drawing.Point(65, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 360);
+            this.panel2.Size = new System.Drawing.Size(490, 229);
             this.panel2.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 24);
+            this.label1.Location = new System.Drawing.Point(69, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 13);
             this.label1.TabIndex = 29;
@@ -87,9 +87,9 @@
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Controls.Add(this.panel14);
             this.panel12.Controls.Add(this.label13);
-            this.panel12.Location = new System.Drawing.Point(43, 53);
+            this.panel12.Location = new System.Drawing.Point(72, 40);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(339, 201);
+            this.panel12.Size = new System.Drawing.Size(339, 163);
             this.panel12.TabIndex = 28;
             // 
             // panel13
@@ -118,7 +118,7 @@
             this.panel14.Controls.Add(this.label11);
             this.panel14.Location = new System.Drawing.Point(24, 57);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(297, 137);
+            this.panel14.Size = new System.Drawing.Size(297, 92);
             this.panel14.TabIndex = 26;
             // 
             // label11
@@ -151,9 +151,9 @@
             this.panel16.Controls.Add(this.btnLoadResults);
             this.panel16.Controls.Add(this.label16);
             this.panel16.Controls.Add(this.label17);
-            this.panel16.Location = new System.Drawing.Point(117, 191);
+            this.panel16.Location = new System.Drawing.Point(65, 248);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(428, 292);
+            this.panel16.Size = new System.Drawing.Size(490, 292);
             this.panel16.TabIndex = 14;
             // 
             // dateTimePicker1
@@ -190,7 +190,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(24, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(375, 189);
+            this.dataGridView1.Size = new System.Drawing.Size(449, 189);
             this.dataGridView1.TabIndex = 4;
             // 
             // btnLoadResults
@@ -207,6 +207,7 @@
             this.btnLoadResults.TabIndex = 9;
             this.btnLoadResults.Text = "Show Test Results";
             this.btnLoadResults.UseVisualStyleBackColor = false;
+            this.btnLoadResults.Click += new System.EventHandler(this.btnLoadResults_Click);
             // 
             // label16
             // 
@@ -230,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 675);
+            this.ClientSize = new System.Drawing.Size(567, 543);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabAssistanceInterface));
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbtnCreatinineTest = new System.Windows.Forms.RadioButton();
             this.rbtnHaemoglobinTest = new System.Windows.Forms.RadioButton();
@@ -38,7 +39,8 @@
             this.rbtnUrineTest = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLoadPatients = new System.Windows.Forms.Button();
-            this.cmbSearchPateints = new System.Windows.Forms.ComboBox();
+            this.txtSearchPatients = new System.Windows.Forms.TextBox();
+            this.btnUserProChange = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +97,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.rbtnCreatinineTest);
             this.panel2.Controls.Add(this.rbtnLipidTest);
-            this.panel2.Location = new System.Drawing.Point(53, 109);
+            this.panel2.Location = new System.Drawing.Point(54, 174);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(474, 169);
             this.panel2.TabIndex = 6;
@@ -141,13 +143,14 @@
             // 
             // btnLoadPatients
             // 
+            this.btnLoadPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLoadPatients.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLoadPatients.FlatAppearance.BorderSize = 0;
             this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(53, 301);
+            this.btnLoadPatients.Location = new System.Drawing.Point(54, 349);
             this.btnLoadPatients.Name = "btnLoadPatients";
             this.btnLoadPatients.Size = new System.Drawing.Size(123, 29);
             this.btnLoadPatients.TabIndex = 7;
@@ -155,28 +158,44 @@
             this.btnLoadPatients.UseVisualStyleBackColor = false;
             this.btnLoadPatients.Click += new System.EventHandler(this.btnLoadPatients_Click);
             // 
-            // cmbSearchPateints
+            // txtSearchPatients
             // 
-            this.cmbSearchPateints.FormattingEnabled = true;
-            this.cmbSearchPateints.Location = new System.Drawing.Point(53, 48);
-            this.cmbSearchPateints.Name = "cmbSearchPateints";
-            this.cmbSearchPateints.Size = new System.Drawing.Size(121, 21);
-            this.cmbSearchPateints.TabIndex = 8;
+            this.txtSearchPatients.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtSearchPatients.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtSearchPatients.Location = new System.Drawing.Point(54, 45);
+            this.txtSearchPatients.Name = "txtSearchPatients";
+            this.txtSearchPatients.Size = new System.Drawing.Size(162, 20);
+            this.txtSearchPatients.TabIndex = 8;
+            this.txtSearchPatients.TextChanged += new System.EventHandler(this.txtSearchPatients_TextChanged);
+            // 
+            // btnUserProChange
+            // 
+            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
+            this.btnUserProChange.Location = new System.Drawing.Point(471, 12);
+            this.btnUserProChange.Name = "btnUserProChange";
+            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
+            this.btnUserProChange.TabIndex = 9;
+            this.btnUserProChange.UseVisualStyleBackColor = true;
             // 
             // LabAssistanceInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 390);
-            this.Controls.Add(this.cmbSearchPateints);
+            this.Controls.Add(this.btnUserProChange);
+            this.Controls.Add(this.txtSearchPatients);
             this.Controls.Add(this.btnLoadPatients);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LabAssistanceInterface";
-            this.Text = "LabAssistanceInterface";
+            this.Text = "Lab Assistance";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -192,6 +211,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnLoadPatients;
-        private System.Windows.Forms.ComboBox cmbSearchPateints;
+        private System.Windows.Forms.TextBox txtSearchPatients;
+        private System.Windows.Forms.Button btnUserProChange;
     }
 }
