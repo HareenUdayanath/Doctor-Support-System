@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Models;
+using DoctorSupportSystem.Models.Test;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,27 @@ namespace DoctorSupportSystem.Interfaces.Tests
         public URINE_FOR_MICRO_ALBUMIN()
         {
             InitializeComponent();
+        }
+
+        private void btnAddResult_Click(object sender, EventArgs e)
+        {
+            UrineTest test = new UrineTest();
+            test.Pid = 1;
+            test.Date = new Date(this.dateTimePicker1.Value);
+            test.Urine_MA = (float)Convert.ToDecimal(this.txtUrineMA.Text);
+            test.Urine_C = (float)Convert.ToDecimal(this.txtUrineC.Text);
+            test.Urine_AC = (float)Convert.ToDecimal(this.txtUrineAC.Text);
+            
+
+            if (DataBaseOperator.GetInstance().addUrineTest(test) != 1)
+            {
+                MessageBox.Show("Error");
+            }
+            else
+            {
+                MessageBox.Show("Test is added successfully");
+                this.Close();
+            }
         }
     }
 }
