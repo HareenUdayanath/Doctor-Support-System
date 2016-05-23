@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoctorSupportSystem.Models.Test
 {
-    abstract class Test
+    public abstract class Test
     {
         private int pid;
         private Date date;

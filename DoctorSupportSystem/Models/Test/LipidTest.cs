@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoctorSupportSystem.Models.Test
 {
-    class LipidTest : Test
+    public class LipidTest : Test
     {
         private float cholesterolTotal;
         private float triglycerides;

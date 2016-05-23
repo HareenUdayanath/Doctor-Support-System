@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoctorSupportSystem.Models.Test
 {
-    class UrineTest : Test
+    public class UrineTest : Test
     {
         private float urine_MA;
         private float urine_C;

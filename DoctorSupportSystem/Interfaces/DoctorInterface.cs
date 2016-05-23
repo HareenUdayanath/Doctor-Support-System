@@ -30,7 +30,7 @@ namespace DoctorSupportSystem.Interfaces
 
         private void btnLoadUsers_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllUser();
+            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllUsers();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

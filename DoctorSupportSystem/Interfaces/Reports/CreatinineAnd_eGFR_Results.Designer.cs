@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatinineAnd_eGFR_Results));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@
             this.btnLoadResults = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnGraphs = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -223,6 +224,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel9.Controls.Add(this.btnGraphs);
             this.panel9.Controls.Add(this.dateTimePicker1);
             this.panel9.Controls.Add(this.dataGridView1);
             this.panel9.Controls.Add(this.btnLoadResults);
@@ -247,14 +249,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(24, 67);
             this.dataGridView1.Name = "dataGridView1";
@@ -295,6 +297,22 @@
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Select date";
+            // 
+            // btnGraphs
+            // 
+            this.btnGraphs.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnGraphs.FlatAppearance.BorderSize = 0;
+            this.btnGraphs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnGraphs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGraphs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraphs.ForeColor = System.Drawing.Color.White;
+            this.btnGraphs.Location = new System.Drawing.Point(320, 274);
+            this.btnGraphs.Name = "btnGraphs";
+            this.btnGraphs.Size = new System.Drawing.Size(123, 36);
+            this.btnGraphs.TabIndex = 15;
+            this.btnGraphs.Text = "Show Test Result Graphs";
+            this.btnGraphs.UseVisualStyleBackColor = false;
+            this.btnGraphs.Click += new System.EventHandler(this.btnGraphs_Click);
             // 
             // CreatinineAnd_eGFR_Results
             // 
@@ -349,5 +367,6 @@
         private System.Windows.Forms.Button btnLoadResults;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnGraphs;
     }
 }

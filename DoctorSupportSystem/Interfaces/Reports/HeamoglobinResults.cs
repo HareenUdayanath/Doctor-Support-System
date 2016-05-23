@@ -24,5 +24,11 @@ namespace DoctorSupportSystem.Interfaces.Reports
             dataGridView1.DataSource = DataBaseOperator.GetInstance()
                 .getHaemoglobinResultsAfter(1,new Date(dateTimePicker1.Value));
         }
+
+        private void btnGraphs_Click(object sender, EventArgs e)
+        {
+            new HaemoglobinGraph(DataBaseOperator.GetInstance()
+            .getHaemoglobinAfterForPlot(1, new Date(dateTimePicker1.Value))).ShowDialog();
+        }
     }
 }
