@@ -23,9 +23,36 @@ namespace DoctorSupportSystem.Interfaces
             txtPID.Text = Convert.ToString(db.getMaxPID() + 1);
         }
 
-        private void btnAddPatient_Click(object sender, EventArgs e)
+        private void txtYear_TextChanged(object sender, EventArgs e)
         {
-            
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtYear.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                txtYear.Text = txtYear.Text.Remove(txtYear.Text.Length - 1);
+            }
+        }
+
+        private void txtMonth_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtMonth.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                txtMonth.Text = txtMonth.Text.Remove(txtMonth.Text.Length - 1);
+            }
+        }
+
+        private void txtDay_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtDay.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                txtDay.Text = txtDay.Text.Remove(txtDay.Text.Length - 1);
+            }
+        }
+
+        private void btnAddPatient_Click_1(object sender, EventArgs e)
+        {
+
             Patient patient = new Patient();
             patient.FirstName = txtFName.Text;
             patient.LastName = txtLName.Text;
@@ -52,6 +79,11 @@ namespace DoctorSupportSystem.Interfaces
             else
                 patient.Nic = txtNIC.Text;
 
+            if (!Validator.contactNumber(txtCoNo.Text))
+                err += "Invalid Contact Number\n";
+            else
+                patient.ContactNo = txtCoNo.Text;
+
             Console.WriteLine(err);
 
             if (err != "")
@@ -72,35 +104,6 @@ namespace DoctorSupportSystem.Interfaces
                     this.Close();
                 }
 
-            }
-            
-                
-        }
-
-        private void txtYear_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtYear.Text, "[^0-9]"))
-            {
-                //MessageBox.Show("Please enter only numbers.");
-                txtYear.Text = txtYear.Text.Remove(txtYear.Text.Length - 1);
-            }
-        }
-
-        private void txtMonth_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtMonth.Text, "[^0-9]"))
-            {
-                //MessageBox.Show("Please enter only numbers.");
-                txtMonth.Text = txtMonth.Text.Remove(txtMonth.Text.Length - 1);
-            }
-        }
-
-        private void txtDay_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtDay.Text, "[^0-9]"))
-            {
-                //MessageBox.Show("Please enter only numbers.");
-                txtDay.Text = txtDay.Text.Remove(txtDay.Text.Length - 1);
             }
         }
     }
