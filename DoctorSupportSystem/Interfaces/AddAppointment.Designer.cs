@@ -200,14 +200,14 @@
             this.panel9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel9.Location = new System.Drawing.Point(51, 321);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(361, 34);
+            this.panel9.Size = new System.Drawing.Size(350, 34);
             this.panel9.TabIndex = 21;
             // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 451);
+            this.ClientSize = new System.Drawing.Size(402, 451);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPNIC);

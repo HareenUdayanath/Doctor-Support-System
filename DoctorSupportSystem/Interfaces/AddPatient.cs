@@ -92,12 +92,13 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
-                if (db.addPatient(patient) == -1)
+                int re = db.addPatient(patient) ;
+                if (re == -1)
                 {
                     MessageBox.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
                 }
-                else
+                else if(re == 1)
                 {
                     MessageBox.Show("The patient successfully added to the database");
                     new AddPatient().Show();
@@ -105,6 +106,16 @@ namespace DoctorSupportSystem.Interfaces
                 }
 
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

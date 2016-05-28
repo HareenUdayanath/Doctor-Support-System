@@ -53,6 +53,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.Patients);
             this.tabControl1.Controls.Add(this.Appointments);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.ItemSize = new System.Drawing.Size(80, 30);
             this.tabControl1.Location = new System.Drawing.Point(53, 79);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -63,10 +65,10 @@
             // 
             this.Patients.Controls.Add(this.btnLoadPatients);
             this.Patients.Controls.Add(this.dataGridView1);
-            this.Patients.Location = new System.Drawing.Point(4, 22);
+            this.Patients.Location = new System.Drawing.Point(4, 34);
             this.Patients.Name = "Patients";
             this.Patients.Padding = new System.Windows.Forms.Padding(3);
-            this.Patients.Size = new System.Drawing.Size(511, 354);
+            this.Patients.Size = new System.Drawing.Size(511, 342);
             this.Patients.TabIndex = 0;
             this.Patients.Text = "Patients";
             this.Patients.UseVisualStyleBackColor = true;
@@ -80,9 +82,9 @@
             this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(381, 272);
+            this.btnLoadPatients.Location = new System.Drawing.Point(381, 260);
             this.btnLoadPatients.Name = "btnLoadPatients";
-            this.btnLoadPatients.Size = new System.Drawing.Size(123, 29);
+            this.btnLoadPatients.Size = new System.Drawing.Size(123, 38);
             this.btnLoadPatients.TabIndex = 3;
             this.btnLoadPatients.Text = "Load Patients";
             this.btnLoadPatients.UseVisualStyleBackColor = false;
@@ -100,7 +102,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(6, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(498, 200);
             this.dataGridView1.TabIndex = 2;
             // 
             // Appointments
@@ -108,10 +110,10 @@
             this.Appointments.Controls.Add(this.button1);
             this.Appointments.Controls.Add(this.dataGridView2);
             this.Appointments.Controls.Add(this.btnShowAppintments);
-            this.Appointments.Location = new System.Drawing.Point(4, 22);
+            this.Appointments.Location = new System.Drawing.Point(4, 34);
             this.Appointments.Name = "Appointments";
             this.Appointments.Padding = new System.Windows.Forms.Padding(3);
-            this.Appointments.Size = new System.Drawing.Size(511, 354);
+            this.Appointments.Size = new System.Drawing.Size(511, 342);
             this.Appointments.TabIndex = 1;
             this.Appointments.Text = "Appointments";
             this.Appointments.UseVisualStyleBackColor = true;
@@ -125,7 +127,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(6, 289);
+            this.button1.Location = new System.Drawing.Point(6, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 38);
             this.button1.TabIndex = 11;
@@ -145,7 +147,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(3, 71);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(501, 212);
+            this.dataGridView2.Size = new System.Drawing.Size(501, 200);
             this.dataGridView2.TabIndex = 10;
             // 
             // btnShowAppintments
@@ -157,7 +159,7 @@
             this.btnShowAppintments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowAppintments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAppintments.ForeColor = System.Drawing.Color.White;
-            this.btnShowAppintments.Location = new System.Drawing.Point(342, 289);
+            this.btnShowAppintments.Location = new System.Drawing.Point(342, 277);
             this.btnShowAppintments.Name = "btnShowAppintments";
             this.btnShowAppintments.Size = new System.Drawing.Size(162, 38);
             this.btnShowAppintments.TabIndex = 9;
