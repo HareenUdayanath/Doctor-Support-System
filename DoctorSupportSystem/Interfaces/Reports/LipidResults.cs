@@ -14,21 +14,23 @@ namespace DoctorSupportSystem.Interfaces.Reports
 {
     public partial class LipidResults : Form
     {
-        public LipidResults()
+        private int pid;
+        public LipidResults(int pid)
         {
+            this.pid = pid;
             InitializeComponent();
         }
 
         private void btnLoadResults_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = DataBaseOperator.GetInstance()
-               .getLipidResultsAfter(1, new Date(dateTimePicker1.Value));
+               .getLipidResultsAfter(pid, new Date(dateTimePicker1.Value));
         }
 
         private void btnGraphs_Click(object sender, EventArgs e)
         {
             new LipidGraphs(DataBaseOperator.GetInstance()
-             .getLipidAfterForPlot(1, new Date(dateTimePicker1.Value))).ShowDialog();
+             .getLipidAfterForPlot(pid, new Date(dateTimePicker1.Value))).ShowDialog();
         }
     }
 }

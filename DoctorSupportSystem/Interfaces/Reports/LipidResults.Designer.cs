@@ -61,12 +61,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.btnGraphs = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLoadResults = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnGraphs = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -405,6 +405,22 @@
             this.panel16.Size = new System.Drawing.Size(713, 292);
             this.panel16.TabIndex = 13;
             // 
+            // btnGraphs
+            // 
+            this.btnGraphs.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnGraphs.FlatAppearance.BorderSize = 0;
+            this.btnGraphs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnGraphs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGraphs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraphs.ForeColor = System.Drawing.Color.White;
+            this.btnGraphs.Location = new System.Drawing.Point(576, 251);
+            this.btnGraphs.Name = "btnGraphs";
+            this.btnGraphs.Size = new System.Drawing.Size(123, 36);
+            this.btnGraphs.TabIndex = 13;
+            this.btnGraphs.Text = "Show Test Result Graphs";
+            this.btnGraphs.UseVisualStyleBackColor = false;
+            this.btnGraphs.Click += new System.EventHandler(this.btnGraphs_Click);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(122, 8);
@@ -476,22 +492,6 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Select date";
             // 
-            // btnGraphs
-            // 
-            this.btnGraphs.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnGraphs.FlatAppearance.BorderSize = 0;
-            this.btnGraphs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnGraphs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraphs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraphs.ForeColor = System.Drawing.Color.White;
-            this.btnGraphs.Location = new System.Drawing.Point(576, 251);
-            this.btnGraphs.Name = "btnGraphs";
-            this.btnGraphs.Size = new System.Drawing.Size(123, 36);
-            this.btnGraphs.TabIndex = 13;
-            this.btnGraphs.Text = "Show Test Result Graphs";
-            this.btnGraphs.UseVisualStyleBackColor = false;
-            this.btnGraphs.Click += new System.EventHandler(this.btnGraphs_Click);
-            // 
             // LipidResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,6 +501,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "LipidResults";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "LipidResults";
             this.panel2.ResumeLayout(false);
             this.panel15.ResumeLayout(false);

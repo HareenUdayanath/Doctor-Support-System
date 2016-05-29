@@ -100,8 +100,7 @@ namespace DoctorSupportSystem.Interfaces
                 }
                 else if(re == 1)
                 {
-                    MessageBox.Show("The patient successfully added to the database");
-                    new AddPatient().Show();
+                    MessageBox.Show("The patient successfully added to the database");                    
                     this.Close();
                 }
 

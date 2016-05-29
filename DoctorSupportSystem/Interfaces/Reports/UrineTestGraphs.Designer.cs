@@ -36,9 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.urineGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbUrineMA = new System.Windows.Forms.CheckBox();
-            this.cbUrineC = new System.Windows.Forms.CheckBox();
             this.cbUrineAC = new System.Windows.Forms.CheckBox();
+            this.cbUrineC = new System.Windows.Forms.CheckBox();
+            this.cbUrineMA = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.urineGraphs)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,9 @@
             // 
             // urineGraphs
             // 
+            this.urineGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.urineGraphs.BorderlineColor = System.Drawing.Color.Black;
             this.urineGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea1.Name = "ChartArea1";
@@ -85,32 +88,33 @@
             this.urineGraphs.Series.Add(series1);
             this.urineGraphs.Series.Add(series2);
             this.urineGraphs.Series.Add(series3);
-            this.urineGraphs.Size = new System.Drawing.Size(724, 347);
+            this.urineGraphs.Size = new System.Drawing.Size(724, 386);
             this.urineGraphs.TabIndex = 12;
             this.urineGraphs.Text = "urineGraphs";
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.cbUrineAC);
             this.panel2.Controls.Add(this.cbUrineC);
             this.panel2.Controls.Add(this.cbUrineMA);
-            this.panel2.Location = new System.Drawing.Point(53, 365);
+            this.panel2.Location = new System.Drawing.Point(53, 404);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(471, 28);
             this.panel2.TabIndex = 13;
             // 
-            // cbUrineMA
+            // cbUrineAC
             // 
-            this.cbUrineMA.AutoSize = true;
-            this.cbUrineMA.Checked = true;
-            this.cbUrineMA.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbUrineMA.Location = new System.Drawing.Point(3, 3);
-            this.cbUrineMA.Name = "cbUrineMA";
-            this.cbUrineMA.Size = new System.Drawing.Size(135, 17);
-            this.cbUrineMA.TabIndex = 0;
-            this.cbUrineMA.Text = "Urine for Micro Albumin";
-            this.cbUrineMA.UseVisualStyleBackColor = true;
-            this.cbUrineMA.CheckedChanged += new System.EventHandler(this.cbUrineMA_CheckedChanged);
+            this.cbUrineAC.AutoSize = true;
+            this.cbUrineAC.Checked = true;
+            this.cbUrineAC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbUrineAC.Location = new System.Drawing.Point(298, 3);
+            this.cbUrineAC.Name = "cbUrineAC";
+            this.cbUrineAC.Size = new System.Drawing.Size(143, 17);
+            this.cbUrineAC.TabIndex = 2;
+            this.cbUrineAC.Text = "Urine Albumin/Creatinine";
+            this.cbUrineAC.UseVisualStyleBackColor = true;
+            this.cbUrineAC.CheckedChanged += new System.EventHandler(this.cbUrineAC_CheckedChanged);
             // 
             // cbUrineC
             // 
@@ -125,18 +129,18 @@
             this.cbUrineC.UseVisualStyleBackColor = true;
             this.cbUrineC.CheckedChanged += new System.EventHandler(this.cbUrineC_CheckedChanged);
             // 
-            // cbUrineAC
+            // cbUrineMA
             // 
-            this.cbUrineAC.AutoSize = true;
-            this.cbUrineAC.Checked = true;
-            this.cbUrineAC.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbUrineAC.Location = new System.Drawing.Point(298, 3);
-            this.cbUrineAC.Name = "cbUrineAC";
-            this.cbUrineAC.Size = new System.Drawing.Size(143, 17);
-            this.cbUrineAC.TabIndex = 2;
-            this.cbUrineAC.Text = "Urine Albumin/Creatinine";
-            this.cbUrineAC.UseVisualStyleBackColor = true;
-            this.cbUrineAC.CheckedChanged += new System.EventHandler(this.cbUrineAC_CheckedChanged);
+            this.cbUrineMA.AutoSize = true;
+            this.cbUrineMA.Checked = true;
+            this.cbUrineMA.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbUrineMA.Location = new System.Drawing.Point(3, 3);
+            this.cbUrineMA.Name = "cbUrineMA";
+            this.cbUrineMA.Size = new System.Drawing.Size(135, 17);
+            this.cbUrineMA.TabIndex = 0;
+            this.cbUrineMA.Text = "Urine for Micro Albumin";
+            this.cbUrineMA.UseVisualStyleBackColor = true;
+            this.cbUrineMA.CheckedChanged += new System.EventHandler(this.cbUrineMA_CheckedChanged);
             // 
             // UrineTestGraphs
             // 

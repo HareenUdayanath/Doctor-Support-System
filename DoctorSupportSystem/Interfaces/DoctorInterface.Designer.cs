@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorInterface));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Patients = new System.Windows.Forms.TabPage();
@@ -36,10 +38,16 @@
             this.Users = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLoadUsers = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUserProChange = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAddTest = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbtnPrfileLiverTest = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.rbtnHaemoglobinTest = new System.Windows.Forms.RadioButton();
+            this.rbtnUrineTest = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rbtnCreatinineTest = new System.Windows.Forms.RadioButton();
+            this.rbtnLipidTest = new System.Windows.Forms.RadioButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,21 +72,20 @@
             this.lbPID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbSearchPatients = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnPrfileLiverTest = new System.Windows.Forms.RadioButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.rbtnHaemoglobinTest = new System.Windows.Forms.RadioButton();
-            this.rbtnUrineTest = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rbtnCreatinineTest = new System.Windows.Forms.RadioButton();
-            this.rbtnLipidTest = new System.Windows.Forms.RadioButton();
-            this.btnAddTest = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddPatientProfile = new System.Windows.Forms.Button();
+            this.btnAddPatient = new System.Windows.Forms.Button();
+            this.btnUserProChange = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Patients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.Users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -87,7 +94,7 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -100,23 +107,24 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(80, 30);
-            this.tabControl1.Location = new System.Drawing.Point(26, 82);
+            this.tabControl1.Location = new System.Drawing.Point(124, 82);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(793, 624);
+            this.tabControl1.Size = new System.Drawing.Size(695, 624);
             this.tabControl1.TabIndex = 0;
             // 
             // Patients
             // 
+            this.Patients.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Patients.Controls.Add(this.button2);
             this.Patients.Controls.Add(this.btnLoadPatients);
             this.Patients.Controls.Add(this.dataGridView2);
             this.Patients.Location = new System.Drawing.Point(4, 34);
             this.Patients.Name = "Patients";
             this.Patients.Padding = new System.Windows.Forms.Padding(3);
-            this.Patients.Size = new System.Drawing.Size(529, 307);
+            this.Patients.Size = new System.Drawing.Size(687, 586);
             this.Patients.TabIndex = 0;
             this.Patients.Text = "Patients";
-            this.Patients.UseVisualStyleBackColor = true;
             // 
             // btnLoadPatients
             // 
@@ -127,11 +135,11 @@
             this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(400, 240);
+            this.btnLoadPatients.Location = new System.Drawing.Point(550, 542);
             this.btnLoadPatients.Name = "btnLoadPatients";
-            this.btnLoadPatients.Size = new System.Drawing.Size(123, 29);
+            this.btnLoadPatients.Size = new System.Drawing.Size(131, 38);
             this.btnLoadPatients.TabIndex = 1;
-            this.btnLoadPatients.Text = "Load Patients";
+            this.btnLoadPatients.Text = "Refresh Patients";
             this.btnLoadPatients.UseVisualStyleBackColor = false;
             this.btnLoadPatients.Click += new System.EventHandler(this.btnLoadPatients_Click);
             // 
@@ -143,27 +151,36 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 34);
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 37);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(517, 200);
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(675, 499);
             this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseClick);
             // 
             // Users
             // 
+            this.Users.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Users.Controls.Add(this.dataGridView1);
             this.Users.Controls.Add(this.btnLoadUsers);
-            this.Users.Controls.Add(this.button1);
             this.Users.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Users.Location = new System.Drawing.Point(4, 34);
             this.Users.Name = "Users";
             this.Users.Padding = new System.Windows.Forms.Padding(3);
-            this.Users.Size = new System.Drawing.Size(529, 307);
+            this.Users.Size = new System.Drawing.Size(687, 586);
             this.Users.TabIndex = 1;
             this.Users.Text = "Users";
-            this.Users.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -173,11 +190,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 45);
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 37);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(517, 212);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(675, 499);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnLoadUsers
@@ -189,49 +216,13 @@
             this.btnLoadUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadUsers.ForeColor = System.Drawing.Color.White;
-            this.btnLoadUsers.Location = new System.Drawing.Point(392, 263);
+            this.btnLoadUsers.Location = new System.Drawing.Point(550, 542);
             this.btnLoadUsers.Name = "btnLoadUsers";
             this.btnLoadUsers.Size = new System.Drawing.Size(131, 38);
             this.btnLoadUsers.TabIndex = 2;
-            this.btnLoadUsers.Text = "Load Users";
+            this.btnLoadUsers.Text = "Refresh Users";
             this.btnLoadUsers.UseVisualStyleBackColor = false;
             this.btnLoadUsers.Click += new System.EventHandler(this.btnLoadUsers_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(6, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add User";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(20, 718);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnUserProChange
-            // 
-            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
-            this.btnUserProChange.Location = new System.Drawing.Point(763, 12);
-            this.btnUserProChange.Name = "btnUserProChange";
-            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
-            this.btnUserProChange.TabIndex = 10;
-            this.btnUserProChange.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -240,10 +231,121 @@
             this.tabPage1.Controls.Add(this.panel5);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(785, 586);
+            this.tabPage1.Size = new System.Drawing.Size(687, 586);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Test";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTest
+            // 
+            this.btnAddTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddTest.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddTest.FlatAppearance.BorderSize = 0;
+            this.btnAddTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTest.ForeColor = System.Drawing.Color.White;
+            this.btnAddTest.Location = new System.Drawing.Point(3, 548);
+            this.btnAddTest.Name = "btnAddTest";
+            this.btnAddTest.Size = new System.Drawing.Size(156, 35);
+            this.btnAddTest.TabIndex = 15;
+            this.btnAddTest.Text = "Add Selected Test";
+            this.btnAddTest.UseVisualStyleBackColor = false;
+            this.btnAddTest.Click += new System.EventHandler(this.btnAddTest_Click_1);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.rbtnHaemoglobinTest);
+            this.panel2.Controls.Add(this.rbtnUrineTest);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.rbtnCreatinineTest);
+            this.panel2.Controls.Add(this.rbtnLipidTest);
+            this.panel2.Location = new System.Drawing.Point(3, 348);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(681, 169);
+            this.panel2.TabIndex = 14;
+            // 
+            // rbtnPrfileLiverTest
+            // 
+            this.rbtnPrfileLiverTest.AutoSize = true;
+            this.rbtnPrfileLiverTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.rbtnPrfileLiverTest.Location = new System.Drawing.Point(18, 108);
+            this.rbtnPrfileLiverTest.Name = "rbtnPrfileLiverTest";
+            this.rbtnPrfileLiverTest.Size = new System.Drawing.Size(162, 20);
+            this.rbtnPrfileLiverTest.TabIndex = 6;
+            this.rbtnPrfileLiverTest.TabStop = true;
+            this.rbtnPrfileLiverTest.Text = "PROFILE LIVER TEST";
+            this.rbtnPrfileLiverTest.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(681, 30);
+            this.panel4.TabIndex = 9;
+            // 
+            // rbtnHaemoglobinTest
+            // 
+            this.rbtnHaemoglobinTest.AutoSize = true;
+            this.rbtnHaemoglobinTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.rbtnHaemoglobinTest.Location = new System.Drawing.Point(18, 43);
+            this.rbtnHaemoglobinTest.Name = "rbtnHaemoglobinTest";
+            this.rbtnHaemoglobinTest.Size = new System.Drawing.Size(258, 20);
+            this.rbtnHaemoglobinTest.TabIndex = 4;
+            this.rbtnHaemoglobinTest.TabStop = true;
+            this.rbtnHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
+            this.rbtnHaemoglobinTest.UseVisualStyleBackColor = false;
+            // 
+            // rbtnUrineTest
+            // 
+            this.rbtnUrineTest.AutoSize = true;
+            this.rbtnUrineTest.Location = new System.Drawing.Point(18, 140);
+            this.rbtnUrineTest.Name = "rbtnUrineTest";
+            this.rbtnUrineTest.Size = new System.Drawing.Size(246, 20);
+            this.rbtnUrineTest.TabIndex = 7;
+            this.rbtnUrineTest.TabStop = true;
+            this.rbtnUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
+            this.rbtnUrineTest.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.Location = new System.Drawing.Point(0, 37);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(681, 30);
+            this.panel3.TabIndex = 8;
+            // 
+            // rbtnCreatinineTest
+            // 
+            this.rbtnCreatinineTest.AutoSize = true;
+            this.rbtnCreatinineTest.Location = new System.Drawing.Point(18, 13);
+            this.rbtnCreatinineTest.Name = "rbtnCreatinineTest";
+            this.rbtnCreatinineTest.Size = new System.Drawing.Size(217, 20);
+            this.rbtnCreatinineTest.TabIndex = 3;
+            this.rbtnCreatinineTest.TabStop = true;
+            this.rbtnCreatinineTest.Text = "CREATININE AND eGFR TEST";
+            this.rbtnCreatinineTest.UseVisualStyleBackColor = true;
+            // 
+            // rbtnLipidTest
+            // 
+            this.rbtnLipidTest.AutoSize = true;
+            this.rbtnLipidTest.Location = new System.Drawing.Point(18, 75);
+            this.rbtnLipidTest.Name = "rbtnLipidTest";
+            this.rbtnLipidTest.Size = new System.Drawing.Size(117, 20);
+            this.rbtnLipidTest.TabIndex = 5;
+            this.rbtnLipidTest.TabStop = true;
+            this.rbtnLipidTest.Text = "LIPID PROFILE";
+            this.rbtnLipidTest.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -261,7 +363,7 @@
             this.panel5.Controls.Add(this.cbSearchPatients);
             this.panel5.Location = new System.Drawing.Point(0, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(782, 339);
+            this.panel5.Size = new System.Drawing.Size(684, 339);
             this.panel5.TabIndex = 13;
             // 
             // panel12
@@ -487,116 +589,110 @@
             this.cbSearchPatients.TabIndex = 10;
             this.cbSearchPatients.TextChanged += new System.EventHandler(this.cbSearchPatients_TextChanged_1);
             // 
-            // panel2
+            // button1
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.rbtnHaemoglobinTest);
-            this.panel2.Controls.Add(this.rbtnUrineTest);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.rbtnCreatinineTest);
-            this.panel2.Controls.Add(this.rbtnLipidTest);
-            this.panel2.Location = new System.Drawing.Point(3, 348);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(779, 169);
-            this.panel2.TabIndex = 14;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 65);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Add User";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // rbtnPrfileLiverTest
+            // panel1
             // 
-            this.rbtnPrfileLiverTest.AutoSize = true;
-            this.rbtnPrfileLiverTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.rbtnPrfileLiverTest.Location = new System.Drawing.Point(18, 108);
-            this.rbtnPrfileLiverTest.Name = "rbtnPrfileLiverTest";
-            this.rbtnPrfileLiverTest.Size = new System.Drawing.Size(162, 20);
-            this.rbtnPrfileLiverTest.TabIndex = 6;
-            this.rbtnPrfileLiverTest.TabStop = true;
-            this.rbtnPrfileLiverTest.Text = "PROFILE LIVER TEST";
-            this.rbtnPrfileLiverTest.UseVisualStyleBackColor = false;
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnAddPatientProfile);
+            this.panel1.Controls.Add(this.btnAddPatient);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(122, 718);
+            this.panel1.TabIndex = 1;
             // 
-            // panel4
+            // button3
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(779, 30);
-            this.panel4.TabIndex = 9;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 295);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(122, 65);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Add Patient";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // rbtnHaemoglobinTest
+            // btnAddPatientProfile
             // 
-            this.rbtnHaemoglobinTest.AutoSize = true;
-            this.rbtnHaemoglobinTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.rbtnHaemoglobinTest.Location = new System.Drawing.Point(18, 43);
-            this.rbtnHaemoglobinTest.Name = "rbtnHaemoglobinTest";
-            this.rbtnHaemoglobinTest.Size = new System.Drawing.Size(258, 20);
-            this.rbtnHaemoglobinTest.TabIndex = 4;
-            this.rbtnHaemoglobinTest.TabStop = true;
-            this.rbtnHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
-            this.rbtnHaemoglobinTest.UseVisualStyleBackColor = false;
+            this.btnAddPatientProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddPatientProfile.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddPatientProfile.FlatAppearance.BorderSize = 0;
+            this.btnAddPatientProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddPatientProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPatientProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatientProfile.ForeColor = System.Drawing.Color.White;
+            this.btnAddPatientProfile.Location = new System.Drawing.Point(0, 224);
+            this.btnAddPatientProfile.Name = "btnAddPatientProfile";
+            this.btnAddPatientProfile.Size = new System.Drawing.Size(122, 65);
+            this.btnAddPatientProfile.TabIndex = 3;
+            this.btnAddPatientProfile.Text = "Add  PatientProfile";
+            this.btnAddPatientProfile.UseVisualStyleBackColor = false;
             // 
-            // rbtnUrineTest
+            // btnAddPatient
             // 
-            this.rbtnUrineTest.AutoSize = true;
-            this.rbtnUrineTest.Location = new System.Drawing.Point(18, 140);
-            this.rbtnUrineTest.Name = "rbtnUrineTest";
-            this.rbtnUrineTest.Size = new System.Drawing.Size(246, 20);
-            this.rbtnUrineTest.TabIndex = 7;
-            this.rbtnUrineTest.TabStop = true;
-            this.rbtnUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
-            this.rbtnUrineTest.UseVisualStyleBackColor = true;
+            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddPatient.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddPatient.FlatAppearance.BorderSize = 0;
+            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatient.ForeColor = System.Drawing.Color.White;
+            this.btnAddPatient.Location = new System.Drawing.Point(0, 153);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(122, 65);
+            this.btnAddPatient.TabIndex = 2;
+            this.btnAddPatient.Text = "Add Patient";
+            this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
-            // panel3
+            // btnUserProChange
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.Location = new System.Drawing.Point(0, 37);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(779, 30);
-            this.panel3.TabIndex = 8;
+            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
+            this.btnUserProChange.Location = new System.Drawing.Point(763, 12);
+            this.btnUserProChange.Name = "btnUserProChange";
+            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
+            this.btnUserProChange.TabIndex = 10;
+            this.btnUserProChange.UseVisualStyleBackColor = true;
             // 
-            // rbtnCreatinineTest
+            // button2
             // 
-            this.rbtnCreatinineTest.AutoSize = true;
-            this.rbtnCreatinineTest.Location = new System.Drawing.Point(18, 13);
-            this.rbtnCreatinineTest.Name = "rbtnCreatinineTest";
-            this.rbtnCreatinineTest.Size = new System.Drawing.Size(217, 20);
-            this.rbtnCreatinineTest.TabIndex = 3;
-            this.rbtnCreatinineTest.TabStop = true;
-            this.rbtnCreatinineTest.Text = "CREATININE AND eGFR TEST";
-            this.rbtnCreatinineTest.UseVisualStyleBackColor = true;
-            // 
-            // rbtnLipidTest
-            // 
-            this.rbtnLipidTest.AutoSize = true;
-            this.rbtnLipidTest.Location = new System.Drawing.Point(18, 75);
-            this.rbtnLipidTest.Name = "rbtnLipidTest";
-            this.rbtnLipidTest.Size = new System.Drawing.Size(117, 20);
-            this.rbtnLipidTest.TabIndex = 5;
-            this.rbtnLipidTest.TabStop = true;
-            this.rbtnLipidTest.Text = "LIPID PROFILE";
-            this.rbtnLipidTest.UseVisualStyleBackColor = true;
-            // 
-            // btnAddTest
-            // 
-            this.btnAddTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddTest.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAddTest.FlatAppearance.BorderSize = 0;
-            this.btnAddTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTest.ForeColor = System.Drawing.Color.White;
-            this.btnAddTest.Location = new System.Drawing.Point(3, 554);
-            this.btnAddTest.Name = "btnAddTest";
-            this.btnAddTest.Size = new System.Drawing.Size(123, 29);
-            this.btnAddTest.TabIndex = 15;
-            this.btnAddTest.Text = "Add Test";
-            this.btnAddTest.UseVisualStyleBackColor = false;
-            this.btnAddTest.Click += new System.EventHandler(this.btnAddTest_Click_1);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(6, 542);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(194, 38);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Show Test Results";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // DoctorInterface
             // 
@@ -616,6 +712,8 @@
             this.Users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -632,8 +730,7 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -684,5 +781,9 @@
         private System.Windows.Forms.RadioButton rbtnCreatinineTest;
         private System.Windows.Forms.RadioButton rbtnLipidTest;
         private System.Windows.Forms.Button btnAddTest;
+        private System.Windows.Forms.Button btnAddPatient;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAddPatientProfile;
+        private System.Windows.Forms.Button button2;
     }
 }

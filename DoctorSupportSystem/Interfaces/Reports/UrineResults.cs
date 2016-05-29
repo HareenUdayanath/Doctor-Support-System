@@ -15,21 +15,23 @@ namespace DoctorSupportSystem.Interfaces.Reports
 {
     public partial class UrineResults : Form
     {
-        public UrineResults()
+        private int pid;
+        public UrineResults(int pid)
         {
+            this.pid = pid;
             InitializeComponent();
         }
 
         private void btnLoadResults_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = DataBaseOperator.GetInstance()
-            .getUrineAfter(1, new Date(dateTimePicker1.Value));
+            .getUrineAfter(pid, new Date(dateTimePicker1.Value));
         }
 
         private void btnGraphs_Click(object sender, EventArgs e)
         {
             new UrineTestGraphs(DataBaseOperator.GetInstance()
-                .getUrineAfterForPlot(1, new Date(dateTimePicker1.Value))).ShowDialog();
+                .getUrineAfterForPlot(pid, new Date(dateTimePicker1.Value))).ShowDialog();
         }
     }
 }

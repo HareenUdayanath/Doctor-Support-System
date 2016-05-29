@@ -24,6 +24,8 @@ namespace DoctorSupportSystem.Interfaces
             AutoCompleteStringCollection col = new AutoCompleteStringCollection();
             col.AddRange(DataBaseOperator.GetInstance().getPatientNameList());
             cbSearchPatients.AutoCompleteCustomSource = col;
+            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllPatients();
+            dataGridView2.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -93,6 +95,11 @@ namespace DoctorSupportSystem.Interfaces
                 lbG.Text = "-";
                 lbCN.Text = "-";
             }
+        }
+
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            new AddPatient().ShowDialog();
         }
     }
 }

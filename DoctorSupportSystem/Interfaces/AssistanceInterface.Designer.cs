@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssistanceInterface));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Patients = new System.Windows.Forms.TabPage();
             this.btnLoadPatients = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Appointments = new System.Windows.Forms.TabPage();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnShowAppintments = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -71,7 +72,9 @@
             this.lbPID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbSearchPatients = new System.Windows.Forms.ComboBox();
+            this.btnAddAppointment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddPatient = new System.Windows.Forms.Button();
             this.btnUserProChange = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Patients.SuspendLayout();
@@ -88,6 +91,7 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -100,23 +104,23 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(80, 30);
-            this.tabControl1.Location = new System.Drawing.Point(53, 79);
+            this.tabControl1.Location = new System.Drawing.Point(128, 79);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(720, 701);
+            this.tabControl1.Size = new System.Drawing.Size(717, 701);
             this.tabControl1.TabIndex = 0;
             // 
             // Patients
             // 
+            this.Patients.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Patients.Controls.Add(this.btnLoadPatients);
             this.Patients.Controls.Add(this.dataGridView1);
             this.Patients.Location = new System.Drawing.Point(4, 34);
             this.Patients.Name = "Patients";
             this.Patients.Padding = new System.Windows.Forms.Padding(3);
-            this.Patients.Size = new System.Drawing.Size(712, 571);
+            this.Patients.Size = new System.Drawing.Size(709, 663);
             this.Patients.TabIndex = 0;
             this.Patients.Text = "Patients";
-            this.Patients.UseVisualStyleBackColor = true;
             // 
             // btnLoadPatients
             // 
@@ -127,7 +131,7 @@
             this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(582, 260);
+            this.btnLoadPatients.Location = new System.Drawing.Point(580, 570);
             this.btnLoadPatients.Name = "btnLoadPatients";
             this.btnLoadPatients.Size = new System.Drawing.Size(123, 38);
             this.btnLoadPatients.TabIndex = 3;
@@ -142,43 +146,35 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 54);
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(699, 200);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(699, 506);
             this.dataGridView1.TabIndex = 2;
             // 
             // Appointments
             // 
-            this.Appointments.Controls.Add(this.btnAddAppointment);
+            this.Appointments.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Appointments.Controls.Add(this.dataGridView2);
             this.Appointments.Controls.Add(this.btnShowAppintments);
             this.Appointments.Location = new System.Drawing.Point(4, 34);
             this.Appointments.Name = "Appointments";
             this.Appointments.Padding = new System.Windows.Forms.Padding(3);
-            this.Appointments.Size = new System.Drawing.Size(712, 571);
+            this.Appointments.Size = new System.Drawing.Size(709, 663);
             this.Appointments.TabIndex = 1;
             this.Appointments.Text = "Appointments";
-            this.Appointments.UseVisualStyleBackColor = true;
-            // 
-            // btnAddAppointment
-            // 
-            this.btnAddAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddAppointment.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAddAppointment.FlatAppearance.BorderSize = 0;
-            this.btnAddAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAppointment.ForeColor = System.Drawing.Color.White;
-            this.btnAddAppointment.Location = new System.Drawing.Point(6, 459);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(162, 38);
-            this.btnAddAppointment.TabIndex = 11;
-            this.btnAddAppointment.Text = "Add Appointment";
-            this.btnAddAppointment.UseVisualStyleBackColor = false;
-            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
             // 
             // dataGridView2
             // 
@@ -188,11 +184,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 71);
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 58);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(684, 382);
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(699, 506);
             this.dataGridView2.TabIndex = 10;
             // 
             // btnShowAppintments
@@ -204,7 +210,7 @@
             this.btnShowAppintments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowAppintments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAppintments.ForeColor = System.Drawing.Color.White;
-            this.btnShowAppintments.Location = new System.Drawing.Point(525, 459);
+            this.btnShowAppintments.Location = new System.Drawing.Point(540, 570);
             this.btnShowAppintments.Name = "btnShowAppintments";
             this.btnShowAppintments.Size = new System.Drawing.Size(162, 38);
             this.btnShowAppintments.TabIndex = 9;
@@ -219,7 +225,7 @@
             this.tabPage1.Controls.Add(this.panel5);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(712, 663);
+            this.tabPage1.Size = new System.Drawing.Size(709, 663);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Test";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -233,7 +239,7 @@
             this.btnAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTest.ForeColor = System.Drawing.Color.White;
-            this.btnAddTest.Location = new System.Drawing.Point(0, 579);
+            this.btnAddTest.Location = new System.Drawing.Point(3, 579);
             this.btnAddTest.Name = "btnAddTest";
             this.btnAddTest.Size = new System.Drawing.Size(123, 29);
             this.btnAddTest.TabIndex = 14;
@@ -243,7 +249,8 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
             this.panel2.Controls.Add(this.panel4);
@@ -254,7 +261,7 @@
             this.panel2.Controls.Add(this.rbtnLipidTest);
             this.panel2.Location = new System.Drawing.Point(0, 348);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(709, 169);
+            this.panel2.Size = new System.Drawing.Size(702, 169);
             this.panel2.TabIndex = 13;
             // 
             // rbtnPrfileLiverTest
@@ -271,10 +278,12 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(474, 30);
+            this.panel4.Size = new System.Drawing.Size(702, 30);
             this.panel4.TabIndex = 9;
             // 
             // rbtnHaemoglobinTest
@@ -302,10 +311,12 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.Location = new System.Drawing.Point(0, 37);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(474, 30);
+            this.panel3.Size = new System.Drawing.Size(702, 30);
             this.panel3.TabIndex = 8;
             // 
             // rbtnCreatinineTest
@@ -332,6 +343,8 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel11);
@@ -344,7 +357,7 @@
             this.panel5.Controls.Add(this.cbSearchPatients);
             this.panel5.Location = new System.Drawing.Point(0, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(709, 339);
+            this.panel5.Size = new System.Drawing.Size(702, 339);
             this.panel5.TabIndex = 12;
             // 
             // panel12
@@ -570,20 +583,56 @@
             this.cbSearchPatients.TabIndex = 10;
             this.cbSearchPatients.TextChanged += new System.EventHandler(this.cbSearchPatients_TextChanged);
             // 
+            // btnAddAppointment
+            // 
+            this.btnAddAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddAppointment.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddAppointment.FlatAppearance.BorderSize = 0;
+            this.btnAddAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAppointment.ForeColor = System.Drawing.Color.White;
+            this.btnAddAppointment.Location = new System.Drawing.Point(0, 150);
+            this.btnAddAppointment.Name = "btnAddAppointment";
+            this.btnAddAppointment.Size = new System.Drawing.Size(122, 65);
+            this.btnAddAppointment.TabIndex = 11;
+            this.btnAddAppointment.Text = "Add Appointment";
+            this.btnAddAppointment.UseVisualStyleBackColor = false;
+            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.btnAddPatient);
+            this.panel1.Controls.Add(this.btnAddAppointment);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(47, 733);
+            this.panel1.Size = new System.Drawing.Size(122, 733);
             this.panel1.TabIndex = 1;
+            // 
+            // btnAddPatient
+            // 
+            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddPatient.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddPatient.FlatAppearance.BorderSize = 0;
+            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatient.ForeColor = System.Drawing.Color.White;
+            this.btnAddPatient.Location = new System.Drawing.Point(0, 79);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(122, 65);
+            this.btnAddPatient.TabIndex = 12;
+            this.btnAddPatient.Text = "Add Patient";
+            this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
             // btnUserProChange
             // 
             this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
-            this.btnUserProChange.Location = new System.Drawing.Point(706, 12);
+            this.btnUserProChange.Location = new System.Drawing.Point(778, 12);
             this.btnUserProChange.Name = "btnUserProChange";
             this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
             this.btnUserProChange.TabIndex = 10;
@@ -593,7 +642,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 733);
+            this.ClientSize = new System.Drawing.Size(846, 733);
             this.Controls.Add(this.btnUserProChange);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
@@ -624,6 +673,7 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -674,5 +724,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbCN;
+        private System.Windows.Forms.Button btnAddPatient;
     }
 }

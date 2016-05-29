@@ -53,6 +53,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.cbLDL);
             this.panel2.Controls.Add(this.cbCHOL);
             this.panel2.Controls.Add(this.cbCVLDL);
@@ -60,7 +61,7 @@
             this.panel2.Controls.Add(this.cbCHDL);
             this.panel2.Controls.Add(this.cbT);
             this.panel2.Controls.Add(this.cbCT);
-            this.panel2.Location = new System.Drawing.Point(63, 375);
+            this.panel2.Location = new System.Drawing.Point(63, 390);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(781, 62);
             this.panel2.TabIndex = 19;
@@ -158,6 +159,9 @@
             // 
             // urineGraphs
             // 
+            this.urineGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.urineGraphs.BorderlineColor = System.Drawing.Color.Black;
             this.urineGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea1.Name = "ChartArea1";
@@ -213,7 +217,7 @@
             this.urineGraphs.Series.Add(series5);
             this.urineGraphs.Series.Add(series6);
             this.urineGraphs.Series.Add(series7);
-            this.urineGraphs.Size = new System.Drawing.Size(781, 347);
+            this.urineGraphs.Size = new System.Drawing.Size(781, 372);
             this.urineGraphs.TabIndex = 18;
             this.urineGraphs.Text = "urineGraphs";
             // 

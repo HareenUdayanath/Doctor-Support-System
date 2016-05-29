@@ -14,21 +14,23 @@ namespace DoctorSupportSystem.Interfaces.Reports
 {
     public partial class HeamoglobinResults : Form
     {
-        public HeamoglobinResults()
+        private int pid;
+        public HeamoglobinResults(int pid)
         {
+            this.pid = pid;
             InitializeComponent();
         }
 
         private void btnLoadResults_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = DataBaseOperator.GetInstance()
-                .getHaemoglobinResultsAfter(1,new Date(dateTimePicker1.Value));
+                .getHaemoglobinResultsAfter(pid, new Date(dateTimePicker1.Value));
         }
 
         private void btnGraphs_Click(object sender, EventArgs e)
         {
             new HaemoglobinGraph(DataBaseOperator.GetInstance()
-            .getHaemoglobinAfterForPlot(1, new Date(dateTimePicker1.Value))).ShowDialog();
+            .getHaemoglobinAfterForPlot(pid, new Date(dateTimePicker1.Value))).ShowDialog();
         }
     }
 }
