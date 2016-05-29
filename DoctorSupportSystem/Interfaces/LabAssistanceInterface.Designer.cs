@@ -42,6 +42,10 @@
             this.btnUserProChange = new System.Windows.Forms.Button();
             this.cbSearchPatients = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbCN = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.lbNIC = new System.Windows.Forms.Label();
@@ -60,9 +64,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lbPID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -116,7 +120,8 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
             this.panel2.Controls.Add(this.panel4);
@@ -144,6 +149,8 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Name = "panel4";
@@ -163,6 +170,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.Location = new System.Drawing.Point(0, 37);
             this.panel3.Name = "panel3";
@@ -209,7 +218,10 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Controls.Add(this.panel9);
@@ -220,32 +232,71 @@
             this.panel5.Controls.Add(this.cbSearchPatients);
             this.panel5.Location = new System.Drawing.Point(92, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(473, 313);
+            this.panel5.Size = new System.Drawing.Size(473, 324);
             this.panel5.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Enter the patient name";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel12.Controls.Add(this.label3);
+            this.panel12.Controls.Add(this.lbCN);
+            this.panel12.Location = new System.Drawing.Point(27, 277);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(358, 31);
+            this.panel12.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(31, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Contact Number :\r\n";
+            // 
+            // lbCN
+            // 
+            this.lbCN.AutoSize = true;
+            this.lbCN.Location = new System.Drawing.Point(156, 9);
+            this.lbCN.Name = "lbCN";
+            this.lbCN.Size = new System.Drawing.Size(10, 13);
+            this.lbCN.TabIndex = 13;
+            this.lbCN.Text = "-";
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.lbNIC);
-            this.panel11.Location = new System.Drawing.Point(27, 250);
+            this.panel11.Location = new System.Drawing.Point(27, 240);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(358, 31);
-            this.panel11.TabIndex = 15;
+            this.panel11.TabIndex = 19;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(31, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.Size = new System.Drawing.Size(41, 16);
             this.label12.TabIndex = 12;
             this.label12.Text = "NIC :\r\n";
             // 
             // lbNIC
             // 
             this.lbNIC.AutoSize = true;
-            this.lbNIC.Location = new System.Drawing.Point(145, 9);
+            this.lbNIC.Location = new System.Drawing.Point(154, 9);
             this.lbNIC.Name = "lbNIC";
             this.lbNIC.Size = new System.Drawing.Size(10, 13);
             this.lbNIC.TabIndex = 13;
@@ -256,24 +307,25 @@
             this.panel10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.lbG);
-            this.panel10.Location = new System.Drawing.Point(27, 213);
+            this.panel10.Location = new System.Drawing.Point(27, 203);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(358, 31);
-            this.panel10.TabIndex = 16;
+            this.panel10.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(31, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.Size = new System.Drawing.Size(67, 16);
             this.label10.TabIndex = 12;
             this.label10.Text = "Gender :\r\n";
             // 
             // lbG
             // 
             this.lbG.AutoSize = true;
-            this.lbG.Location = new System.Drawing.Point(145, 9);
+            this.lbG.Location = new System.Drawing.Point(155, 9);
             this.lbG.Name = "lbG";
             this.lbG.Size = new System.Drawing.Size(10, 13);
             this.lbG.TabIndex = 13;
@@ -284,24 +336,25 @@
             this.panel9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.lbDOB);
-            this.panel9.Location = new System.Drawing.Point(27, 176);
+            this.panel9.Location = new System.Drawing.Point(27, 166);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(358, 31);
-            this.panel9.TabIndex = 15;
+            this.panel9.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(31, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 13);
+            this.label8.Size = new System.Drawing.Size(101, 16);
             this.label8.TabIndex = 12;
             this.label8.Text = "Date of Birth :\r\n";
             // 
             // lbDOB
             // 
             this.lbDOB.AutoSize = true;
-            this.lbDOB.Location = new System.Drawing.Point(145, 9);
+            this.lbDOB.Location = new System.Drawing.Point(154, 9);
             this.lbDOB.Name = "lbDOB";
             this.lbDOB.Size = new System.Drawing.Size(10, 13);
             this.lbDOB.TabIndex = 13;
@@ -312,24 +365,25 @@
             this.panel8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.lbLN);
-            this.panel8.Location = new System.Drawing.Point(27, 139);
+            this.panel8.Location = new System.Drawing.Point(27, 129);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(358, 31);
-            this.panel8.TabIndex = 15;
+            this.panel8.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.Size = new System.Drawing.Size(90, 16);
             this.label6.TabIndex = 12;
             this.label6.Text = "Last Name :\r\n";
             // 
             // lbLN
             // 
             this.lbLN.AutoSize = true;
-            this.lbLN.Location = new System.Drawing.Point(145, 9);
+            this.lbLN.Location = new System.Drawing.Point(155, 9);
             this.lbLN.Name = "lbLN";
             this.lbLN.Size = new System.Drawing.Size(10, 13);
             this.lbLN.TabIndex = 13;
@@ -340,24 +394,25 @@
             this.panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.lbFN);
-            this.panel7.Location = new System.Drawing.Point(27, 102);
+            this.panel7.Location = new System.Drawing.Point(27, 92);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(358, 31);
-            this.panel7.TabIndex = 15;
+            this.panel7.TabIndex = 22;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(31, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(91, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "First Name :\r\n";
             // 
             // lbFN
             // 
             this.lbFN.AutoSize = true;
-            this.lbFN.Location = new System.Drawing.Point(145, 9);
+            this.lbFN.Location = new System.Drawing.Point(155, 9);
             this.lbFN.Name = "lbFN";
             this.lbFN.Size = new System.Drawing.Size(10, 13);
             this.lbFN.TabIndex = 13;
@@ -368,37 +423,29 @@
             this.panel6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.lbPID);
-            this.panel6.Location = new System.Drawing.Point(27, 65);
+            this.panel6.Location = new System.Drawing.Point(27, 55);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(358, 31);
-            this.panel6.TabIndex = 14;
+            this.panel6.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(31, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 12;
             this.label2.Text = "PID :\r\n";
             // 
             // lbPID
             // 
             this.lbPID.AutoSize = true;
-            this.lbPID.Location = new System.Drawing.Point(145, 9);
+            this.lbPID.Location = new System.Drawing.Point(155, 9);
             this.lbPID.Name = "lbPID";
             this.lbPID.Size = new System.Drawing.Size(10, 13);
             this.lbPID.TabIndex = 13;
             this.lbPID.Text = "-";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Enter the patient name";
             // 
             // LabAssistanceInterface
             // 
@@ -418,6 +465,8 @@
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -449,6 +498,16 @@
         private System.Windows.Forms.Button btnUserProChange;
         private System.Windows.Forms.ComboBox cbSearchPatients;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbCN;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbNIC;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbG;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbDOB;
@@ -461,12 +520,5 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbPID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lbNIC;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbG;
     }
 }
