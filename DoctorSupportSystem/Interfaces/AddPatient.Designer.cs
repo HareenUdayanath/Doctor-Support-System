@@ -49,6 +49,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCoNo = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,16 +74,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCoNo = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,6 +104,33 @@
             this.panel1.Size = new System.Drawing.Size(442, 389);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.txtCoNo);
+            this.panel5.Location = new System.Drawing.Point(0, 351);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(442, 38);
+            this.panel5.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label11.Location = new System.Drawing.Point(22, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Contact Number:";
+            // 
+            // txtCoNo
+            // 
+            this.txtCoNo.Location = new System.Drawing.Point(152, 7);
+            this.txtCoNo.Name = "txtCoNo";
+            this.txtCoNo.Size = new System.Drawing.Size(208, 20);
+            this.txtCoNo.TabIndex = 20;
             // 
             // panel2
             // 
@@ -252,6 +279,7 @@
             // comboBoxGender
             // 
             this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxGender.FormattingEnabled = true;
             this.comboBoxGender.Items.AddRange(new object[] {
             "Male",
@@ -303,23 +331,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient ID : ";
             // 
-            // txtCoNo
-            // 
-            this.txtCoNo.Location = new System.Drawing.Point(152, 7);
-            this.txtCoNo.Name = "txtCoNo";
-            this.txtCoNo.Size = new System.Drawing.Size(208, 20);
-            this.txtCoNo.TabIndex = 20;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label11.Location = new System.Drawing.Point(22, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Contact Number:";
-            // 
             // btnAddPatient
             // 
             this.btnAddPatient.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -346,16 +357,6 @@
             this.panel3.TabIndex = 12;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.txtCoNo);
-            this.panel5.Location = new System.Drawing.Point(0, 351);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(442, 38);
-            this.panel5.TabIndex = 8;
-            // 
             // AddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,18 +365,20 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnAddPatient);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddPatient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add New Patient";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

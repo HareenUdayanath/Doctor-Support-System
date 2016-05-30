@@ -218,6 +218,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddAppointment";
             this.Tag = "";
             this.Text = "Add Appointment";

@@ -1,6 +1,6 @@
-﻿namespace DoctorSupportSystem.Interfaces
+﻿namespace DoctorSupportSystem.Interfaces.Reports
 {
-    partial class LabAssistanceInterface
+    partial class MedicalReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabAssistanceInterface));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rbtnCreatinineTest = new System.Windows.Forms.RadioButton();
-            this.rbtnHaemoglobinTest = new System.Windows.Forms.RadioButton();
-            this.rbtnLipidTest = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnPrfileLiverTest = new System.Windows.Forms.RadioButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.rbtnUrineTest = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLoadPatients = new System.Windows.Forms.Button();
-            this.btnUserProChange = new System.Windows.Forms.Button();
-            this.cbSearchPatients = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,8 +50,17 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lbPID = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.txtDoctorOpinion = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -73,154 +69,19 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(85, 558);
-            this.panel1.TabIndex = 2;
-            // 
-            // rbtnCreatinineTest
-            // 
-            this.rbtnCreatinineTest.AutoSize = true;
-            this.rbtnCreatinineTest.Location = new System.Drawing.Point(18, 13);
-            this.rbtnCreatinineTest.Name = "rbtnCreatinineTest";
-            this.rbtnCreatinineTest.Size = new System.Drawing.Size(178, 17);
-            this.rbtnCreatinineTest.TabIndex = 3;
-            this.rbtnCreatinineTest.TabStop = true;
-            this.rbtnCreatinineTest.Text = "CREATININE AND eGFR TEST";
-            this.rbtnCreatinineTest.UseVisualStyleBackColor = true;
-            // 
-            // rbtnHaemoglobinTest
-            // 
-            this.rbtnHaemoglobinTest.AutoSize = true;
-            this.rbtnHaemoglobinTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.rbtnHaemoglobinTest.Location = new System.Drawing.Point(18, 43);
-            this.rbtnHaemoglobinTest.Name = "rbtnHaemoglobinTest";
-            this.rbtnHaemoglobinTest.Size = new System.Drawing.Size(210, 17);
-            this.rbtnHaemoglobinTest.TabIndex = 4;
-            this.rbtnHaemoglobinTest.TabStop = true;
-            this.rbtnHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
-            this.rbtnHaemoglobinTest.UseVisualStyleBackColor = false;
-            // 
-            // rbtnLipidTest
-            // 
-            this.rbtnLipidTest.AutoSize = true;
-            this.rbtnLipidTest.Location = new System.Drawing.Point(18, 75);
-            this.rbtnLipidTest.Name = "rbtnLipidTest";
-            this.rbtnLipidTest.Size = new System.Drawing.Size(100, 17);
-            this.rbtnLipidTest.TabIndex = 5;
-            this.rbtnLipidTest.TabStop = true;
-            this.rbtnLipidTest.Text = "LIPID PROFILE";
-            this.rbtnLipidTest.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.rbtnHaemoglobinTest);
-            this.panel2.Controls.Add(this.rbtnUrineTest);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.rbtnCreatinineTest);
-            this.panel2.Controls.Add(this.rbtnLipidTest);
-            this.panel2.Location = new System.Drawing.Point(92, 342);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(474, 169);
-            this.panel2.TabIndex = 6;
-            // 
-            // rbtnPrfileLiverTest
-            // 
-            this.rbtnPrfileLiverTest.AutoSize = true;
-            this.rbtnPrfileLiverTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.rbtnPrfileLiverTest.Location = new System.Drawing.Point(18, 108);
-            this.rbtnPrfileLiverTest.Name = "rbtnPrfileLiverTest";
-            this.rbtnPrfileLiverTest.Size = new System.Drawing.Size(135, 17);
-            this.rbtnPrfileLiverTest.TabIndex = 6;
-            this.rbtnPrfileLiverTest.TabStop = true;
-            this.rbtnPrfileLiverTest.Text = "PROFILE LIVER TEST";
-            this.rbtnPrfileLiverTest.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(474, 30);
-            this.panel4.TabIndex = 9;
-            // 
-            // rbtnUrineTest
-            // 
-            this.rbtnUrineTest.AutoSize = true;
-            this.rbtnUrineTest.Location = new System.Drawing.Point(18, 140);
-            this.rbtnUrineTest.Name = "rbtnUrineTest";
-            this.rbtnUrineTest.Size = new System.Drawing.Size(204, 17);
-            this.rbtnUrineTest.TabIndex = 7;
-            this.rbtnUrineTest.TabStop = true;
-            this.rbtnUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
-            this.rbtnUrineTest.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.Location = new System.Drawing.Point(0, 37);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(474, 30);
-            this.panel3.TabIndex = 8;
-            // 
-            // btnLoadPatients
-            // 
-            this.btnLoadPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLoadPatients.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLoadPatients.FlatAppearance.BorderSize = 0;
-            this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(91, 517);
-            this.btnLoadPatients.Name = "btnLoadPatients";
-            this.btnLoadPatients.Size = new System.Drawing.Size(123, 29);
-            this.btnLoadPatients.TabIndex = 7;
-            this.btnLoadPatients.Text = "Add Test";
-            this.btnLoadPatients.UseVisualStyleBackColor = false;
-            this.btnLoadPatients.Click += new System.EventHandler(this.btnLoadPatients_Click);
-            // 
-            // btnUserProChange
-            // 
-            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
-            this.btnUserProChange.Location = new System.Drawing.Point(648, 12);
-            this.btnUserProChange.Name = "btnUserProChange";
-            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
-            this.btnUserProChange.TabIndex = 9;
-            this.btnUserProChange.UseVisualStyleBackColor = true;
-            // 
-            // cbSearchPatients
-            // 
-            this.cbSearchPatients.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbSearchPatients.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbSearchPatients.FormattingEnabled = true;
-            this.cbSearchPatients.Location = new System.Drawing.Point(191, 18);
-            this.cbSearchPatients.Name = "cbSearchPatients";
-            this.cbSearchPatients.Size = new System.Drawing.Size(194, 21);
-            this.cbSearchPatients.TabIndex = 10;
-            this.cbSearchPatients.TextChanged += new System.EventHandler(this.cbSearchPatients_TextChanged);
             // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.panel2);
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.panel10);
@@ -228,21 +89,19 @@
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.cbSearchPatients);
-            this.panel5.Location = new System.Drawing.Point(92, 12);
+            this.panel5.Location = new System.Drawing.Point(97, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(473, 324);
-            this.panel5.TabIndex = 11;
+            this.panel5.Size = new System.Drawing.Size(558, 554);
+            this.panel5.TabIndex = 13;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel12.Controls.Add(this.label3);
             this.panel12.Controls.Add(this.lbCN);
-            this.panel12.Location = new System.Drawing.Point(27, 277);
+            this.panel12.Location = new System.Drawing.Point(3, 225);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(358, 31);
+            this.panel12.Size = new System.Drawing.Size(555, 31);
             this.panel12.TabIndex = 24;
             // 
             // label3
@@ -269,9 +128,9 @@
             this.panel11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.lbNIC);
-            this.panel11.Location = new System.Drawing.Point(27, 240);
+            this.panel11.Location = new System.Drawing.Point(3, 188);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(358, 31);
+            this.panel11.Size = new System.Drawing.Size(555, 31);
             this.panel11.TabIndex = 19;
             // 
             // label12
@@ -298,9 +157,9 @@
             this.panel10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.lbG);
-            this.panel10.Location = new System.Drawing.Point(27, 203);
+            this.panel10.Location = new System.Drawing.Point(3, 151);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(358, 31);
+            this.panel10.Size = new System.Drawing.Size(555, 31);
             this.panel10.TabIndex = 23;
             // 
             // label10
@@ -327,9 +186,9 @@
             this.panel9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.lbDOB);
-            this.panel9.Location = new System.Drawing.Point(27, 166);
+            this.panel9.Location = new System.Drawing.Point(3, 114);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(358, 31);
+            this.panel9.Size = new System.Drawing.Size(555, 31);
             this.panel9.TabIndex = 20;
             // 
             // label8
@@ -356,9 +215,9 @@
             this.panel8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.lbLN);
-            this.panel8.Location = new System.Drawing.Point(27, 129);
+            this.panel8.Location = new System.Drawing.Point(3, 77);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(358, 31);
+            this.panel8.Size = new System.Drawing.Size(555, 31);
             this.panel8.TabIndex = 21;
             // 
             // label6
@@ -385,9 +244,9 @@
             this.panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.lbFN);
-            this.panel7.Location = new System.Drawing.Point(27, 92);
+            this.panel7.Location = new System.Drawing.Point(3, 40);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(358, 31);
+            this.panel7.Size = new System.Drawing.Size(555, 31);
             this.panel7.TabIndex = 22;
             // 
             // label4
@@ -414,9 +273,9 @@
             this.panel6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.lbPID);
-            this.panel6.Location = new System.Drawing.Point(27, 55);
+            this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(358, 31);
+            this.panel6.Size = new System.Drawing.Size(555, 31);
             this.panel6.TabIndex = 18;
             // 
             // label2
@@ -438,34 +297,125 @@
             this.lbPID.TabIndex = 13;
             this.lbPID.Text = "-";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(85, 578);
+            this.panel1.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Controls.Add(this.txtDoctorOpinion);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(2, 262);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(555, 106);
+            this.panel2.TabIndex = 25;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 21);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Enter the patient name";
+            this.label1.Size = new System.Drawing.Size(129, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Doctor\'s opinion :\r\n";
             // 
-            // LabAssistanceInterface
+            // txtDoctorOpinion
+            // 
+            this.txtDoctorOpinion.Location = new System.Drawing.Point(172, 9);
+            this.txtDoctorOpinion.Multiline = true;
+            this.txtDoctorOpinion.Name = "txtDoctorOpinion";
+            this.txtDoctorOpinion.Size = new System.Drawing.Size(376, 94);
+            this.txtDoctorOpinion.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(3, 374);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(555, 106);
+            this.panel3.TabIndex = 26;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(172, 9);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(376, 94);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(31, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 32);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Doctor\'s \r\nRecommendation :\r\n";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel4.Controls.Add(this.comboBoxGender);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Location = new System.Drawing.Point(3, 486);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(555, 65);
+            this.panel4.TabIndex = 27;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(156, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(10, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "-";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(31, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(192, 16);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Is applicant fit for the duty :";
+            // 
+            // comboBoxGender
+            // 
+            this.comboBoxGender.BackColor = System.Drawing.Color.White;
+            this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.comboBoxGender.Location = new System.Drawing.Point(238, 9);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(95, 21);
+            this.comboBoxGender.TabIndex = 14;
+            // 
+            // MedicalReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 558);
+            this.ClientSize = new System.Drawing.Size(659, 578);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.btnUserProChange);
-            this.Controls.Add(this.btnLoadPatients);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "LabAssistanceInterface";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Lab Assistance";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Name = "MedicalReport";
+            this.Text = "MedicalReport";
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -480,25 +430,27 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton rbtnCreatinineTest;
-        private System.Windows.Forms.RadioButton rbtnHaemoglobinTest;
-        private System.Windows.Forms.RadioButton rbtnLipidTest;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton rbtnUrineTest;
-        private System.Windows.Forms.RadioButton rbtnPrfileLiverTest;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnLoadPatients;
-        private System.Windows.Forms.Button btnUserProChange;
-        private System.Windows.Forms.ComboBox cbSearchPatients;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtDoctorOpinion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label3;
@@ -521,5 +473,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbPID;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBoxGender;
     }
 }

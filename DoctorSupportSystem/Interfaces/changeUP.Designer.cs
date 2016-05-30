@@ -34,21 +34,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNewPW = new System.Windows.Forms.TextBox();
             this.txtNewUN = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNewCPW = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNewPW = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnChangeUP = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,6 +108,33 @@
             this.panel2.Size = new System.Drawing.Size(342, 155);
             this.panel2.TabIndex = 11;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.txtNewPW);
+            this.panel5.Location = new System.Drawing.Point(0, 50);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(342, 55);
+            this.panel5.TabIndex = 23;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "New Password :";
+            // 
+            // txtNewPW
+            // 
+            this.txtNewPW.Location = new System.Drawing.Point(131, 16);
+            this.txtNewPW.Name = "txtNewPW";
+            this.txtNewPW.PasswordChar = '*';
+            this.txtNewPW.Size = new System.Drawing.Size(170, 20);
+            this.txtNewPW.TabIndex = 6;
+            // 
             // txtNewUN
             // 
             this.txtNewUN.Location = new System.Drawing.Point(131, 13);
@@ -131,23 +158,6 @@
             this.txtNewCPW.PasswordChar = '*';
             this.txtNewCPW.Size = new System.Drawing.Size(170, 20);
             this.txtNewCPW.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "New Password :";
-            // 
-            // txtNewPW
-            // 
-            this.txtNewPW.Location = new System.Drawing.Point(131, 16);
-            this.txtNewPW.Name = "txtNewPW";
-            this.txtNewPW.PasswordChar = '*';
-            this.txtNewPW.Size = new System.Drawing.Size(170, 20);
-            this.txtNewPW.TabIndex = 6;
             // 
             // label6
             // 
@@ -209,16 +219,6 @@
             this.panel4.Size = new System.Drawing.Size(342, 55);
             this.panel4.TabIndex = 22;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.txtNewPW);
-            this.panel5.Location = new System.Drawing.Point(0, 50);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(342, 55);
-            this.panel5.TabIndex = 23;
-            // 
             // ChangeUP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,16 +230,18 @@
             this.Controls.Add(this.btnChangeUP);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ChangeUP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Change Username and Password";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -646,6 +646,7 @@
             this.Controls.Add(this.btnUserProChange);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AssistanceInterface";
             this.Text = "Assistance";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
