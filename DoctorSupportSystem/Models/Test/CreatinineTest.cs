@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoctorSupportSystem.Models.Test
 {
-    public class CreatinineTest : Test
+    public class CreatinineTest : MedicalTest
     {
         private float serumCreatinint;
         private float gfr;
