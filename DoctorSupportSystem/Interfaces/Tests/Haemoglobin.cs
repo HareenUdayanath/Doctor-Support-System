@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using DoctorSupportSystem.Models.Test;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Help;
 
 namespace DoctorSupportSystem.Interfaces.Tests
 {
     public partial class Haemoglobin : Form
     {
-        public Haemoglobin()
+
+        private int pid;
+        public Haemoglobin(int pid)
         {
+            this.pid = pid;
             InitializeComponent();
         }
 
@@ -24,20 +28,34 @@ namespace DoctorSupportSystem.Interfaces.Tests
         private void btnAddResults_Click(object sender, EventArgs e)
         {
             HaemoglobinTest test = new HaemoglobinTest();
-            test.Pid = 1;
+            string err = "";
+            test.Pid = pid;
             test.Date = new Date(this.dateTimePicker1.Value);
-            test.Results = (float)Convert.ToDecimal(this.txtResult.Text);
+
+            if (!Validator.numberCheck(txtResult.Text))
+                err += "estimated GFR should be a number \n";
+            else
+                test.Results = (float)Convert.ToDecimal(txtResult.Text);
 
 
-            if (DataBaseOperator.GetInstance().addHaemoglobinTest(test) != 1)
+            if (err != "")
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(err);
             }
             else
             {
-                MessageBox.Show("Test is added successfully");
-                this.Close();
+                if (DataBaseOperator.GetInstance().addHaemoglobinTest(test) != 1)
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    MessageBox.Show("Test is added successfully");
+                    this.Close();
+                }
             }
+
+          
         }
     }
 }

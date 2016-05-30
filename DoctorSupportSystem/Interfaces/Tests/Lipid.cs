@@ -1,4 +1,5 @@
 ﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Help;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.Models.Test;
 using System;
@@ -15,33 +16,73 @@ namespace DoctorSupportSystem.Interfaces.Tests
 {
     public partial class Lipid : Form
     {
-        public Lipid()
+        private int pid;
+        public Lipid(int pid)
         {
+            this.pid = pid;
             InitializeComponent();
         }
 
         private void btnAddResult_Click(object sender, EventArgs e)
         {
             LipidTest test = new LipidTest();
-            test.Pid = 1;
+            string err = "";
+            test.Pid = pid;
             test.Date = new Date(this.dateTimePicker1.Value);
-            test.CholesterolTotal = (float)Convert.ToDecimal(this.txtCholesterolTot.Text);
-            test.Triglycerides = (float)Convert.ToDecimal(this.txtTriglyceride.Text);
-            test.CholesterolHDL = (float)Convert.ToDecimal(this.txtCholesterolHDL.Text);
-            test.CholesterolLDL = (float)Convert.ToDecimal(this.txtCholesterolLDL.Text);
-            test.CholesterolVLDL = (float)Convert.ToDecimal(this.txtCholesterolVLDL.Text);
-            test.Chol_hdl = (float)Convert.ToDecimal(this.txtCHOL.Text);
-            test.Ldl_hdl = (float)Convert.ToDecimal(this.txtLDL.Text);
+            
+            if (!Validator.numberRangeCheck(txtCholesterolTot.Text,140,239))
+                err += "Cholesterol Total should be a number between 140.0-239.0\n";
+            else
+                test.CholesterolTotal = (float)Convert.ToDecimal(txtCholesterolTot.Text);
 
-            if (DataBaseOperator.GetInstance().addLipidTest(test) != 1)
+            if (!Validator.numberRangeCheck(txtTriglyceride.Text, 10, 200))
+                err += "Triglyceride should be a number between 10.0-200.0\n";
+            else
+                test.Triglycerides = (float)Convert.ToDecimal(txtTriglyceride.Text);
+
+            if (!Validator.numberRangeCheck(txtCholesterolHDL.Text, 35, 85))
+                err += "Cholesterol H.D.L. should be a number between 35.0-85.0\n";
+            else
+                test.CholesterolHDL = (float)Convert.ToDecimal(txtCholesterolHDL.Text);
+
+            if (!Validator.numberRangeCheck(txtCholesterolLDL.Text, 75, 159))
+                err += "txtCholesterol L.D.L. should be a number between 75.0-159.0\n";
+            else
+                test.CholesterolLDL = (float)Convert.ToDecimal(txtCholesterolLDL.Text);
+
+            if (!Validator.numberRangeCheck(txtCholesterolVLDL.Text, 10, 41))
+                err += "Cholesterol VLDL should be a number between 10.0-41.0\n";
+            else
+                test.CholesterolVLDL = (float)Convert.ToDecimal(txtCholesterolVLDL.Text);
+
+            if (!Validator.numberRangeCheck(txtCHOL.Text, 2, 5))
+                err += "CHOL/HDL should be a number between 2.0-5.0\n";
+            else
+                test.Chol_hdl = (float)Convert.ToDecimal(txtCHOL.Text);
+
+            if (!Validator.numberRangeCheck(txtLDL.Text, 0, 3.3))
+                err += "LDL/HDL should be a number between 0.0-3.3\n";
+            else
+                test.Ldl_hdl = (float)Convert.ToDecimal(txtLDL.Text);
+
+            if (err != "")
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(err);
             }
             else
             {
-                MessageBox.Show("Test is added successfully");
-                this.Close();
+                if (DataBaseOperator.GetInstance().addLipidTest(test) != 1)
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    MessageBox.Show("Test is added successfully");
+                    this.Close();
+                }
             }
+
+           
         }
     }
 }

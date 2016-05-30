@@ -10,13 +10,16 @@ using System.Windows.Forms;
 using DoctorSupportSystem.Models.Test;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Help;
 
 namespace DoctorSupportSystem.Interfaces.Tests
 {
     public partial class CreatinineAnd_eGFR : Form
     {
-        public CreatinineAnd_eGFR()
+        private int pid;
+        public CreatinineAnd_eGFR(int pid)
         {
+            this.pid = pid;
             InitializeComponent();
         }
 
@@ -24,21 +27,40 @@ namespace DoctorSupportSystem.Interfaces.Tests
         {
 
             CreatinineTest test = new CreatinineTest();
-            test.Pid = 1;
+            string err = "";
+            test.Pid = pid;
             test.Date = new Date(this.dateTimePicker1.Value);
-            test.SerumCreatinint = (float)Convert.ToDecimal(this.txtSerum.Text);
-            Console.WriteLine(test.SerumCreatinint);
-            test.Gfr = (float)Convert.ToDecimal(this.txtGFR.Text);
 
-            if (DataBaseOperator.GetInstance().addCreatinineTest(test) != 1)
+            if (!Validator.numberRangeCheck(txtSerum.Text, 0.8, 1.3))
+                err += "Serum Creatinint should be a number between 0.8-1.3\n";
+            else
+                test.SerumCreatinint = (float)Convert.ToDecimal(txtSerum.Text);
+
+            if (!Validator.numberCheck(txtGFR.Text))
+                err += "estimated GFR should be a number \n";
+            else
+                test.Gfr = (float)Convert.ToDecimal(txtGFR.Text);
+
+
+
+            if (err != "")
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(err);
             }
             else
             {
-                MessageBox.Show("Test is added successfully");
-                this.Close();
+                if (DataBaseOperator.GetInstance().addCreatinineTest(test) != 1)
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    MessageBox.Show("Test is added successfully");
+                    this.Close();
+                }
             }
+
+            
         }
     }
 }

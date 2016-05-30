@@ -1,4 +1,5 @@
 ﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Help;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.Models.Test;
 using System;
@@ -15,7 +16,10 @@ namespace DoctorSupportSystem.Interfaces.Tests
 {
     public partial class URINE_FOR_MICRO_ALBUMIN : Form
     {
-        public URINE_FOR_MICRO_ALBUMIN()
+
+        private int pid;
+
+        public URINE_FOR_MICRO_ALBUMIN(int pid)
         {
             InitializeComponent();
         }
@@ -23,22 +27,43 @@ namespace DoctorSupportSystem.Interfaces.Tests
         private void btnAddResult_Click(object sender, EventArgs e)
         {
             UrineTest test = new UrineTest();
-            test.Pid = 1;
+            string err = "";
+            test.Pid = pid;
             test.Date = new Date(this.dateTimePicker1.Value);
-            test.Urine_MA = (float)Convert.ToDecimal(this.txtUrineMA.Text);
-            test.Urine_C = (float)Convert.ToDecimal(this.txtUrineC.Text);
-            test.Urine_AC = (float)Convert.ToDecimal(this.txtUrineAC.Text);
-            
 
-            if (DataBaseOperator.GetInstance().addUrineTest(test) != 1)
+
+            if (!Validator.numberCheck(txtUrineMA.Text))
+                err += "Urine for Micro Albumin should be a number \n";
+            else
+                test.Urine_MA = (float)Convert.ToDecimal(txtUrineMA.Text);
+
+            if (!Validator.numberCheck(txtUrineC.Text))
+                err += "Urine Creatinine should be a number \n";
+            else
+                test.Urine_C = (float)Convert.ToDecimal(txtUrineC.Text);
+
+            if (!Validator.numberCheck(txtUrineAC.Text))
+                err += "Urine Albumin/Creatinine should be a number \n";
+            else
+                test.Urine_AC = (float)Convert.ToDecimal(txtUrineAC.Text);
+
+            if (err != "")
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(err);
             }
             else
             {
-                MessageBox.Show("Test is added successfully");
-                this.Close();
+                if (DataBaseOperator.GetInstance().addUrineTest(test) != 1)
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    MessageBox.Show("Test is added successfully");
+                    this.Close();
+                }
             }
+                       
         }
     }
 }

@@ -49,15 +49,44 @@ namespace DoctorSupportSystem.Interfaces
         private void btnAddTest_Click_1(object sender, EventArgs e)
         {
             if (this.rbtnCreatinineTest.Checked)
-                new CreatinineAnd_eGFR().ShowDialog();
+            {
+                if (patient != null)
+                    new CreatinineAnd_eGFR(patient.PID).ShowDialog();
+                else
+                    MessageBox.Show("Select the Patient");
+            }
             else if (this.rbtnHaemoglobinTest.Checked)
-                new Haemoglobin().ShowDialog();
+            {
+                if (patient != null)
+                    new Haemoglobin(patient.PID).ShowDialog();
+                else
+                    MessageBox.Show("Select the Patient");
+
+            }
             else if (this.rbtnLipidTest.Checked)
-                new Lipid().ShowDialog();
+            {
+                if (patient != null)
+                    new Lipid(patient.PID).ShowDialog();
+                else
+                    MessageBox.Show("Select the Patient");
+
+            }
             else if (this.rbtnPrfileLiverTest.Checked)
-                new ProfileLiver().ShowDialog();
+            {
+                if (patient != null)
+                    new ProfileLiver(patient.PID).ShowDialog();
+                else
+                    MessageBox.Show("Select the Patient");
+
+            }
             else if (this.rbtnUrineTest.Checked)
-                new URINE_FOR_MICRO_ALBUMIN().ShowDialog();
+            {
+                if (patient != null)
+                    new URINE_FOR_MICRO_ALBUMIN(patient.PID).ShowDialog();
+                else
+                    MessageBox.Show("Select the Patient");
+
+            }
         }
 
         private void cbSearchPatients_TextChanged_1(object sender, EventArgs e)
@@ -90,6 +119,7 @@ namespace DoctorSupportSystem.Interfaces
             }
             catch (IndexOutOfRangeException ex)
             {
+                patient = null;
                 lbPID.Text = "-";
                 lbFN.Text = "-";
                 lbLN.Text = "-";
