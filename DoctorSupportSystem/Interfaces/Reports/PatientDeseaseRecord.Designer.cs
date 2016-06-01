@@ -55,15 +55,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.txtDesease = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbCreatinineTest = new System.Windows.Forms.CheckBox();
-            this.cbHaemoglobinTest = new System.Windows.Forms.CheckBox();
-            this.cbLipidTest = new System.Windows.Forms.CheckBox();
-            this.cbPrfileLiverTest = new System.Windows.Forms.CheckBox();
-            this.cbUrineTest = new System.Windows.Forms.CheckBox();
             this.btnAddRecord = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -75,7 +68,6 @@
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel17.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -326,7 +318,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(85, 618);
+            this.panel1.Size = new System.Drawing.Size(85, 461);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -334,22 +326,28 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel17);
             this.panel2.Location = new System.Drawing.Point(91, 342);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(529, 219);
+            this.panel2.Size = new System.Drawing.Size(529, 71);
             this.panel2.TabIndex = 14;
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel17.Controls.Add(this.textBox1);
+            this.panel17.Controls.Add(this.txtDesease);
             this.panel17.Controls.Add(this.label21);
             this.panel17.Location = new System.Drawing.Point(27, 17);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(467, 35);
             this.panel17.TabIndex = 18;
+            // 
+            // txtDesease
+            // 
+            this.txtDesease.Location = new System.Drawing.Point(164, 8);
+            this.txtDesease.Name = "txtDesease";
+            this.txtDesease.Size = new System.Drawing.Size(290, 20);
+            this.txtDesease.TabIndex = 13;
             // 
             // label21
             // 
@@ -361,87 +359,6 @@
             this.label21.TabIndex = 12;
             this.label21.Text = " Desease:\r\n";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(164, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 20);
-            this.textBox1.TabIndex = 13;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel3.Controls.Add(this.cbUrineTest);
-            this.panel3.Controls.Add(this.cbPrfileLiverTest);
-            this.panel3.Controls.Add(this.cbLipidTest);
-            this.panel3.Controls.Add(this.cbHaemoglobinTest);
-            this.panel3.Controls.Add(this.cbCreatinineTest);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(27, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(467, 149);
-            this.panel3.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 16);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Relevent Tests:\r\n";
-            // 
-            // cbCreatinineTest
-            // 
-            this.cbCreatinineTest.AutoSize = true;
-            this.cbCreatinineTest.Location = new System.Drawing.Point(164, 10);
-            this.cbCreatinineTest.Name = "cbCreatinineTest";
-            this.cbCreatinineTest.Size = new System.Drawing.Size(179, 17);
-            this.cbCreatinineTest.TabIndex = 13;
-            this.cbCreatinineTest.Text = "CREATININE AND eGFR TEST";
-            this.cbCreatinineTest.UseVisualStyleBackColor = true;
-            // 
-            // cbHaemoglobinTest
-            // 
-            this.cbHaemoglobinTest.AutoSize = true;
-            this.cbHaemoglobinTest.Location = new System.Drawing.Point(164, 33);
-            this.cbHaemoglobinTest.Name = "cbHaemoglobinTest";
-            this.cbHaemoglobinTest.Size = new System.Drawing.Size(211, 17);
-            this.cbHaemoglobinTest.TabIndex = 14;
-            this.cbHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
-            this.cbHaemoglobinTest.UseVisualStyleBackColor = true;
-            // 
-            // cbLipidTest
-            // 
-            this.cbLipidTest.AutoSize = true;
-            this.cbLipidTest.Location = new System.Drawing.Point(164, 56);
-            this.cbLipidTest.Name = "cbLipidTest";
-            this.cbLipidTest.Size = new System.Drawing.Size(101, 17);
-            this.cbLipidTest.TabIndex = 15;
-            this.cbLipidTest.Text = "LIPID PROFILE";
-            this.cbLipidTest.UseVisualStyleBackColor = true;
-            // 
-            // cbPrfileLiverTest
-            // 
-            this.cbPrfileLiverTest.AutoSize = true;
-            this.cbPrfileLiverTest.Location = new System.Drawing.Point(164, 79);
-            this.cbPrfileLiverTest.Name = "cbPrfileLiverTest";
-            this.cbPrfileLiverTest.Size = new System.Drawing.Size(136, 17);
-            this.cbPrfileLiverTest.TabIndex = 16;
-            this.cbPrfileLiverTest.Text = "PROFILE LIVER TEST";
-            this.cbPrfileLiverTest.UseVisualStyleBackColor = true;
-            // 
-            // cbUrineTest
-            // 
-            this.cbUrineTest.AutoSize = true;
-            this.cbUrineTest.Location = new System.Drawing.Point(164, 102);
-            this.cbUrineTest.Name = "cbUrineTest";
-            this.cbUrineTest.Size = new System.Drawing.Size(205, 17);
-            this.cbUrineTest.TabIndex = 17;
-            this.cbUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
-            this.cbUrineTest.UseVisualStyleBackColor = true;
-            // 
             // btnAddRecord
             // 
             this.btnAddRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -451,7 +368,7 @@
             this.btnAddRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRecord.ForeColor = System.Drawing.Color.White;
-            this.btnAddRecord.Location = new System.Drawing.Point(91, 577);
+            this.btnAddRecord.Location = new System.Drawing.Point(91, 420);
             this.btnAddRecord.Name = "btnAddRecord";
             this.btnAddRecord.Size = new System.Drawing.Size(123, 29);
             this.btnAddRecord.TabIndex = 15;
@@ -463,7 +380,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 618);
+            this.ClientSize = new System.Drawing.Size(651, 461);
             this.Controls.Add(this.btnAddRecord);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
@@ -489,8 +406,6 @@
             this.panel2.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -523,15 +438,8 @@
         private System.Windows.Forms.ComboBox cbSearchPatients;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.CheckBox cbUrineTest;
-        private System.Windows.Forms.CheckBox cbPrfileLiverTest;
-        private System.Windows.Forms.CheckBox cbLipidTest;
-        private System.Windows.Forms.CheckBox cbHaemoglobinTest;
-        private System.Windows.Forms.CheckBox cbCreatinineTest;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDesease;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnAddRecord;
     }

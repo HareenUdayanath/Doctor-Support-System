@@ -66,6 +66,37 @@ namespace DoctorSupportSystem.Interfaces.Reports
 
         private void btnAddRecord_Click(object sender, EventArgs e)
         {
+            DeseaseReport dr = new DeseaseReport();
+
+            string err = "";
+
+
+            if (lbPID.Text == "-")
+                err += "Select a patient\n";
+
+            if (txtDesease.Text == "")
+                err += "Desease required\n";
+
+
+            if (err != "")
+            {
+                MessageBox.Show(err);
+            }
+            else
+            {
+                dr.Desease = txtDesease.Text;
+                dr.Pid = Convert.ToInt32(lbPID.Text);
+                if (DataBaseOperator.GetInstance().addDeseaseReport(dr) == 1)
+                {
+                    MessageBox.Show("The desease report successfully added to the database");                    
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong....");
+                   
+                }
+            }
 
         }
     }

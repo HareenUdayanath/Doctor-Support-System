@@ -12,7 +12,6 @@ namespace DoctorSupportSystem.Models
         private int rid;
         private int pid;
         private string desease;
-        private List<MedicalTest> testList = new List<MedicalTest>();
 
         public int Rid
         {
@@ -53,17 +52,6 @@ namespace DoctorSupportSystem.Models
             }
         }
 
-        public List<MedicalTest> TestList
-        {
-            get
-            {
-                return testList;
-            }
-                      
-        }
-        
-        public void addTest(MedicalTest test) {
-            testList.Add(test);
-        }
+       
     }
 }

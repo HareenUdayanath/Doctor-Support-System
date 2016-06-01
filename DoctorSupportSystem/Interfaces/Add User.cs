@@ -66,8 +66,7 @@ namespace DoctorSupportSystem.Interfaces
                 }
                 else
                 {
-                    MessageBox.Show("The user successfully added to the database");
-                    new Add_User().Show();
+                    MessageBox.Show("The user successfully added to the database");                    
                     this.Close();
                 }
             }
