@@ -18,14 +18,20 @@ namespace DoctorSupportSystem.Interfaces
     {
         Patient patient;
         int selectedPID;
+
+        DataTable users;
+        DataTable patients;
+
         public DoctorInterface()
         {
             InitializeComponent();
             AutoCompleteStringCollection col = new AutoCompleteStringCollection();
             col.AddRange(DataBaseOperator.GetInstance().getPatientNameList());
             cbSearchPatients.AutoCompleteCustomSource = col;
-            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllUsers();
-            dataGridView2.DataSource = DataBaseOperator.GetInstance().getAllPatients();
+            users = DataBaseOperator.GetInstance().getAllUsers();
+            dgvUsers.DataSource = users;
+            patients = DataBaseOperator.GetInstance().getAllPatients();
+            dgvPatients.DataSource = patients;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,12 +41,14 @@ namespace DoctorSupportSystem.Interfaces
 
         private void btnLoadPatients_Click(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = DataBaseOperator.GetInstance().getAllPatients();
+            patients = DataBaseOperator.GetInstance().getAllPatients();
+            dgvPatients.DataSource = patients;
         }
 
         private void btnLoadUsers_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllUsers();
+            users = DataBaseOperator.GetInstance().getAllUsers();
+            dgvUsers.DataSource = users;
         }
 
       
@@ -140,14 +148,14 @@ namespace DoctorSupportSystem.Interfaces
             
             if (e.Button == MouseButtons.Right)
             {
-                var hti = dataGridView2.HitTest(e.X, e.Y);
-                dataGridView2.ClearSelection();
-                dataGridView2.Rows[hti.RowIndex].Selected = true;                  
+                var hti = dgvPatients.HitTest(e.X, e.Y);
+                dgvPatients.ClearSelection();
+                dgvPatients.Rows[hti.RowIndex].Selected = true;                  
                 
                 ContextMenu m = new ContextMenu();                   
 
-                int currentMouseOverRow = dataGridView2.HitTest(e.X, e.Y).RowIndex;
-                DataGridViewRow selectedRow = dataGridView2.Rows[currentMouseOverRow];
+                int currentMouseOverRow = dgvPatients.HitTest(e.X, e.Y).RowIndex;
+                DataGridViewRow selectedRow = dgvPatients.Rows[currentMouseOverRow];
                 selectedPID = Convert.ToInt32(selectedRow.Cells["PID"].Value);
 
                 MenuItem mi1 = new MenuItem(string.Format("Show Creatinine And eGFR Test Results", currentMouseOverRow.ToString()));
@@ -177,7 +185,7 @@ namespace DoctorSupportSystem.Interfaces
                     m.MenuItems.Add(mi);
                 }*/
 
-                m.Show(dataGridView2, new Point(e.X, e.Y));
+                m.Show(dgvPatients, new Point(e.X, e.Y));
               
             }
         }
@@ -207,5 +215,29 @@ namespace DoctorSupportSystem.Interfaces
             new CreatinineAnd_eGFR_Results(selectedPID).ShowDialog();
         }
 
+        private void txtSearchPatients_TextChanged(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(patients);
+            dataView.RowFilter = string.Format("Name Like '%{0}%'", txtSearchPatients.Text);
+            dgvPatients.DataSource = dataView;
+        }
+
+        private void txtSearchUsers_TextChanged(object sender, EventArgs e)
+        {
+            try {
+                DataView dataView = new DataView(users);
+                dataView.RowFilter = string.Format("[Full Name] Like '%{0}%'", txtSearchUsers.Text);
+                dgvUsers.DataSource = dataView;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

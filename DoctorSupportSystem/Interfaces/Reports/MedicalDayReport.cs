@@ -139,7 +139,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
                         dgvMedicines.Rows.RemoveAt(dgvMedicines.Rows.Count - 1);
                     }
                 }
-            }*/
-        }
+            }
+        }*/
     }
 }

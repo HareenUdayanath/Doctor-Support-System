@@ -15,8 +15,10 @@ namespace DoctorSupportSystem.Interfaces
 {
     public partial class AssistanceInterface : Form
     {
+
         Patient patient;
-     
+        DataTable patients;
+
         public AssistanceInterface()
         {
             InitializeComponent();
@@ -24,18 +26,20 @@ namespace DoctorSupportSystem.Interfaces
             AutoCompleteStringCollection col = new AutoCompleteStringCollection();
             col.AddRange(DataBaseOperator.GetInstance().getPatientNameList());
             cbSearchPatients.AutoCompleteCustomSource = col;
-            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllPatients();
-            dataGridView2.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
+            patients = DataBaseOperator.GetInstance().getAllPatients();
+            dgvPatients.DataSource = patients;
+            dgvApplintments.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
+            dgvApplintments.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
         }
 
         private void btnLoadPatients_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DataBaseOperator.GetInstance().getAllPatients();
+            patients = DataBaseOperator.GetInstance().getAllPatients();
+            dgvPatients.DataSource = patients;
         }
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
@@ -131,6 +135,13 @@ namespace DoctorSupportSystem.Interfaces
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
             new AddPatient().ShowDialog();
+        }
+
+        private void txtSearchPatients_TextChanged(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(patients);
+            dataView.RowFilter = string.Format("Name Like '%{0}%'", txtSearchPatients.Text);
+            dgvPatients.DataSource = dataView;
         }
     }
 }
