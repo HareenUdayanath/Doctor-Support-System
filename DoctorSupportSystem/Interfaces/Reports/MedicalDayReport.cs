@@ -15,9 +15,11 @@ namespace DoctorSupportSystem.Interfaces.Reports
 {
     public partial class MedicalDayReport : Form
     {
-        public MedicalDayReport()
+        private DeseaseReport deseaseReport;
+        public MedicalDayReport(DeseaseReport deseaseReport)
         {
             InitializeComponent();
+            this.deseaseReport = deseaseReport;
             dgvMedicines.Rows.Add();
             dgvMedicines.Rows[0].Cells[0].Value = dgvMedicines.Rows.Count;
             dgvMedicines.CurrentCell = dgvMedicines.Rows[0].Cells[1];
@@ -79,6 +81,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
         private void btnAddDayReport_Click(object sender, EventArgs e)
         {
             DayReport dayReport = new DayReport();
+            dayReport.Rid = deseaseReport.Rid; 
 
             dayReport.Date = new Date(this.dateTimePicker1.Value);
 

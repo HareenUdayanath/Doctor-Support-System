@@ -19,23 +19,24 @@ namespace DoctorSupportSystem.Interfaces.Reports
             InitializeComponent();
             this.testList = testList;
             setGraphs();
+            urineGraphs.ChartAreas[0].AxisX.IsMarginVisible = false;
         }
 
         private void setGraphs() {
             foreach(UrineTest test in testList)
             {
-                this.urineGraphs.Series["Urine for Micro Albumin"].Points.AddXY(test.Date.getDate(),test.Urine_MA);
-                this.urineGraphs.Series["Urine Creatinine"].Points.AddXY(test.Date.getDate(), test.Urine_C);
-                this.urineGraphs.Series["Urine Albumin/Creatinine"].Points.AddXY(test.Date.getDate(), test.Urine_AC);
+                urineGraphs.Series["Urine for Micro Albumin"].Points.AddXY(test.Date.getDate(),test.Urine_MA);
+                urineGraphs.Series["Urine Creatinine"].Points.AddXY(test.Date.getDate(), test.Urine_C);
+                urineGraphs.Series["Urine Albumin/Creatinine"].Points.AddXY(test.Date.getDate(), test.Urine_AC);
             }
         }
 
         private void cbUrineMA_CheckedChanged(object sender, EventArgs e)
         {
             if(cbUrineMA.Checked)
-                this.urineGraphs.Series["Urine for Micro Albumin"].Enabled = true;
+                urineGraphs.Series["Urine for Micro Albumin"].Enabled = true;
             else
-                this.urineGraphs.Series["Urine for Micro Albumin"].Enabled = false;
+                urineGraphs.Series["Urine for Micro Albumin"].Enabled = false;
 
         }
 
@@ -43,18 +44,18 @@ namespace DoctorSupportSystem.Interfaces.Reports
         {
 
             if (cbUrineC.Checked)
-                this.urineGraphs.Series["Urine Creatinine"].Enabled = true;
+                urineGraphs.Series["Urine Creatinine"].Enabled = true;
             else
-                this.urineGraphs.Series["Urine Creatinine"].Enabled = false;
+                urineGraphs.Series["Urine Creatinine"].Enabled = false;
 
         }
 
         private void cbUrineAC_CheckedChanged(object sender, EventArgs e)
         {
             if (cbUrineAC.Checked)
-                this.urineGraphs.Series["Urine Albumin/Creatinine"].Enabled = true;
+                urineGraphs.Series["Urine Albumin/Creatinine"].Enabled = true;
             else
-                this.urineGraphs.Series["Urine Albumin/Creatinine"].Enabled = false;
+                urineGraphs.Series["Urine Albumin/Creatinine"].Enabled = false;
         }
     }
 }

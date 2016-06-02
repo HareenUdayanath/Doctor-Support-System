@@ -7,7 +7,7 @@ using DoctorSupportSystem.Models.Test;
 
 namespace DoctorSupportSystem.Models
 {
-    class DeseaseReport
+    public class DeseaseReport
     {
         private int rid;
         private int pid;

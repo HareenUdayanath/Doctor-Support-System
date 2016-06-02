@@ -95,6 +95,14 @@ namespace DoctorSupportSystem.Interfaces
                     MessageBox.Show("Select the Patient");
 
             }
+            else if (lbPID.Text.Equals("-"))
+            {
+                MessageBox.Show("Select the Patient");
+            }
+            else
+            {
+                MessageBox.Show("Select the Test");
+            }
         }
 
         private void cbSearchPatients_TextChanged_1(object sender, EventArgs e)
@@ -178,6 +186,11 @@ namespace DoctorSupportSystem.Interfaces
                 mi5.Click += new EventHandler(getUrineResults);
                 m.MenuItems.Add(mi5);
 
+
+                MenuItem mi6 = new MenuItem(string.Format("Show Profile", currentMouseOverRow.ToString()));
+                mi6.Click += new EventHandler(getProfile);
+                m.MenuItems.Add(mi6);
+
                 /*if (currentMouseOverRow >= 0)
                 {
                     MenuItem mi = new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString()));
@@ -188,6 +201,14 @@ namespace DoctorSupportSystem.Interfaces
                 m.Show(dgvPatients, new Point(e.X, e.Y));
               
             }
+        }
+
+        private void getProfile(object sender, EventArgs e)
+        {
+            
+            int currentMouseOverRow = dgvPatients.CurrentRow.Index;
+            string selectedNIC = dgvPatients.Rows[currentMouseOverRow].Cells[5].Value.ToString();
+            new PatientProfile(DataBaseOperator.GetInstance().getPatientByNIC(selectedNIC)).Show();
         }
 
         private void getUrineResults(object sender, EventArgs e)
@@ -212,7 +233,7 @@ namespace DoctorSupportSystem.Interfaces
 
         private void getCreatinineAnd_eGFR_Results(object sender, EventArgs e)
         {
-            new CreatinineAnd_eGFR_Results(selectedPID).ShowDialog();
+            new HeamoglobinResults(selectedPID).ShowDialog();
         }
 
         private void txtSearchPatients_TextChanged(object sender, EventArgs e)

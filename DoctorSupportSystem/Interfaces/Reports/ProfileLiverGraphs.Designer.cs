@@ -49,10 +49,10 @@
             this.cbGlobuin = new System.Windows.Forms.CheckBox();
             this.cbALbumin = new System.Windows.Forms.CheckBox();
             this.cbTotPro = new System.Windows.Forms.CheckBox();
-            this.urineGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.profileGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urineGraphs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileGraphs)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -191,20 +191,20 @@
             // 
             // urineGraphs
             // 
-            this.urineGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.profileGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.urineGraphs.BorderlineColor = System.Drawing.Color.Black;
-            this.urineGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.profileGraphs.BorderlineColor = System.Drawing.Color.Black;
+            this.profileGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea1.Name = "ChartArea1";
-            this.urineGraphs.ChartAreas.Add(chartArea1);
+            this.profileGraphs.ChartAreas.Add(chartArea1);
             legend1.BorderColor = System.Drawing.Color.Transparent;
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend1.Name = "Legend1";
-            this.urineGraphs.Legends.Add(legend1);
-            this.urineGraphs.Location = new System.Drawing.Point(53, 12);
-            this.urineGraphs.Name = "urineGraphs";
-            this.urineGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            this.profileGraphs.Legends.Add(legend1);
+            this.profileGraphs.Location = new System.Drawing.Point(53, 12);
+            this.profileGraphs.Name = "urineGraphs";
+            this.profileGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -252,18 +252,18 @@
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series9.Legend = "Legend1";
             series9.Name = "Gamma-GT";
-            this.urineGraphs.Series.Add(series1);
-            this.urineGraphs.Series.Add(series2);
-            this.urineGraphs.Series.Add(series3);
-            this.urineGraphs.Series.Add(series4);
-            this.urineGraphs.Series.Add(series5);
-            this.urineGraphs.Series.Add(series6);
-            this.urineGraphs.Series.Add(series7);
-            this.urineGraphs.Series.Add(series8);
-            this.urineGraphs.Series.Add(series9);
-            this.urineGraphs.Size = new System.Drawing.Size(781, 359);
-            this.urineGraphs.TabIndex = 15;
-            this.urineGraphs.Text = "urineGraphs";
+            this.profileGraphs.Series.Add(series1);
+            this.profileGraphs.Series.Add(series2);
+            this.profileGraphs.Series.Add(series3);
+            this.profileGraphs.Series.Add(series4);
+            this.profileGraphs.Series.Add(series5);
+            this.profileGraphs.Series.Add(series6);
+            this.profileGraphs.Series.Add(series7);
+            this.profileGraphs.Series.Add(series8);
+            this.profileGraphs.Series.Add(series9);
+            this.profileGraphs.Size = new System.Drawing.Size(781, 359);
+            this.profileGraphs.TabIndex = 15;
+            this.profileGraphs.Text = "urineGraphs";
             // 
             // panel1
             // 
@@ -280,13 +280,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 451);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.urineGraphs);
+            this.Controls.Add(this.profileGraphs);
             this.Controls.Add(this.panel1);
             this.Name = "ProfileLiverGraphs";
             this.Text = "ProfileLiverGraphs";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urineGraphs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileGraphs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,7 +297,7 @@
         private System.Windows.Forms.CheckBox cbGlobuin;
         private System.Windows.Forms.CheckBox cbALbumin;
         private System.Windows.Forms.CheckBox cbTotPro;
-        private System.Windows.Forms.DataVisualization.Charting.Chart urineGraphs;
+        private System.Windows.Forms.DataVisualization.Charting.Chart profileGraphs;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox cbALT;
         private System.Windows.Forms.CheckBox cbALK_P;

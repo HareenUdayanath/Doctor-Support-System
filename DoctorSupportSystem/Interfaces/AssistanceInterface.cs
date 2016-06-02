@@ -89,6 +89,14 @@ namespace DoctorSupportSystem.Interfaces
                     MessageBox.Show("Select the Patient");
 
             }
+            else if (lbPID.Text.Equals("-"))
+            {
+                MessageBox.Show("Select the Patient");
+            }
+            else
+            {
+                MessageBox.Show("Select the Test");
+            }
         }
 
         private void cbSearchPatients_TextChanged(object sender, EventArgs e)
@@ -109,7 +117,7 @@ namespace DoctorSupportSystem.Interfaces
                     lbCN.Text = patient.ContactNo;
                 }
                 else
-                {
+                {                    
                     lbPID.Text = "-";
                     lbFN.Text = "-";
                     lbLN.Text = "-";

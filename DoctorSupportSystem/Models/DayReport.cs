@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DoctorSupportSystem.Models.Test
 {
-    class DayReport
+    public class DayReport
     {
         private int rid;
+        private int drid;
         private Date date;
         private List<string> medicines = new List<string>();
         private string condition;
@@ -59,6 +60,19 @@ namespace DoctorSupportSystem.Models.Test
                 return medicines;
             }
                        
+        }
+
+        public int Drid
+        {
+            get
+            {
+                return drid;
+            }
+
+            set
+            {
+                drid = value;
+            }
         }
 
         public void addMedicine(string medicine)

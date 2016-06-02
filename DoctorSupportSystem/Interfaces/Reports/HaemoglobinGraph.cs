@@ -20,14 +20,15 @@ namespace DoctorSupportSystem.Interfaces.Reports
             this.testList = testList;
             InitializeComponent();
             setGraphs();
+            haemoglobinGraphs.ChartAreas[0].AxisX.IsMarginVisible = false;
         }
 
         private void setGraphs()
         {
             foreach (HaemoglobinTest test in testList)
             {
-               
-                this.urineGraphs.Series["Haemoglobin "].Points.AddXY(test.Date.getDate(), test.Results);              
+
+                haemoglobinGraphs.Series["Haemoglobin "].Points.AddXY(test.Date.getDate(), test.Results);              
 
             }
         }

@@ -35,10 +35,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbEG = new System.Windows.Forms.CheckBox();
             this.cbSC = new System.Windows.Forms.CheckBox();
-            this.urineGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.creatinineGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urineGraphs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.creatinineGraphs)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,20 +79,20 @@
             // 
             // urineGraphs
             // 
-            this.urineGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.creatinineGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.urineGraphs.BorderlineColor = System.Drawing.Color.Black;
-            this.urineGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.creatinineGraphs.BorderlineColor = System.Drawing.Color.Black;
+            this.creatinineGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea1.Name = "ChartArea1";
-            this.urineGraphs.ChartAreas.Add(chartArea1);
+            this.creatinineGraphs.ChartAreas.Add(chartArea1);
             legend1.BorderColor = System.Drawing.Color.Transparent;
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend1.Name = "Legend1";
-            this.urineGraphs.Legends.Add(legend1);
-            this.urineGraphs.Location = new System.Drawing.Point(53, 12);
-            this.urineGraphs.Name = "urineGraphs";
-            this.urineGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            this.creatinineGraphs.Legends.Add(legend1);
+            this.creatinineGraphs.Location = new System.Drawing.Point(53, 12);
+            this.creatinineGraphs.Name = "urineGraphs";
+            this.creatinineGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -105,11 +105,11 @@
             series2.Color = System.Drawing.Color.Blue;
             series2.Legend = "Legend1";
             series2.Name = "Estimated GFR";
-            this.urineGraphs.Series.Add(series1);
-            this.urineGraphs.Series.Add(series2);
-            this.urineGraphs.Size = new System.Drawing.Size(724, 383);
-            this.urineGraphs.TabIndex = 15;
-            this.urineGraphs.Text = "urineGraphs";
+            this.creatinineGraphs.Series.Add(series1);
+            this.creatinineGraphs.Series.Add(series2);
+            this.creatinineGraphs.Size = new System.Drawing.Size(724, 383);
+            this.creatinineGraphs.TabIndex = 15;
+            this.creatinineGraphs.Text = "urineGraphs";
             // 
             // panel1
             // 
@@ -126,13 +126,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 441);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.urineGraphs);
+            this.Controls.Add(this.creatinineGraphs);
             this.Controls.Add(this.panel1);
             this.Name = "CreatinineAnd_eGFR_Graphs";
             this.Text = "CreatinineAnd_eGFR_Graphs";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urineGraphs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.creatinineGraphs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,7 +142,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox cbEG;
         private System.Windows.Forms.CheckBox cbSC;
-        private System.Windows.Forms.DataVisualization.Charting.Chart urineGraphs;
+        private System.Windows.Forms.DataVisualization.Charting.Chart creatinineGraphs;
         private System.Windows.Forms.Panel panel1;
     }
 }

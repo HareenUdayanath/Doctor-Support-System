@@ -45,10 +45,10 @@
             this.cbCHDL = new System.Windows.Forms.CheckBox();
             this.cbT = new System.Windows.Forms.CheckBox();
             this.cbCT = new System.Windows.Forms.CheckBox();
-            this.urineGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lipidGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urineGraphs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lipidGraphs)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -159,20 +159,20 @@
             // 
             // urineGraphs
             // 
-            this.urineGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lipidGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.urineGraphs.BorderlineColor = System.Drawing.Color.Black;
-            this.urineGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.lipidGraphs.BorderlineColor = System.Drawing.Color.Black;
+            this.lipidGraphs.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea1.Name = "ChartArea1";
-            this.urineGraphs.ChartAreas.Add(chartArea1);
+            this.lipidGraphs.ChartAreas.Add(chartArea1);
             legend1.BorderColor = System.Drawing.Color.Transparent;
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend1.Name = "Legend1";
-            this.urineGraphs.Legends.Add(legend1);
-            this.urineGraphs.Location = new System.Drawing.Point(63, 12);
-            this.urineGraphs.Name = "urineGraphs";
-            this.urineGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            this.lipidGraphs.Legends.Add(legend1);
+            this.lipidGraphs.Location = new System.Drawing.Point(63, 12);
+            this.lipidGraphs.Name = "urineGraphs";
+            this.lipidGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -210,16 +210,16 @@
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series7.Legend = "Legend1";
             series7.Name = "LDL / HDL";
-            this.urineGraphs.Series.Add(series1);
-            this.urineGraphs.Series.Add(series2);
-            this.urineGraphs.Series.Add(series3);
-            this.urineGraphs.Series.Add(series4);
-            this.urineGraphs.Series.Add(series5);
-            this.urineGraphs.Series.Add(series6);
-            this.urineGraphs.Series.Add(series7);
-            this.urineGraphs.Size = new System.Drawing.Size(781, 372);
-            this.urineGraphs.TabIndex = 18;
-            this.urineGraphs.Text = "urineGraphs";
+            this.lipidGraphs.Series.Add(series1);
+            this.lipidGraphs.Series.Add(series2);
+            this.lipidGraphs.Series.Add(series3);
+            this.lipidGraphs.Series.Add(series4);
+            this.lipidGraphs.Series.Add(series5);
+            this.lipidGraphs.Series.Add(series6);
+            this.lipidGraphs.Series.Add(series7);
+            this.lipidGraphs.Size = new System.Drawing.Size(781, 372);
+            this.lipidGraphs.TabIndex = 18;
+            this.lipidGraphs.Text = "urineGraphs";
             // 
             // panel1
             // 
@@ -236,13 +236,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 464);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.urineGraphs);
+            this.Controls.Add(this.lipidGraphs);
             this.Controls.Add(this.panel1);
             this.Name = "LipidGraphs";
             this.Text = "LipidGraphs";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urineGraphs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lipidGraphs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,7 +257,7 @@
         private System.Windows.Forms.CheckBox cbCHDL;
         private System.Windows.Forms.CheckBox cbT;
         private System.Windows.Forms.CheckBox cbCT;
-        private System.Windows.Forms.DataVisualization.Charting.Chart urineGraphs;
+        private System.Windows.Forms.DataVisualization.Charting.Chart lipidGraphs;
         private System.Windows.Forms.Panel panel1;
     }
 }
