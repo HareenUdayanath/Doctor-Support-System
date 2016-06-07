@@ -24,12 +24,17 @@ namespace DoctorSupportSystem.Interfaces.Reports
             this.patient = patient;
             deseaseReports = DataBaseOperator.GetInstance().getAllDeseaseRecords(patient.PID);
             dgvDeseaeReports.DataSource = deseaseReports;
+
+            lbPID.Text = patient.PID.ToString();
+            lbFN.Text = patient.FirstName;
+            lbLN.Text = patient.LastName;
+            lbNIC.Text = patient.Nic;
+            lbDOB.Text = patient.DateOfBirth.getDate();
+            lbG.Text = patient.Gender;
+            lbCN.Text = patient.ContactNo;
+
         }
 
-        private void mIPatientDetails_Click(object sender, EventArgs e)
-        {
-            new PatientDetails(patient).ShowDialog();
-        }
 
         private void miCreatinineTest_Click(object sender, EventArgs e)
         {
@@ -89,7 +94,17 @@ namespace DoctorSupportSystem.Interfaces.Reports
 
         private void getDayReports(object sender, EventArgs e)
         {
-            
+            new DayReports(Convert.ToInt32(dgvDeseaeReports.SelectedRows[0].Cells[0].Value)).Show();
+        }
+
+        private void PatientProfile_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvDeseaeReports.Columns[0].Width = 50;
+                //dgvDeseaeReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            }
+            catch (Exception ee) { Console.WriteLine("SS" + ee.Message); }
         }
     }
 }

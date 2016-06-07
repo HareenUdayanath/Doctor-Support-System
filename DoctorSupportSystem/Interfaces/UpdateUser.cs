@@ -32,7 +32,10 @@ namespace DoctorSupportSystem.Interfaces
             this.txtNIC.Text = user.Nic;
             this.txtCoNo.Text = user.ContactNo;
             this.comboBoxGender.Text = user.Gender;
-            this.comboboxPosition.Text = user.Position;
+            if (user.Position.Equals("Doctor"))
+                this.comboboxPosition.Hide();
+            else
+                this.comboboxPosition.Text = user.Position;
                
         }
 
