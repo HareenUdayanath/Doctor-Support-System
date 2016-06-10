@@ -36,7 +36,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.haemoglobinGraphs)).BeginInit();
             this.SuspendLayout();
             // 
-            // urineGraphs
+            // haemoglobinGraphs
             // 
             this.haemoglobinGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -50,13 +50,15 @@
             legend1.Name = "Legend1";
             this.haemoglobinGraphs.Legends.Add(legend1);
             this.haemoglobinGraphs.Location = new System.Drawing.Point(53, 22);
-            this.haemoglobinGraphs.Name = "urineGraphs";
+            this.haemoglobinGraphs.Name = "haemoglobinGraphs";
             this.haemoglobinGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             series1.Legend = "Legend1";
+            series1.MarkerSize = 8;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Haemoglobin ";
             this.haemoglobinGraphs.Series.Add(series1);
             this.haemoglobinGraphs.Size = new System.Drawing.Size(712, 347);

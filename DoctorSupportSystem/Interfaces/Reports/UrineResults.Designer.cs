@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UrineResults));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,12 +38,15 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.p3 = new System.Windows.Forms.Panel();
+            this.p2 = new System.Windows.Forms.Panel();
+            this.p1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.btnGraphs = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvUrineResults = new System.Windows.Forms.DataGridView();
             this.btnLoadResults = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -51,7 +55,7 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrineResults)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 14);
+            this.label1.Location = new System.Drawing.Point(21, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 13);
             this.label1.TabIndex = 29;
@@ -88,9 +92,9 @@
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Controls.Add(this.panel14);
             this.panel12.Controls.Add(this.label13);
-            this.panel12.Location = new System.Drawing.Point(72, 40);
+            this.panel12.Location = new System.Drawing.Point(24, 45);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(339, 163);
+            this.panel12.Size = new System.Drawing.Size(449, 163);
             this.panel12.TabIndex = 28;
             // 
             // panel13
@@ -99,7 +103,7 @@
             this.panel13.Controls.Add(this.label9);
             this.panel13.Location = new System.Drawing.Point(24, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(297, 29);
+            this.panel13.Size = new System.Drawing.Size(420, 29);
             this.panel13.TabIndex = 26;
             // 
             // label9
@@ -115,16 +119,50 @@
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.p3);
+            this.panel14.Controls.Add(this.p2);
+            this.panel14.Controls.Add(this.p1);
             this.panel14.Controls.Add(this.label11);
             this.panel14.Location = new System.Drawing.Point(24, 57);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(297, 92);
+            this.panel14.Size = new System.Drawing.Size(420, 92);
             this.panel14.TabIndex = 26;
+            // 
+            // p3
+            // 
+            this.p3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p3.BackgroundImage")));
+            this.p3.Location = new System.Drawing.Point(286, 58);
+            this.p3.Name = "p3";
+            this.p3.Size = new System.Drawing.Size(131, 19);
+            this.p3.TabIndex = 32;
+            this.p3.Visible = false;
+            // 
+            // p2
+            // 
+            this.p2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p2.BackgroundImage")));
+            this.p2.Location = new System.Drawing.Point(269, 33);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(148, 19);
+            this.p2.TabIndex = 31;
+            this.p2.Visible = false;
+            // 
+            // p1
+            // 
+            this.p1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p1.BackgroundImage")));
+            this.p1.Location = new System.Drawing.Point(227, 7);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(190, 19);
+            this.p1.TabIndex = 31;
+            this.p1.Visible = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(3, 10);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(277, 65);
@@ -149,7 +187,7 @@
             this.panel16.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel16.Controls.Add(this.btnGraphs);
             this.panel16.Controls.Add(this.dateTimePicker1);
-            this.panel16.Controls.Add(this.dataGridView1);
+            this.panel16.Controls.Add(this.dgvUrineResults);
             this.panel16.Controls.Add(this.btnLoadResults);
             this.panel16.Controls.Add(this.label16);
             this.panel16.Controls.Add(this.label17);
@@ -181,22 +219,22 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgvUrineResults
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvUrineResults.AllowUserToAddRows = false;
+            this.dgvUrineResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvUrineResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUrineResults.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUrineResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUrineResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,12 +242,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(449, 189);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvUrineResults.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUrineResults.EnableHeadersVisualStyles = false;
+            this.dgvUrineResults.Location = new System.Drawing.Point(24, 56);
+            this.dgvUrineResults.Name = "dgvUrineResults";
+            this.dgvUrineResults.ReadOnly = true;
+            this.dgvUrineResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUrineResults.Size = new System.Drawing.Size(449, 189);
+            this.dgvUrineResults.TabIndex = 4;
+            this.dgvUrineResults.SelectionChanged += new System.EventHandler(this.dgvUrineResults_SelectionChanged);
             // 
             // btnLoadResults
             // 
@@ -256,7 +297,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UrineResults";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "UrineResults";
+            this.Text = "URINE FOR MICRO ALBUMIN";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -267,7 +308,7 @@
             this.panel14.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrineResults)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,10 +326,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUrineResults;
         private System.Windows.Forms.Button btnLoadResults;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnGraphs;
+        private System.Windows.Forms.Panel p3;
+        private System.Windows.Forms.Panel p2;
+        private System.Windows.Forms.Panel p1;
     }
 }

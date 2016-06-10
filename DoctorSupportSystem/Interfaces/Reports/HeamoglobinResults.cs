@@ -21,9 +21,17 @@ namespace DoctorSupportSystem.Interfaces.Reports
             InitializeComponent();
         }
 
+        private void bulbOFF() {
+            p1.Hide();
+            p2.Hide();
+            p3.Hide();
+            p4.Hide();
+            p5.Hide();
+        }
+
         private void btnLoadResults_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DataBaseOperator.GetInstance()
+            dgvHaemoglobin.DataSource = DataBaseOperator.GetInstance()
                 .getHaemoglobinResultsAfter(pid, new Date(dateTimePicker1.Value));
         }
 
@@ -31,6 +39,33 @@ namespace DoctorSupportSystem.Interfaces.Reports
         {
             new HaemoglobinGraph(DataBaseOperator.GetInstance()
             .getHaemoglobinAfterForPlot(pid, new Date(dateTimePicker1.Value))).ShowDialog();
+        }
+
+        private void dgvHaemoglobin_SelectionChanged(object sender, EventArgs e)
+        {
+            try {
+                bulbOFF();
+                if (Convert.ToDecimal(dgvHaemoglobin.SelectedRows[0].Cells[1].Value) > 8)
+                {
+                    p1.Show();
+                }
+                else if (Convert.ToDecimal(dgvHaemoglobin.SelectedRows[0].Cells[1].Value) > 7)
+                {
+                    p2.Show();
+                }
+                else if (Convert.ToDecimal(dgvHaemoglobin.SelectedRows[0].Cells[1].Value) > 6)
+                {
+                    p3.Show();
+                    p4.Show();
+                }
+                else
+                {
+                    p5.Show();
+                }
+            }
+            catch (Exception es) {
+                Console.WriteLine(es.Message);
+            }
         }
     }
 }

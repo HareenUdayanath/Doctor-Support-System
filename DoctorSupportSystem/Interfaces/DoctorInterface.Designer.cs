@@ -710,6 +710,7 @@
             this.btnAddPatientProfile.TabIndex = 3;
             this.btnAddPatientProfile.Text = "Add  PatientProfile";
             this.btnAddPatientProfile.UseVisualStyleBackColor = false;
+            this.btnAddPatientProfile.Click += new System.EventHandler(this.btnAddPatientProfile_Click);
             // 
             // btnAddPatient
             // 
@@ -737,6 +738,7 @@
             this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
             this.btnUserProChange.TabIndex = 10;
             this.btnUserProChange.UseVisualStyleBackColor = true;
+            this.btnUserProChange.Click += new System.EventHandler(this.btnUserProChange_Click);
             // 
             // DoctorInterface
             // 

@@ -77,7 +77,7 @@
             this.cbSC.UseVisualStyleBackColor = true;
             this.cbSC.CheckedChanged += new System.EventHandler(this.cbSC_CheckedChanged);
             // 
-            // urineGraphs
+            // creatinineGraphs
             // 
             this.creatinineGraphs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -91,19 +91,23 @@
             legend1.Name = "Legend1";
             this.creatinineGraphs.Legends.Add(legend1);
             this.creatinineGraphs.Location = new System.Drawing.Point(53, 12);
-            this.creatinineGraphs.Name = "urineGraphs";
+            this.creatinineGraphs.Name = "creatinineGraphs";
             this.creatinineGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             series1.Legend = "Legend1";
+            series1.MarkerSize = 8;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Serum Creatinine";
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Color = System.Drawing.Color.Blue;
             series2.Legend = "Legend1";
+            series2.MarkerSize = 8;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series2.Name = "Estimated GFR";
             this.creatinineGraphs.Series.Add(series1);
             this.creatinineGraphs.Series.Add(series2);

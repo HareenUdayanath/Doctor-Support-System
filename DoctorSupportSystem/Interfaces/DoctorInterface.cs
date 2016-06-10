@@ -156,50 +156,45 @@ namespace DoctorSupportSystem.Interfaces
             
             if (e.Button == MouseButtons.Right)
             {
-                var hti = dgvPatients.HitTest(e.X, e.Y);
-                dgvPatients.ClearSelection();
-                dgvPatients.Rows[hti.RowIndex].Selected = true;                  
-                
-                ContextMenu m = new ContextMenu();                   
+                try {
+                    var hti = dgvPatients.HitTest(e.X, e.Y);
+                    dgvPatients.ClearSelection();
+                    dgvPatients.Rows[hti.RowIndex].Selected = true;
 
-                int currentMouseOverRow = dgvPatients.HitTest(e.X, e.Y).RowIndex;
-                DataGridViewRow selectedRow = dgvPatients.Rows[currentMouseOverRow];
-                selectedPID = Convert.ToInt32(selectedRow.Cells["PID"].Value);
+                    ContextMenu m = new ContextMenu();
 
-                MenuItem mi1 = new MenuItem(string.Format("Show Creatinine And eGFR Test Results", currentMouseOverRow.ToString()));
-                mi1.Click += new EventHandler(getCreatinineAnd_eGFR_Results);
-                m.MenuItems.Add(mi1);
+                    int currentMouseOverRow = dgvPatients.HitTest(e.X, e.Y).RowIndex;
+                    DataGridViewRow selectedRow = dgvPatients.Rows[currentMouseOverRow];
+                    selectedPID = Convert.ToInt32(selectedRow.Cells["PID"].Value);
 
-                MenuItem mi2 = new MenuItem(string.Format("Show Heamoglobin Test Results", currentMouseOverRow.ToString()));
-                mi2.Click += new EventHandler(getHeamoglobinResults);
-                m.MenuItems.Add(mi2);
-                
-                MenuItem mi3 = new MenuItem(string.Format("Show Lipid Test Results", currentMouseOverRow.ToString()));
-                mi3.Click += new EventHandler(getLipidResults);
-                m.MenuItems.Add(mi3);
+                    MenuItem mi1 = new MenuItem(string.Format("Show Creatinine And eGFR Test Results", currentMouseOverRow.ToString()));
+                    mi1.Click += new EventHandler(getCreatinineAnd_eGFR_Results);
+                    m.MenuItems.Add(mi1);
 
-                MenuItem mi4 = new MenuItem(string.Format("Show ProfileLiver Test Results", currentMouseOverRow.ToString()));
-                mi4.Click += new EventHandler(getProfileLiverResults);
-                m.MenuItems.Add(mi4);
+                    MenuItem mi2 = new MenuItem(string.Format("Show Heamoglobin Test Results", currentMouseOverRow.ToString()));
+                    mi2.Click += new EventHandler(getHeamoglobinResults);
+                    m.MenuItems.Add(mi2);
 
-                MenuItem mi5 = new MenuItem(string.Format("Show Urine Test Results", currentMouseOverRow.ToString()));
-                mi5.Click += new EventHandler(getUrineResults);
-                m.MenuItems.Add(mi5);
+                    MenuItem mi3 = new MenuItem(string.Format("Show Lipid Test Results", currentMouseOverRow.ToString()));
+                    mi3.Click += new EventHandler(getLipidResults);
+                    m.MenuItems.Add(mi3);
+
+                    MenuItem mi4 = new MenuItem(string.Format("Show ProfileLiver Test Results", currentMouseOverRow.ToString()));
+                    mi4.Click += new EventHandler(getProfileLiverResults);
+                    m.MenuItems.Add(mi4);
+
+                    MenuItem mi5 = new MenuItem(string.Format("Show Urine Test Results", currentMouseOverRow.ToString()));
+                    mi5.Click += new EventHandler(getUrineResults);
+                    m.MenuItems.Add(mi5);
 
 
-                MenuItem mi6 = new MenuItem(string.Format("Show Profile", currentMouseOverRow.ToString()));
-                mi6.Click += new EventHandler(getProfile);
-                m.MenuItems.Add(mi6);
-
-                /*if (currentMouseOverRow >= 0)
-                {
-                    MenuItem mi = new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString()));
-                    mi.Click += new EventHandler(mnuCopy_Click);
-                    m.MenuItems.Add(mi);
-                }*/
-
-                m.Show(dgvPatients, new Point(e.X, e.Y));
-              
+                    MenuItem mi6 = new MenuItem(string.Format("Show Profile", currentMouseOverRow.ToString()));
+                    mi6.Click += new EventHandler(getProfile);
+                    m.MenuItems.Add(mi6);
+                   
+                    m.Show(dgvPatients, new Point(e.X, e.Y));
+                }
+                catch (Exception ex) { }
             }
         }
 
@@ -233,7 +228,7 @@ namespace DoctorSupportSystem.Interfaces
 
         private void getCreatinineAnd_eGFR_Results(object sender, EventArgs e)
         {
-            new HeamoglobinResults(selectedPID).ShowDialog();
+            new CreatinineAnd_eGFR_Results(selectedPID).ShowDialog();
         }
 
         private void txtSearchPatients_TextChanged(object sender, EventArgs e)
@@ -259,6 +254,24 @@ namespace DoctorSupportSystem.Interfaces
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddPatientProfile_Click(object sender, EventArgs e)
+        {
+            new PatientDeseaseRecord().Show(); 
+        }
+
+        private void btnUserProChange_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Username = "Doctor";
+            user.Password = "DOC";
+            user.Position = "Assistance";
+            user.Fullname = "A";
+            user.Gender = "Male";
+            user.Nic = "123456789V";
+            user.ContactNo = "123456";
+            new UpdateUser(user).Show();
         }
     }
 }
