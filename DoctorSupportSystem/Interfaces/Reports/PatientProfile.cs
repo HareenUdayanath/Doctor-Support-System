@@ -84,11 +84,23 @@ namespace DoctorSupportSystem.Interfaces.Reports
 
                 MenuItem mi1 = new MenuItem(string.Format("Show Pervious Reports", currentMouseOverRow.ToString()));
                 mi1.Click += new EventHandler(getDayReports);
-                m.MenuItems.Add(mi1);                           
+                m.MenuItems.Add(mi1);
 
+                MenuItem mi2 = new MenuItem(string.Format("Delete this record", currentMouseOverRow.ToString()));
+                mi2.Click += new EventHandler(deleteRecord);
+                m.MenuItems.Add(mi2);
 
                 m.Show(dgvDeseaeReports, new Point(e.X, e.Y));
 
+            }
+        }
+
+        private void deleteRecord(object sender, EventArgs e)
+        {
+            if (dgvDeseaeReports.Rows.Count > 0)
+            {
+                DataBaseOperator.GetInstance().deleteDeseaseRecord(Convert.ToInt32(dgvDeseaeReports.SelectedRows[0].Cells[0].Value));
+                dgvDeseaeReports.Rows.RemoveAt(dgvDeseaeReports.CurrentRow.Index);
             }
         }
 
@@ -106,5 +118,13 @@ namespace DoctorSupportSystem.Interfaces.Reports
             }
             catch (Exception ee) { Console.WriteLine("SS" + ee.Message); }
         }
+
+        private void btnAddReseaseRecord_Click(object sender, EventArgs e)
+        {
+            new PatientDeseaseRecord(patient).ShowDialog();
+            deseaseReports = DataBaseOperator.GetInstance().getAllDeseaseRecords(patient.PID);
+            dgvDeseaeReports.DataSource = deseaseReports;
+        }
+
     }
 }

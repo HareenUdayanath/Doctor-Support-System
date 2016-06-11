@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLoadPatients = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -62,6 +62,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lbPID = new System.Windows.Forms.Label();
+            this.btnAddReseaseRecord = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeseaeReports)).BeginInit();
             this.panel5.SuspendLayout();
@@ -164,21 +165,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDeseaeReports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDeseaeReports.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDeseaeReports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeseaeReports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDeseaeReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeseaeReports.EnableHeadersVisualStyles = false;
-            this.dgvDeseaeReports.Location = new System.Drawing.Point(548, 99);
+            this.dgvDeseaeReports.Location = new System.Drawing.Point(505, 99);
             this.dgvDeseaeReports.Name = "dgvDeseaeReports";
             this.dgvDeseaeReports.ReadOnly = true;
             this.dgvDeseaeReports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDeseaeReports.Size = new System.Drawing.Size(245, 398);
+            this.dgvDeseaeReports.Size = new System.Drawing.Size(288, 398);
             this.dgvDeseaeReports.TabIndex = 16;
             this.dgvDeseaeReports.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvDeseaeReports_MouseClick);
             // 
@@ -195,7 +196,7 @@
             this.btnRefreshReports.Name = "btnRefreshReports";
             this.btnRefreshReports.Size = new System.Drawing.Size(146, 38);
             this.btnRefreshReports.TabIndex = 17;
-            this.btnRefreshReports.Text = "Refresh Desease Reports";
+            this.btnRefreshReports.Text = "Refresh Desease Record";
             this.btnRefreshReports.UseVisualStyleBackColor = false;
             this.btnRefreshReports.Click += new System.EventHandler(this.btnRefreshReports_Click);
             // 
@@ -419,11 +420,29 @@
             this.lbPID.TabIndex = 13;
             this.lbPID.Text = "-";
             // 
+            // btnAddReseaseRecord
+            // 
+            this.btnAddReseaseRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddReseaseRecord.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddReseaseRecord.FlatAppearance.BorderSize = 0;
+            this.btnAddReseaseRecord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddReseaseRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddReseaseRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReseaseRecord.ForeColor = System.Drawing.Color.White;
+            this.btnAddReseaseRecord.Location = new System.Drawing.Point(241, 514);
+            this.btnAddReseaseRecord.Name = "btnAddReseaseRecord";
+            this.btnAddReseaseRecord.Size = new System.Drawing.Size(136, 29);
+            this.btnAddReseaseRecord.TabIndex = 19;
+            this.btnAddReseaseRecord.Text = "Add Desease Record";
+            this.btnAddReseaseRecord.UseVisualStyleBackColor = false;
+            this.btnAddReseaseRecord.Click += new System.EventHandler(this.btnAddReseaseRecord_Click);
+            // 
             // PatientProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 553);
+            this.Controls.Add(this.btnAddReseaseRecord);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnRefreshReports);
             this.Controls.Add(this.dgvDeseaeReports);
@@ -492,5 +511,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbPID;
+        private System.Windows.Forms.Button btnAddReseaseRecord;
     }
 }

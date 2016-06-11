@@ -266,6 +266,7 @@
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(675, 463);
             this.dgvUsers.TabIndex = 0;
+            this.dgvUsers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvUsers_MouseClick);
             // 
             // btnLoadUsers
             // 
@@ -708,7 +709,7 @@
             this.btnAddPatientProfile.Name = "btnAddPatientProfile";
             this.btnAddPatientProfile.Size = new System.Drawing.Size(122, 65);
             this.btnAddPatientProfile.TabIndex = 3;
-            this.btnAddPatientProfile.Text = "Add  PatientProfile";
+            this.btnAddPatientProfile.Text = "Add  Patient Desease Record";
             this.btnAddPatientProfile.UseVisualStyleBackColor = false;
             this.btnAddPatientProfile.Click += new System.EventHandler(this.btnAddPatientProfile_Click);
             // 

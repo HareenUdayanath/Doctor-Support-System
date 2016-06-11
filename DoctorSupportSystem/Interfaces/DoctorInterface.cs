@@ -273,5 +273,39 @@ namespace DoctorSupportSystem.Interfaces
             user.ContactNo = "123456";
             new UpdateUser(user).Show();
         }
+
+        private void dgvUsers_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button == MouseButtons.Right)
+            {
+                var hti = dgvUsers.HitTest(e.X, e.Y);
+                dgvUsers.ClearSelection();
+                dgvUsers.Rows[hti.RowIndex].Selected = true;
+
+                ContextMenu m = new ContextMenu();
+
+                int currentMouseOverRow = dgvUsers.HitTest(e.X, e.Y).RowIndex;
+                DataGridViewRow selectedRow = dgvUsers.Rows[currentMouseOverRow];
+
+
+                MenuItem mi1 = new MenuItem(string.Format("Delete Selected User", currentMouseOverRow.ToString()));
+                mi1.Click += new EventHandler(deleteUser);
+                m.MenuItems.Add(mi1);
+
+                m.Show(dgvUsers, new Point(e.X, e.Y));
+
+            }
+        }
+
+        private void deleteUser(object sender, EventArgs e)
+        {
+            if (dgvUsers.Rows.Count > 0)
+            {
+                DataBaseOperator.GetInstance().deleteUser(dgvUsers.SelectedRows[0].Cells[3].Value.ToString());
+                dgvUsers.Rows.RemoveAt(dgvUsers.CurrentRow.Index);
+                
+            }
+        }
     }
 }

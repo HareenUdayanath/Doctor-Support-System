@@ -50,7 +50,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lbPID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbSelectPatient = new System.Windows.Forms.Label();
             this.cbSearchPatients = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -82,7 +82,7 @@
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.lbSelectPatient);
             this.panel5.Controls.Add(this.cbSearchPatients);
             this.panel5.Location = new System.Drawing.Point(91, 12);
             this.panel5.Name = "panel5";
@@ -292,14 +292,14 @@
             this.lbPID.TabIndex = 13;
             this.lbPID.Text = "-";
             // 
-            // label1
+            // lbSelectPatient
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Enter the patient name";
+            this.lbSelectPatient.AutoSize = true;
+            this.lbSelectPatient.Location = new System.Drawing.Point(24, 21);
+            this.lbSelectPatient.Name = "lbSelectPatient";
+            this.lbSelectPatient.Size = new System.Drawing.Size(114, 13);
+            this.lbSelectPatient.TabIndex = 11;
+            this.lbSelectPatient.Text = "Enter the patient name";
             // 
             // cbSearchPatients
             // 
@@ -434,7 +434,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbPID;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbSelectPatient;
         private System.Windows.Forms.ComboBox cbSearchPatients;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

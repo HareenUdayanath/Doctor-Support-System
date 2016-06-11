@@ -23,6 +23,28 @@ namespace DoctorSupportSystem.Interfaces.Reports
             cbSearchPatients.AutoCompleteCustomSource = col;
         }
 
+        public PatientDeseaseRecord(Patient patient)
+        {
+            InitializeComponent();
+
+            this.patient = patient;
+            this.cbSearchPatients.Hide();
+            this.lbSelectPatient.Text = "Patient Details";
+
+            AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+            col.AddRange(DataBaseOperator.GetInstance().getPatientNameList());
+            cbSearchPatients.AutoCompleteCustomSource = col;
+
+            lbPID.Text = patient.PID.ToString();
+            lbFN.Text = patient.FirstName;
+            lbLN.Text = patient.LastName;
+            lbNIC.Text = patient.Nic;
+            lbDOB.Text = patient.DateOfBirth.getDate();
+            lbG.Text = patient.Gender;
+            lbCN.Text = patient.ContactNo;
+
+        }
+
         private void cbSearchPatients_TextChanged(object sender, EventArgs e)
         {
             try
@@ -88,7 +110,8 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 dr.Pid = Convert.ToInt32(lbPID.Text);
                 if (DataBaseOperator.GetInstance().addDeseaseReport(dr) == 1)
                 {
-                    MessageBox.Show("The desease report successfully added to the database");                    
+                    MessageBox.Show("The desease report successfully added to the database");  
+                                      
                     this.Close();
                 }
                 else
