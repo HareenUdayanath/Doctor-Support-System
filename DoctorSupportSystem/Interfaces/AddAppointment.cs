@@ -36,11 +36,7 @@ namespace DoctorSupportSystem.Interfaces
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Appointment appointment = new Appointment();
-            appointment.Date = new Date(calendar.SelectionStart);
-            appointment.Number = Convert.ToInt32(lbNumber.Text)+1;
-            appointment.PatientName = txtPName.Text;
-            
-            
+            Date selectedDate = new Date(calendar.SelectionStart);
 
             String err = "";
 
@@ -50,7 +46,8 @@ namespace DoctorSupportSystem.Interfaces
                 err += "Invalid NIC\n";
             else
                 appointment.Nic = txtPNIC.Text;
-
+            if (!Validator.isNotPast(selectedDate))
+                err += "Date should not be a past one\n";
             Console.WriteLine(err);
 
             if (err != "")
@@ -66,6 +63,9 @@ namespace DoctorSupportSystem.Interfaces
                 }
                 else
                 {*/
+                appointment.Date = selectedDate;
+                appointment.Number = Convert.ToInt32(lbNumber.Text);
+                appointment.PatientName = txtPName.Text;
                 db.addAppointment(appointment);
                 MessageBox.Show("The patient successfully added to the database");
                 new AddAppointment().Show();

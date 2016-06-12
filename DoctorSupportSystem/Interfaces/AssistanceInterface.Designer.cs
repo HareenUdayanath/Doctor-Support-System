@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssistanceInterface));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Patients = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSearchPatients = new System.Windows.Forms.TextBox();
             this.btnLoadPatients = new System.Windows.Forms.Button();
             this.dgvPatients = new System.Windows.Forms.DataGridView();
             this.Appointments = new System.Windows.Forms.TabPage();
+            this.dtpAppoinmentDates = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             this.dgvApplintments = new System.Windows.Forms.DataGridView();
             this.btnShowAppintments = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -76,8 +80,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.btnUserProChange = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSearchPatients = new System.Windows.Forms.TextBox();
+            this.btnCurrentAppointments = new System.Windows.Forms.Button();
+            this.btnDeletePast = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Patients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
@@ -126,6 +130,23 @@
             this.Patients.TabIndex = 0;
             this.Patients.Text = "Patients";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Search Patients";
+            // 
+            // txtSearchPatients
+            // 
+            this.txtSearchPatients.Location = new System.Drawing.Point(122, 26);
+            this.txtSearchPatients.Name = "txtSearchPatients";
+            this.txtSearchPatients.Size = new System.Drawing.Size(167, 23);
+            this.txtSearchPatients.TabIndex = 5;
+            this.txtSearchPatients.TextChanged += new System.EventHandler(this.txtSearchPatients_TextChanged);
+            // 
             // btnLoadPatients
             // 
             this.btnLoadPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -143,7 +164,7 @@
             this.btnLoadPatients.UseVisualStyleBackColor = false;
             this.btnLoadPatients.Click += new System.EventHandler(this.btnLoadPatients_Click);
             // 
-            // dataGridView1
+            // dgvPatients
             // 
             this.dgvPatients.AllowUserToAddRows = false;
             this.dgvPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -151,18 +172,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPatients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPatients.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPatients.EnableHeadersVisualStyles = false;
             this.dgvPatients.Location = new System.Drawing.Point(3, 68);
-            this.dgvPatients.Name = "dataGridView1";
+            this.dgvPatients.Name = "dgvPatients";
             this.dgvPatients.ReadOnly = true;
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatients.Size = new System.Drawing.Size(699, 496);
@@ -171,6 +192,10 @@
             // Appointments
             // 
             this.Appointments.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Appointments.Controls.Add(this.btnDeletePast);
+            this.Appointments.Controls.Add(this.btnCurrentAppointments);
+            this.Appointments.Controls.Add(this.dtpAppoinmentDates);
+            this.Appointments.Controls.Add(this.label9);
             this.Appointments.Controls.Add(this.dgvApplintments);
             this.Appointments.Controls.Add(this.btnShowAppintments);
             this.Appointments.Location = new System.Drawing.Point(4, 34);
@@ -180,7 +205,24 @@
             this.Appointments.TabIndex = 1;
             this.Appointments.Text = "Appointments";
             // 
-            // dataGridView2
+            // dtpAppoinmentDates
+            // 
+            this.dtpAppoinmentDates.Location = new System.Drawing.Point(168, 32);
+            this.dtpAppoinmentDates.Name = "dtpAppoinmentDates";
+            this.dtpAppoinmentDates.Size = new System.Drawing.Size(242, 23);
+            this.dtpAppoinmentDates.TabIndex = 17;
+            this.dtpAppoinmentDates.ValueChanged += new System.EventHandler(this.dtpAppoinmentDates_ValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 37);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 17);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Search Appoinments";
+            // 
+            // dgvApplintments
             // 
             this.dgvApplintments.AllowUserToAddRows = false;
             this.dgvApplintments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -188,18 +230,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvApplintments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvApplintments.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApplintments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApplintments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvApplintments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApplintments.EnableHeadersVisualStyles = false;
             this.dgvApplintments.Location = new System.Drawing.Point(3, 68);
-            this.dgvApplintments.Name = "dataGridView2";
+            this.dgvApplintments.Name = "dgvApplintments";
             this.dgvApplintments.ReadOnly = true;
             this.dgvApplintments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvApplintments.Size = new System.Drawing.Size(699, 496);
@@ -216,9 +258,9 @@
             this.btnShowAppintments.ForeColor = System.Drawing.Color.White;
             this.btnShowAppintments.Location = new System.Drawing.Point(540, 570);
             this.btnShowAppintments.Name = "btnShowAppintments";
-            this.btnShowAppintments.Size = new System.Drawing.Size(162, 38);
+            this.btnShowAppintments.Size = new System.Drawing.Size(162, 50);
             this.btnShowAppintments.TabIndex = 9;
-            this.btnShowAppintments.Text = "Show Appointments";
+            this.btnShowAppintments.Text = "Refresh Appointments";
             this.btnShowAppintments.UseVisualStyleBackColor = false;
             this.btnShowAppintments.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
@@ -642,22 +684,39 @@
             this.btnUserProChange.TabIndex = 10;
             this.btnUserProChange.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btnCurrentAppointments
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Search Patients";
+            this.btnCurrentAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCurrentAppointments.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCurrentAppointments.FlatAppearance.BorderSize = 0;
+            this.btnCurrentAppointments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCurrentAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCurrentAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCurrentAppointments.ForeColor = System.Drawing.Color.White;
+            this.btnCurrentAppointments.Location = new System.Drawing.Point(372, 570);
+            this.btnCurrentAppointments.Name = "btnCurrentAppointments";
+            this.btnCurrentAppointments.Size = new System.Drawing.Size(162, 48);
+            this.btnCurrentAppointments.TabIndex = 18;
+            this.btnCurrentAppointments.Text = "Current Appointments";
+            this.btnCurrentAppointments.UseVisualStyleBackColor = false;
+            this.btnCurrentAppointments.Click += new System.EventHandler(this.btnCurrentAppointments_Click);
             // 
-            // txtSearchPatients
+            // btnDeletePast
             // 
-            this.txtSearchPatients.Location = new System.Drawing.Point(122, 26);
-            this.txtSearchPatients.Name = "txtSearchPatients";
-            this.txtSearchPatients.Size = new System.Drawing.Size(167, 23);
-            this.txtSearchPatients.TabIndex = 5;
-            this.txtSearchPatients.TextChanged += new System.EventHandler(this.txtSearchPatients_TextChanged);
+            this.btnDeletePast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletePast.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDeletePast.FlatAppearance.BorderSize = 0;
+            this.btnDeletePast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnDeletePast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletePast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePast.ForeColor = System.Drawing.Color.White;
+            this.btnDeletePast.Location = new System.Drawing.Point(204, 570);
+            this.btnDeletePast.Name = "btnDeletePast";
+            this.btnDeletePast.Size = new System.Drawing.Size(162, 48);
+            this.btnDeletePast.TabIndex = 19;
+            this.btnDeletePast.Text = "Delete Previous Appointment";
+            this.btnDeletePast.UseVisualStyleBackColor = false;
+            this.btnDeletePast.Click += new System.EventHandler(this.btnDeletePast_Click);
             // 
             // AssistanceInterface
             // 
@@ -676,6 +735,7 @@
             this.Patients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).EndInit();
             this.Appointments.ResumeLayout(false);
+            this.Appointments.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplintments)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -750,5 +810,9 @@
         private System.Windows.Forms.Button btnAddPatient;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSearchPatients;
+        private System.Windows.Forms.DateTimePicker dtpAppoinmentDates;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnCurrentAppointments;
+        private System.Windows.Forms.Button btnDeletePast;
     }
 }

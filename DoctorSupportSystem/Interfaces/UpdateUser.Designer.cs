@@ -242,6 +242,7 @@
             // 
             // UpdateUser
             // 
+            this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 360);
@@ -249,6 +250,7 @@
             this.Controls.Add(this.btnChangeUP);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UpdateUser";
             this.Text = "Edit Profile";
             this.panel2.ResumeLayout(false);

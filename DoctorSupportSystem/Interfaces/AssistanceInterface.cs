@@ -18,6 +18,8 @@ namespace DoctorSupportSystem.Interfaces
 
         Patient patient;
         DataTable patients;
+        DataTable appoinments;
+
 
         public AssistanceInterface()
         {
@@ -29,11 +31,14 @@ namespace DoctorSupportSystem.Interfaces
             patients = DataBaseOperator.GetInstance().getAllPatients();
             dgvPatients.DataSource = patients;
             dgvApplintments.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
+            appoinments = DataBaseOperator.GetInstance().getAllAppointments();
+            dgvApplintments.DataSource = appoinments;
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            dgvApplintments.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
+            appoinments = DataBaseOperator.GetInstance().getAllAppointments();
+            dgvApplintments.DataSource = appoinments;
         }
 
         private void btnLoadPatients_Click(object sender, EventArgs e)
@@ -45,6 +50,7 @@ namespace DoctorSupportSystem.Interfaces
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
             new AddAppointment().ShowDialog();
+            dgvApplintments.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
         }
 
         private void btnAddTest_Click(object sender, EventArgs e)
@@ -150,6 +156,33 @@ namespace DoctorSupportSystem.Interfaces
             DataView dataView = new DataView(patients);
             dataView.RowFilter = string.Format("Name Like '%{0}%'", txtSearchPatients.Text);
             dgvPatients.DataSource = dataView;
+        }
+
+        private void dtpAppoinmentDates_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataView dataView = new DataView(appoinments);
+                dataView.RowFilter = string.Format("[Date] = #{0}#", dtpAppoinmentDates.Value.ToString("MM/dd/yyyy"));
+                dgvApplintments.DataSource = dataView;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnCurrentAppointments_Click(object sender, EventArgs e)
+        {
+            appoinments = DataBaseOperator.GetInstance().getAllCurrentAppointments();
+            dgvApplintments.DataSource = appoinments;
+        }
+
+        private void btnDeletePast_Click(object sender, EventArgs e)
+        {
+            DataBaseOperator.GetInstance().deletePreviousAppointment();
+            appoinments = DataBaseOperator.GetInstance().getAllCurrentAppointments();
+            dgvApplintments.DataSource = appoinments;
         }
     }
 }

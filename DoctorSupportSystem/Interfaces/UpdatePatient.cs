@@ -43,19 +43,7 @@ namespace DoctorSupportSystem.Interfaces
         private void btnUpdatePatient_Click(object sender, EventArgs e)
         {
             Patient patient = new Patient();
-            patient.PID = Convert.ToInt32(txtPID.Text);
-            patient.FirstName = txtFName.Text;
-            patient.LastName = txtLName.Text;
-            int year = Int32.Parse(txtYear.Text);
-            int month = Int32.Parse(txtMonth.Text);
-            int day = Int32.Parse(txtDay.Text);
-            
-            patient.DateOfBirth = new Date(year, month, day);
-            
-            patient.Address = txtAddress.Text;
-
-            patient.Gender = cbGender.SelectedItem.ToString();
-
+    
             String err = "";
 
             if (txtFName.Text == "")
@@ -82,6 +70,19 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
+                patient.PID = Convert.ToInt32(txtPID.Text);
+                patient.FirstName = txtFName.Text;
+                patient.LastName = txtLName.Text;
+                int year = Int32.Parse(txtYear.Text);
+                int month = Int32.Parse(txtMonth.Text);
+                int day = Int32.Parse(txtDay.Text);
+
+                patient.DateOfBirth = new Date(year, month, day);
+
+                patient.Address = txtAddress.Text;
+
+                patient.Gender = cbGender.SelectedItem.ToString();
+
                 int re = db.updatePatient(patient);
                 if (re == -1)
                 {

@@ -21,6 +21,7 @@ namespace DoctorSupportSystem.Interfaces
 
         DataTable users;
         DataTable patients;
+        DataTable appoinments;
 
         public DoctorInterface()
         {
@@ -32,11 +33,15 @@ namespace DoctorSupportSystem.Interfaces
             dgvUsers.DataSource = users;
             patients = DataBaseOperator.GetInstance().getAllPatients();
             dgvPatients.DataSource = patients;
+            appoinments = DataBaseOperator.GetInstance().getAllAppointments();
+            dgvApplintments.DataSource = appoinments;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             new Add_User().ShowDialog();
+            users = DataBaseOperator.GetInstance().getAllUsers();
+            dgvUsers.DataSource = users;
         }
 
         private void btnLoadPatients_Click(object sender, EventArgs e)
@@ -149,6 +154,9 @@ namespace DoctorSupportSystem.Interfaces
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
             new AddPatient().ShowDialog();
+            patients = DataBaseOperator.GetInstance().getAllPatients();
+            dgvPatients.DataSource = patients;
+
         }
 
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
@@ -240,7 +248,8 @@ namespace DoctorSupportSystem.Interfaces
 
         private void txtSearchUsers_TextChanged(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 DataView dataView = new DataView(users);
                 dataView.RowFilter = string.Format("[Full Name] Like '%{0}%'", txtSearchUsers.Text);
                 dgvUsers.DataSource = dataView;
@@ -249,12 +258,7 @@ namespace DoctorSupportSystem.Interfaces
             {
                 Console.WriteLine(ex.Message);
             }
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void btnAddPatientProfile_Click(object sender, EventArgs e)
         {
@@ -306,6 +310,83 @@ namespace DoctorSupportSystem.Interfaces
                 dgvUsers.Rows.RemoveAt(dgvUsers.CurrentRow.Index);
                 
             }
+        }
+        
+      
+        private void btnShowAppintments_Click(object sender, EventArgs e)
+        {
+            appoinments = DataBaseOperator.GetInstance().getAllAppointments();
+            dgvApplintments.DataSource = appoinments;
+        }
+
+        private void btnAddAppointment_Click(object sender, EventArgs e)
+        {
+            new AddAppointment().ShowDialog();
+            appoinments = DataBaseOperator.GetInstance().getAllAppointments();
+            dgvApplintments.DataSource = appoinments;
+        }
+
+        private void dgvApplintments_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button == MouseButtons.Right)
+            {
+                var hti = dgvApplintments.HitTest(e.X, e.Y);
+                dgvApplintments.ClearSelection();
+                dgvApplintments.Rows[hti.RowIndex].Selected = true;
+
+                ContextMenu m = new ContextMenu();
+
+                int currentMouseOverRow = dgvApplintments.HitTest(e.X, e.Y).RowIndex;
+                DataGridViewRow selectedRow = dgvApplintments.Rows[currentMouseOverRow];
+
+
+                MenuItem mi1 = new MenuItem(string.Format("Delete Selected User", currentMouseOverRow.ToString()));
+                mi1.Click += new EventHandler(deleteAppointment);
+                m.MenuItems.Add(mi1);
+
+                m.Show(dgvApplintments, new Point(e.X, e.Y));
+
+            }
+        }
+
+        private void deleteAppointment(object sender, EventArgs e)
+        {
+            if (dgvApplintments.Rows.Count > 0)
+            {
+                DataBaseOperator.GetInstance()
+                    .deleteAppointment(Convert.ToInt32(dgvApplintments.SelectedRows[0].Cells[0].Value)
+                    ,new Date(dgvApplintments.SelectedRows[0].Cells[1].Value.ToString()));
+                dgvApplintments.Rows.RemoveAt(dgvApplintments.CurrentRow.Index);
+
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataView dataView = new DataView(appoinments);
+                dataView.RowFilter = string.Format("[Date] = #{0}#", dtpAppoinmentDates.Value.ToString("MM/dd/yyyy"));
+                dgvApplintments.DataSource = dataView;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnCurrentAppointments_Click(object sender, EventArgs e)
+        {
+            appoinments = DataBaseOperator.GetInstance().getAllCurrentAppointments();
+            dgvApplintments.DataSource = appoinments;
+        }
+
+        private void btnDeletePast_Click(object sender, EventArgs e)
+        {
+            DataBaseOperator.GetInstance().deletePreviousAppointment();
+            appoinments = DataBaseOperator.GetInstance().getAllCurrentAppointments();
+            dgvApplintments.DataSource = appoinments;
         }
     }
 }

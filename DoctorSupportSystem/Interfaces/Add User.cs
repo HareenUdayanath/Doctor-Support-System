@@ -26,10 +26,7 @@ namespace DoctorSupportSystem.Interfaces
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             User user = new User();
-            user.Fullname = txtFullName.Text;
-            user.Position = comboboxPosition.SelectedItem.ToString();
-            user.Gender = comboBoxGender.SelectedItem.ToString();
-            user.Username = txtUserName.Text;
+           
 
             String err = "";
 
@@ -59,6 +56,10 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
+                user.Fullname = txtFullName.Text;
+                user.Position = comboboxPosition.SelectedItem.ToString();
+                user.Gender = comboBoxGender.SelectedItem.ToString();
+                user.Username = txtUserName.Text;
                 if (db.addUser(user) == -1)
                 {
                     MessageBox.Show("Duplicate NIC:\n"
