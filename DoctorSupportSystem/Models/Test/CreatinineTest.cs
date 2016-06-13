@@ -8,19 +8,19 @@ namespace DoctorSupportSystem.Models.Test
 {
     public class CreatinineTest : MedicalTest
     {
-        private float serumCreatinint;
+        private float serumCreatinine;
         private float gfr;
 
         public float SerumCreatinint
         {
             get
             {
-                return serumCreatinint;
+                return serumCreatinine;
             }
 
             set
             {
-                serumCreatinint = value;
+                serumCreatinine = value;
             }
         }
 
