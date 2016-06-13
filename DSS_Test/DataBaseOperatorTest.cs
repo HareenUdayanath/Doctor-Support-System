@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.DataBase;
+using System.Threading;
 
 namespace DSS_Test
 {
@@ -13,6 +14,10 @@ namespace DSS_Test
         [TestMethod]
         public void checkPateintInsertonAndLoad()
         {
+            /*
+             * Check insertion of a patient to the database
+             * Using patient object
+             */
             Patient orgPatient = new Patient();
             orgPatient.FirstName = "Udaya";
             orgPatient.LastName = "Gunarathna";            
@@ -22,10 +27,26 @@ namespace DSS_Test
             orgPatient.Nic = "123654987V";
             orgPatient.ContactNo = "0113365126";
 
-            db.addPatient(orgPatient);
+            int re = db.addPatient(orgPatient);
 
+
+            /*
+             * To verify that the patient is added corrctly,
+             * load the added patient using nic
+             * and compare the loaded patient and added patient 
+             */
             Patient loadedPateitn = db.getPatientByNIC(orgPatient.Nic);
 
+            /*
+             * If the patient is successfuly added to the database, 
+             * the function will return 1
+             */
+            Assert.AreEqual(re,1);
+
+
+            /*
+             * Compare following values 
+             */
             Assert.AreEqual(orgPatient.FirstName, loadedPateitn.FirstName);
             Assert.AreEqual(orgPatient.LastName, loadedPateitn.LastName);
             Assert.AreEqual(orgPatient.DateOfBirth.getDate(), loadedPateitn.DateOfBirth.getDate());
@@ -121,5 +142,72 @@ namespace DSS_Test
             Assert.AreEqual(re, 1);
             Assert.AreNotEqual(appointment.Number, db.getNoOfAppointments(appointment.Date));
         }
+
+        [TestMethod]
+        public void chechDeseaseRecordInsertion()
+        {
+
+            /*
+             * max rid + 1 should be the next rid 
+             */
+            int rid = db.getMaxRID() + 1;
+            /*
+             * Check the insertion using the correct values
+             */
+            DeseaseReport deseaseRecord = new DeseaseReport();
+            deseaseRecord.Pid = 1;
+            deseaseRecord.Rid = rid;
+            deseaseRecord.Desease = "A";
+
+            /*
+             * If the insertion is success, the function return 1
+             */
+            int re = db.addDeseaseReport(deseaseRecord);
+
+            /*
+             * Check whether the correct data is added to the database
+             */
+            Assert.AreEqual(re,1);
+
+            rid = db.getMaxRID();
+
+            /*
+             * After insertion the max rid should be equal to the desease report rid 
+             */
+            Assert.AreEqual(deseaseRecord.Rid,rid);
+                       
+            // If the deletion is successful, the deletion function return 1
+            //re = db.deleteDeseaseRecord(deseaseRecord.Rid);
+
+            //Assert.AreEqual(re, 1);
+
+          
+        }
+
+        [TestMethod]
+        public void checkDeseaseReportInsertionWithIncorrectData()
+        {
+            /*
+           * check the insertion using invalid patient id,
+           * which is not in the patientdetails table
+           */
+
+            DeseaseReport deseaseRecord = new DeseaseReport();
+            deseaseRecord.Pid = 15000;
+            deseaseRecord.Desease = "B";
+
+            /*
+             * If the insertion is success, the function return 1
+             * If the insertion fail because of the invalid pid, it will return -2
+             */
+            int re = db.addDeseaseReport(deseaseRecord);
+
+            /*
+             * Check whether the correct data is added to the database
+             */
+            Assert.AreEqual(re, -2);
+        }
+
+       
     }
 }
