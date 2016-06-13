@@ -48,10 +48,18 @@ namespace DSS_Test
             orgUser.Nic = "123798456V";
             orgUser.ContactNo = "0113365423";
 
+
+            /*
+             * If the data added successfully to the database, the function returns the number 1
+             * Otehrwise negative number will return according to the error   
+             */
             int re = db.addUser(orgUser);
 
             User loadUser = db.getUser(orgUser.Nic);
 
+            /*
+             * Should check the insertion function has returned 1
+             */
             Assert.AreEqual(re, 1);
             Assert.AreEqual(orgUser.Username, loadUser.Username);
             Assert.AreEqual(orgUser.Position, loadUser.Position);
@@ -60,11 +68,58 @@ namespace DSS_Test
             Assert.AreEqual(orgUser.Nic, loadUser.Nic);
             Assert.AreEqual(orgUser.ContactNo, loadUser.ContactNo);
 
+            /*
+             * If the data successfully delete from the database, the function returns the number 1
+             * Otehrwise negative number will return according to the error   
+             */
             re = db.deleteUser(orgUser.Nic);
 
+            /*
+            * Should check the deletion function has returned 1
+            */
             Assert.AreEqual(re, 1);
             Assert.IsFalse(db.checkUser(orgUser.Username, orgUser.Password));
             
+        }
+
+        [TestMethod]
+        public void checkAppointmentInsertionAndDeletion()
+        {
+            Appointment appointment = new Appointment();
+            appointment.Date = new Date(2016,8,2);
+            appointment.PatientName = "Sunil Perera";
+            appointment.Nic = "456789123V";
+
+            /*
+             * Appointment number for a specific date should be number of appointments of that date + 1
+             */
+            int appointmentNumber = db.getNoOfAppointments(appointment.Date) + 1;
+            appointment.Number = appointmentNumber;
+
+            /*
+            * If the data added successfully to the database, the function returns the number 1
+            * Otehrwise negative number will return according to the error   
+            */
+            int re = db.addAppointment(appointment);
+           
+
+            /*
+             * Should check the insertion function has returned 1
+             */
+            Assert.AreEqual(re,1);
+            Assert.AreEqual(appointment.Number, db.getNoOfAppointments(appointment.Date));
+
+            /*
+             * If the data successfully delete from the database, the function returns the number 1
+             * Otehrwise negative number will return according to the error   
+            */
+            re = db.deleteAppointment(appointment.Number,appointment.Date);
+
+            /*
+             * Should check the deletion function has returned 1
+             */
+            Assert.AreEqual(re, 1);
+            Assert.AreNotEqual(appointment.Number, db.getNoOfAppointments(appointment.Date));
         }
     }
 }
