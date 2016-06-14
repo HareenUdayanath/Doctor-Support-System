@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorInterface));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Patients = new System.Windows.Forms.TabPage();
@@ -47,16 +48,15 @@
             this.btnAddTest = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbtnPrfileLiverTest = new System.Windows.Forms.RadioButton();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.rbtnHaemoglobinTest = new System.Windows.Forms.RadioButton();
             this.rbtnUrineTest = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.rbtnCreatinineTest = new System.Windows.Forms.RadioButton();
             this.rbtnLipidTest = new System.Windows.Forms.RadioButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtSearchPatient = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbCN = new System.Windows.Forms.Label();
+            this.lbBlood = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.lbNIC = new System.Windows.Forms.Label();
@@ -76,8 +76,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbPID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbSearchPatients = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnDeletePast = new System.Windows.Forms.Button();
             this.btnCurrentAppointments = new System.Windows.Forms.Button();
             this.dtpAppoinmentDates = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.btnAddPatientProfile = new System.Windows.Forms.Button();
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.btnUserProChange = new System.Windows.Forms.Button();
-            this.btnDeletePast = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.Patients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
@@ -119,17 +119,17 @@
             this.tabControl1.Controls.Add(this.Users);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(80, 30);
-            this.tabControl1.Location = new System.Drawing.Point(124, 82);
+            this.tabControl1.Location = new System.Drawing.Point(12, 93);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(695, 624);
+            this.tabControl1.Size = new System.Drawing.Size(1342, 583);
             this.tabControl1.TabIndex = 0;
             // 
             // Patients
             // 
-            this.Patients.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Patients.BackColor = System.Drawing.Color.White;
             this.Patients.Controls.Add(this.label5);
             this.Patients.Controls.Add(this.txtSearchPatients);
             this.Patients.Controls.Add(this.btnLoadPatients);
@@ -137,39 +137,39 @@
             this.Patients.Location = new System.Drawing.Point(4, 34);
             this.Patients.Name = "Patients";
             this.Patients.Padding = new System.Windows.Forms.Padding(3);
-            this.Patients.Size = new System.Drawing.Size(687, 586);
+            this.Patients.Size = new System.Drawing.Size(1334, 545);
             this.Patients.TabIndex = 0;
             this.Patients.Text = "Patients";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 40);
+            this.label5.Location = new System.Drawing.Point(20, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 16);
+            this.label5.Size = new System.Drawing.Size(129, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Search Patients";
             // 
             // txtSearchPatients
             // 
-            this.txtSearchPatients.Location = new System.Drawing.Point(117, 37);
+            this.txtSearchPatients.Location = new System.Drawing.Point(155, 22);
             this.txtSearchPatients.Name = "txtSearchPatients";
-            this.txtSearchPatients.Size = new System.Drawing.Size(167, 22);
+            this.txtSearchPatients.Size = new System.Drawing.Size(167, 31);
             this.txtSearchPatients.TabIndex = 3;
             this.txtSearchPatients.TextChanged += new System.EventHandler(this.txtSearchPatients_TextChanged);
             // 
             // btnLoadPatients
             // 
             this.btnLoadPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoadPatients.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLoadPatients.BackColor = System.Drawing.Color.Teal;
             this.btnLoadPatients.FlatAppearance.BorderSize = 0;
             this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadPatients.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(550, 542);
+            this.btnLoadPatients.Location = new System.Drawing.Point(1009, 488);
             this.btnLoadPatients.Name = "btnLoadPatients";
-            this.btnLoadPatients.Size = new System.Drawing.Size(131, 38);
+            this.btnLoadPatients.Size = new System.Drawing.Size(320, 52);
             this.btnLoadPatients.TabIndex = 1;
             this.btnLoadPatients.Text = "Refresh Patients";
             this.btnLoadPatients.UseVisualStyleBackColor = false;
@@ -183,54 +183,65 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPatients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPatients.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPatients.EnableHeadersVisualStyles = false;
+            this.dgvPatients.GridColor = System.Drawing.Color.White;
             this.dgvPatients.Location = new System.Drawing.Point(6, 72);
             this.dgvPatients.Name = "dgvPatients";
             this.dgvPatients.ReadOnly = true;
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPatients.Size = new System.Drawing.Size(675, 464);
+            this.dgvPatients.Size = new System.Drawing.Size(1322, 412);
             this.dgvPatients.TabIndex = 0;
             this.dgvPatients.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseClick);
             // 
             // Users
             // 
-            this.Users.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Users.BackColor = System.Drawing.Color.White;
             this.Users.Controls.Add(this.label7);
             this.Users.Controls.Add(this.txtSearchUsers);
             this.Users.Controls.Add(this.dgvUsers);
             this.Users.Controls.Add(this.btnLoadUsers);
-            this.Users.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Users.ForeColor = System.Drawing.Color.White;
             this.Users.Location = new System.Drawing.Point(4, 34);
             this.Users.Name = "Users";
             this.Users.Padding = new System.Windows.Forms.Padding(3);
-            this.Users.Size = new System.Drawing.Size(687, 586);
+            this.Users.Size = new System.Drawing.Size(1334, 545);
             this.Users.TabIndex = 1;
             this.Users.Text = "Users";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(8, 40);
+            this.label7.Location = new System.Drawing.Point(19, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
+            this.label7.Size = new System.Drawing.Size(110, 23);
             this.label7.TabIndex = 6;
             this.label7.Text = "Search Users";
             // 
             // txtSearchUsers
             // 
-            this.txtSearchUsers.Location = new System.Drawing.Point(117, 37);
+            this.txtSearchUsers.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchUsers.Location = new System.Drawing.Point(133, 21);
             this.txtSearchUsers.Name = "txtSearchUsers";
-            this.txtSearchUsers.Size = new System.Drawing.Size(167, 22);
+            this.txtSearchUsers.Size = new System.Drawing.Size(167, 31);
             this.txtSearchUsers.TabIndex = 5;
             this.txtSearchUsers.TextChanged += new System.EventHandler(this.txtSearchUsers_TextChanged);
             // 
@@ -242,36 +253,36 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsers.EnableHeadersVisualStyles = false;
             this.dgvUsers.Location = new System.Drawing.Point(6, 73);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(675, 463);
+            this.dgvUsers.Size = new System.Drawing.Size(1322, 408);
             this.dgvUsers.TabIndex = 0;
             this.dgvUsers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvUsers_MouseClick);
             // 
             // btnLoadUsers
             // 
             this.btnLoadUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoadUsers.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLoadUsers.BackColor = System.Drawing.Color.Teal;
             this.btnLoadUsers.FlatAppearance.BorderSize = 0;
             this.btnLoadUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLoadUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadUsers.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadUsers.ForeColor = System.Drawing.Color.White;
-            this.btnLoadUsers.Location = new System.Drawing.Point(550, 542);
+            this.btnLoadUsers.Location = new System.Drawing.Point(1008, 487);
             this.btnLoadUsers.Name = "btnLoadUsers";
-            this.btnLoadUsers.Size = new System.Drawing.Size(131, 38);
+            this.btnLoadUsers.Size = new System.Drawing.Size(320, 52);
             this.btnLoadUsers.TabIndex = 2;
             this.btnLoadUsers.Text = "Refresh Users";
             this.btnLoadUsers.UseVisualStyleBackColor = false;
@@ -284,7 +295,7 @@
             this.tabPage1.Controls.Add(this.panel5);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(687, 586);
+            this.tabPage1.Size = new System.Drawing.Size(1334, 545);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Test";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -292,15 +303,15 @@
             // btnAddTest
             // 
             this.btnAddTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddTest.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddTest.BackColor = System.Drawing.Color.Teal;
             this.btnAddTest.FlatAppearance.BorderSize = 0;
             this.btnAddTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTest.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTest.ForeColor = System.Drawing.Color.White;
-            this.btnAddTest.Location = new System.Drawing.Point(3, 548);
+            this.btnAddTest.Location = new System.Drawing.Point(1011, 490);
             this.btnAddTest.Name = "btnAddTest";
-            this.btnAddTest.Size = new System.Drawing.Size(156, 35);
+            this.btnAddTest.Size = new System.Drawing.Size(320, 52);
             this.btnAddTest.TabIndex = 15;
             this.btnAddTest.Text = "Add Selected Test";
             this.btnAddTest.UseVisualStyleBackColor = false;
@@ -310,48 +321,36 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
-            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.rbtnHaemoglobinTest);
             this.panel2.Controls.Add(this.rbtnUrineTest);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.rbtnCreatinineTest);
             this.panel2.Controls.Add(this.rbtnLipidTest);
-            this.panel2.Location = new System.Drawing.Point(3, 348);
+            this.panel2.Location = new System.Drawing.Point(13, 334);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(681, 169);
+            this.panel2.Size = new System.Drawing.Size(700, 169);
             this.panel2.TabIndex = 14;
             // 
             // rbtnPrfileLiverTest
             // 
             this.rbtnPrfileLiverTest.AutoSize = true;
-            this.rbtnPrfileLiverTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.rbtnPrfileLiverTest.Location = new System.Drawing.Point(18, 108);
+            this.rbtnPrfileLiverTest.BackColor = System.Drawing.Color.White;
+            this.rbtnPrfileLiverTest.Location = new System.Drawing.Point(18, 107);
             this.rbtnPrfileLiverTest.Name = "rbtnPrfileLiverTest";
-            this.rbtnPrfileLiverTest.Size = new System.Drawing.Size(162, 20);
+            this.rbtnPrfileLiverTest.Size = new System.Drawing.Size(181, 27);
             this.rbtnPrfileLiverTest.TabIndex = 6;
             this.rbtnPrfileLiverTest.TabStop = true;
             this.rbtnPrfileLiverTest.Text = "PROFILE LIVER TEST";
             this.rbtnPrfileLiverTest.UseVisualStyleBackColor = false;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(681, 30);
-            this.panel4.TabIndex = 9;
-            // 
             // rbtnHaemoglobinTest
             // 
             this.rbtnHaemoglobinTest.AutoSize = true;
-            this.rbtnHaemoglobinTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.rbtnHaemoglobinTest.Location = new System.Drawing.Point(18, 43);
+            this.rbtnHaemoglobinTest.BackColor = System.Drawing.Color.White;
+            this.rbtnHaemoglobinTest.Location = new System.Drawing.Point(18, 44);
             this.rbtnHaemoglobinTest.Name = "rbtnHaemoglobinTest";
-            this.rbtnHaemoglobinTest.Size = new System.Drawing.Size(258, 20);
+            this.rbtnHaemoglobinTest.Size = new System.Drawing.Size(308, 27);
             this.rbtnHaemoglobinTest.TabIndex = 4;
             this.rbtnHaemoglobinTest.TabStop = true;
             this.rbtnHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
@@ -362,28 +361,18 @@
             this.rbtnUrineTest.AutoSize = true;
             this.rbtnUrineTest.Location = new System.Drawing.Point(18, 140);
             this.rbtnUrineTest.Name = "rbtnUrineTest";
-            this.rbtnUrineTest.Size = new System.Drawing.Size(246, 20);
+            this.rbtnUrineTest.Size = new System.Drawing.Size(291, 27);
             this.rbtnUrineTest.TabIndex = 7;
             this.rbtnUrineTest.TabStop = true;
             this.rbtnUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
             this.rbtnUrineTest.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.Location = new System.Drawing.Point(0, 37);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(681, 30);
-            this.panel3.TabIndex = 8;
             // 
             // rbtnCreatinineTest
             // 
             this.rbtnCreatinineTest.AutoSize = true;
             this.rbtnCreatinineTest.Location = new System.Drawing.Point(18, 13);
             this.rbtnCreatinineTest.Name = "rbtnCreatinineTest";
-            this.rbtnCreatinineTest.Size = new System.Drawing.Size(217, 20);
+            this.rbtnCreatinineTest.Size = new System.Drawing.Size(244, 27);
             this.rbtnCreatinineTest.TabIndex = 3;
             this.rbtnCreatinineTest.TabStop = true;
             this.rbtnCreatinineTest.Text = "CREATININE AND eGFR TEST";
@@ -394,7 +383,7 @@
             this.rbtnLipidTest.AutoSize = true;
             this.rbtnLipidTest.Location = new System.Drawing.Point(18, 75);
             this.rbtnLipidTest.Name = "rbtnLipidTest";
-            this.rbtnLipidTest.Size = new System.Drawing.Size(117, 20);
+            this.rbtnLipidTest.Size = new System.Drawing.Size(139, 27);
             this.rbtnLipidTest.TabIndex = 5;
             this.rbtnLipidTest.TabStop = true;
             this.rbtnLipidTest.Text = "LIPID PROFILE";
@@ -404,7 +393,8 @@
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.txtSearchPatient);
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.panel10);
@@ -413,238 +403,281 @@
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.cbSearchPatients);
+            this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel5.Location = new System.Drawing.Point(0, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(684, 339);
+            this.panel5.Size = new System.Drawing.Size(1595, 307);
             this.panel5.TabIndex = 13;
+            // 
+            // txtSearchPatient
+            // 
+            this.txtSearchPatient.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtSearchPatient.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtSearchPatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchPatient.Location = new System.Drawing.Point(213, 21);
+            this.txtSearchPatient.Name = "txtSearchPatient";
+            this.txtSearchPatient.Size = new System.Drawing.Size(215, 31);
+            this.txtSearchPatient.TabIndex = 18;
+            this.txtSearchPatient.TextChanged += new System.EventHandler(this.txtSearchPatient_TextChanged);
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.label3);
-            this.panel12.Controls.Add(this.lbCN);
-            this.panel12.Location = new System.Drawing.Point(27, 287);
+            this.panel12.Controls.Add(this.lbBlood);
+            this.panel12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel12.Location = new System.Drawing.Point(571, 175);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(358, 31);
+            this.panel12.Size = new System.Drawing.Size(480, 52);
             this.panel12.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(31, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 16);
+            this.label3.Size = new System.Drawing.Size(103, 23);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Contact Number :\r\n";
+            this.label3.Text = "Blood Type :\r\n";
             // 
-            // lbCN
+            // lbBlood
             // 
-            this.lbCN.AutoSize = true;
-            this.lbCN.Location = new System.Drawing.Point(156, 9);
-            this.lbCN.Name = "lbCN";
-            this.lbCN.Size = new System.Drawing.Size(12, 16);
-            this.lbCN.TabIndex = 13;
-            this.lbCN.Text = "-";
+            this.lbBlood.AutoSize = true;
+            this.lbBlood.BackColor = System.Drawing.Color.White;
+            this.lbBlood.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBlood.Location = new System.Drawing.Point(156, 9);
+            this.lbBlood.Name = "lbBlood";
+            this.lbBlood.Size = new System.Drawing.Size(16, 23);
+            this.lbBlood.TabIndex = 13;
+            this.lbBlood.Text = "-";
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.lbNIC);
-            this.panel11.Location = new System.Drawing.Point(27, 250);
+            this.panel11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel11.Location = new System.Drawing.Point(571, 120);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(358, 31);
+            this.panel11.Size = new System.Drawing.Size(480, 52);
             this.panel11.TabIndex = 15;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(31, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 16);
+            this.label12.Size = new System.Drawing.Size(47, 23);
             this.label12.TabIndex = 12;
             this.label12.Text = "NIC :\r\n";
             // 
             // lbNIC
             // 
             this.lbNIC.AutoSize = true;
+            this.lbNIC.BackColor = System.Drawing.Color.White;
+            this.lbNIC.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNIC.Location = new System.Drawing.Point(154, 9);
             this.lbNIC.Name = "lbNIC";
-            this.lbNIC.Size = new System.Drawing.Size(12, 16);
+            this.lbNIC.Size = new System.Drawing.Size(16, 23);
             this.lbNIC.TabIndex = 13;
             this.lbNIC.Text = "-";
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.lbG);
-            this.panel10.Location = new System.Drawing.Point(27, 213);
+            this.panel10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel10.Location = new System.Drawing.Point(571, 65);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(358, 31);
+            this.panel10.Size = new System.Drawing.Size(480, 52);
             this.panel10.TabIndex = 16;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(31, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.Size = new System.Drawing.Size(76, 23);
             this.label10.TabIndex = 12;
             this.label10.Text = "Gender :\r\n";
             // 
             // lbG
             // 
             this.lbG.AutoSize = true;
+            this.lbG.BackColor = System.Drawing.Color.White;
+            this.lbG.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbG.Location = new System.Drawing.Point(155, 9);
             this.lbG.Name = "lbG";
-            this.lbG.Size = new System.Drawing.Size(12, 16);
+            this.lbG.Size = new System.Drawing.Size(16, 23);
             this.lbG.TabIndex = 13;
             this.lbG.Text = "-";
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.lbDOB);
-            this.panel9.Location = new System.Drawing.Point(27, 176);
+            this.panel9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel9.Location = new System.Drawing.Point(27, 230);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(358, 31);
+            this.panel9.Size = new System.Drawing.Size(480, 52);
             this.panel9.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(31, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 16);
+            this.label8.Size = new System.Drawing.Size(116, 23);
             this.label8.TabIndex = 12;
             this.label8.Text = "Date of Birth :\r\n";
             // 
             // lbDOB
             // 
             this.lbDOB.AutoSize = true;
+            this.lbDOB.BackColor = System.Drawing.Color.White;
+            this.lbDOB.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDOB.Location = new System.Drawing.Point(154, 9);
             this.lbDOB.Name = "lbDOB";
-            this.lbDOB.Size = new System.Drawing.Size(12, 16);
+            this.lbDOB.Size = new System.Drawing.Size(16, 23);
             this.lbDOB.TabIndex = 13;
             this.lbDOB.Text = "-";
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.lbLN);
-            this.panel8.Location = new System.Drawing.Point(27, 139);
+            this.panel8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel8.Location = new System.Drawing.Point(27, 175);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(358, 31);
+            this.panel8.Size = new System.Drawing.Size(480, 52);
             this.panel8.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(31, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 16);
+            this.label6.Size = new System.Drawing.Size(99, 23);
             this.label6.TabIndex = 12;
             this.label6.Text = "Last Name :\r\n";
             // 
             // lbLN
             // 
             this.lbLN.AutoSize = true;
+            this.lbLN.BackColor = System.Drawing.Color.White;
+            this.lbLN.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLN.Location = new System.Drawing.Point(155, 9);
             this.lbLN.Name = "lbLN";
-            this.lbLN.Size = new System.Drawing.Size(12, 16);
+            this.lbLN.Size = new System.Drawing.Size(16, 23);
             this.lbLN.TabIndex = 13;
             this.lbLN.Text = "-";
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.lbFN);
-            this.panel7.Location = new System.Drawing.Point(27, 102);
+            this.panel7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel7.Location = new System.Drawing.Point(27, 120);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(358, 31);
+            this.panel7.Size = new System.Drawing.Size(480, 52);
             this.panel7.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(31, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 16);
+            this.label4.Size = new System.Drawing.Size(102, 23);
             this.label4.TabIndex = 12;
             this.label4.Text = "First Name :\r\n";
             // 
             // lbFN
             // 
             this.lbFN.AutoSize = true;
+            this.lbFN.BackColor = System.Drawing.Color.White;
+            this.lbFN.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFN.Location = new System.Drawing.Point(155, 9);
             this.lbFN.Name = "lbFN";
-            this.lbFN.Size = new System.Drawing.Size(12, 16);
+            this.lbFN.Size = new System.Drawing.Size(16, 23);
             this.lbFN.TabIndex = 13;
             this.lbFN.Text = "-";
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.lbPID);
+            this.panel6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel6.Location = new System.Drawing.Point(27, 65);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(358, 31);
+            this.panel6.Size = new System.Drawing.Size(480, 52);
             this.panel6.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(31, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(47, 23);
             this.label2.TabIndex = 12;
             this.label2.Text = "PID :\r\n";
             // 
             // lbPID
             // 
             this.lbPID.AutoSize = true;
+            this.lbPID.BackColor = System.Drawing.Color.White;
+            this.lbPID.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPID.Location = new System.Drawing.Point(155, 9);
             this.lbPID.Name = "lbPID";
-            this.lbPID.Size = new System.Drawing.Size(12, 16);
+            this.lbPID.Size = new System.Drawing.Size(16, 23);
             this.lbPID.TabIndex = 13;
             this.lbPID.Text = "-";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 16);
+            this.label1.Size = new System.Drawing.Size(186, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "Enter the patient name";
             // 
-            // cbSearchPatients
-            // 
-            this.cbSearchPatients.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbSearchPatients.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbSearchPatients.FormattingEnabled = true;
-            this.cbSearchPatients.Location = new System.Drawing.Point(191, 18);
-            this.cbSearchPatients.Name = "cbSearchPatients";
-            this.cbSearchPatients.Size = new System.Drawing.Size(194, 24);
-            this.cbSearchPatients.TabIndex = 10;
-            this.cbSearchPatients.TextChanged += new System.EventHandler(this.cbSearchPatients_TextChanged_1);
-            // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.btnDeletePast);
             this.tabPage2.Controls.Add(this.btnCurrentAppointments);
             this.tabPage2.Controls.Add(this.dtpAppoinmentDates);
@@ -653,22 +686,39 @@
             this.tabPage2.Controls.Add(this.dgvApplintments);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(687, 586);
+            this.tabPage2.Size = new System.Drawing.Size(1334, 545);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Appointment";
+            // 
+            // btnDeletePast
+            // 
+            this.btnDeletePast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletePast.BackColor = System.Drawing.Color.Teal;
+            this.btnDeletePast.FlatAppearance.BorderSize = 0;
+            this.btnDeletePast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnDeletePast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletePast.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePast.ForeColor = System.Drawing.Color.White;
+            this.btnDeletePast.Location = new System.Drawing.Point(357, 490);
+            this.btnDeletePast.Name = "btnDeletePast";
+            this.btnDeletePast.Size = new System.Drawing.Size(320, 52);
+            this.btnDeletePast.TabIndex = 17;
+            this.btnDeletePast.Text = "Delete Previous Appointment";
+            this.btnDeletePast.UseVisualStyleBackColor = false;
+            this.btnDeletePast.Click += new System.EventHandler(this.btnDeletePast_Click);
             // 
             // btnCurrentAppointments
             // 
             this.btnCurrentAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCurrentAppointments.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCurrentAppointments.BackColor = System.Drawing.Color.Teal;
             this.btnCurrentAppointments.FlatAppearance.BorderSize = 0;
             this.btnCurrentAppointments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnCurrentAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCurrentAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCurrentAppointments.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCurrentAppointments.ForeColor = System.Drawing.Color.White;
-            this.btnCurrentAppointments.Location = new System.Drawing.Point(344, 535);
+            this.btnCurrentAppointments.Location = new System.Drawing.Point(683, 490);
             this.btnCurrentAppointments.Name = "btnCurrentAppointments";
-            this.btnCurrentAppointments.Size = new System.Drawing.Size(162, 48);
+            this.btnCurrentAppointments.Size = new System.Drawing.Size(320, 52);
             this.btnCurrentAppointments.TabIndex = 16;
             this.btnCurrentAppointments.Text = "Current Appointments";
             this.btnCurrentAppointments.UseVisualStyleBackColor = false;
@@ -676,33 +726,34 @@
             // 
             // dtpAppoinmentDates
             // 
-            this.dtpAppoinmentDates.Location = new System.Drawing.Point(162, 23);
+            this.dtpAppoinmentDates.Location = new System.Drawing.Point(184, 19);
             this.dtpAppoinmentDates.Name = "dtpAppoinmentDates";
-            this.dtpAppoinmentDates.Size = new System.Drawing.Size(242, 22);
+            this.dtpAppoinmentDates.Size = new System.Drawing.Size(320, 31);
             this.dtpAppoinmentDates.TabIndex = 15;
             this.dtpAppoinmentDates.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 28);
+            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(12, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 16);
+            this.label9.Size = new System.Drawing.Size(169, 23);
             this.label9.TabIndex = 14;
             this.label9.Text = "Search Appoinments";
             // 
             // btnShowAppintments
             // 
             this.btnShowAppintments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowAppintments.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnShowAppintments.BackColor = System.Drawing.Color.Teal;
             this.btnShowAppintments.FlatAppearance.BorderSize = 0;
             this.btnShowAppintments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnShowAppintments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowAppintments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAppintments.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAppintments.ForeColor = System.Drawing.Color.White;
-            this.btnShowAppintments.Location = new System.Drawing.Point(512, 535);
+            this.btnShowAppintments.Location = new System.Drawing.Point(1009, 490);
             this.btnShowAppintments.Name = "btnShowAppintments";
-            this.btnShowAppintments.Size = new System.Drawing.Size(162, 48);
+            this.btnShowAppintments.Size = new System.Drawing.Size(320, 52);
             this.btnShowAppintments.TabIndex = 12;
             this.btnShowAppintments.Text = "Refresh Appointments";
             this.btnShowAppintments.UseVisualStyleBackColor = false;
@@ -716,36 +767,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvApplintments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvApplintments.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApplintments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApplintments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvApplintments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApplintments.EnableHeadersVisualStyles = false;
-            this.dgvApplintments.Location = new System.Drawing.Point(3, 62);
+            this.dgvApplintments.Location = new System.Drawing.Point(15, 62);
             this.dgvApplintments.Name = "dgvApplintments";
             this.dgvApplintments.ReadOnly = true;
             this.dgvApplintments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvApplintments.Size = new System.Drawing.Size(681, 467);
+            this.dgvApplintments.Size = new System.Drawing.Size(1580, 426);
             this.dgvApplintments.TabIndex = 11;
             this.dgvApplintments.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvApplintments_MouseClick);
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.BackColor = System.Drawing.Color.DarkCyan;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 82);
+            this.button1.Location = new System.Drawing.Point(13, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 65);
+            this.button1.Size = new System.Drawing.Size(160, 52);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add User";
             this.button1.UseVisualStyleBackColor = false;
@@ -753,29 +803,27 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.btnAddAppointment);
             this.panel1.Controls.Add(this.btnAddPatientProfile);
             this.panel1.Controls.Add(this.btnAddPatient);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(122, 718);
+            this.panel1.Size = new System.Drawing.Size(1366, 88);
             this.panel1.TabIndex = 1;
             // 
             // btnAddAppointment
             // 
-            this.btnAddAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddAppointment.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddAppointment.BackColor = System.Drawing.Color.DarkCyan;
             this.btnAddAppointment.FlatAppearance.BorderSize = 0;
-            this.btnAddAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAppointment.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAppointment.ForeColor = System.Drawing.Color.White;
-            this.btnAddAppointment.Location = new System.Drawing.Point(0, 295);
+            this.btnAddAppointment.Location = new System.Drawing.Point(341, 17);
             this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(122, 65);
+            this.btnAddAppointment.Size = new System.Drawing.Size(160, 52);
             this.btnAddAppointment.TabIndex = 12;
             this.btnAddAppointment.Text = "Add Appointment";
             this.btnAddAppointment.UseVisualStyleBackColor = false;
@@ -783,33 +831,31 @@
             // 
             // btnAddPatientProfile
             // 
-            this.btnAddPatientProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddPatientProfile.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddPatientProfile.BackColor = System.Drawing.Color.DarkCyan;
             this.btnAddPatientProfile.FlatAppearance.BorderSize = 0;
-            this.btnAddPatientProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddPatientProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnAddPatientProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPatientProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatientProfile.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPatientProfile.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatientProfile.Location = new System.Drawing.Point(0, 224);
+            this.btnAddPatientProfile.Location = new System.Drawing.Point(505, 17);
             this.btnAddPatientProfile.Name = "btnAddPatientProfile";
-            this.btnAddPatientProfile.Size = new System.Drawing.Size(122, 65);
+            this.btnAddPatientProfile.Size = new System.Drawing.Size(320, 52);
             this.btnAddPatientProfile.TabIndex = 3;
-            this.btnAddPatientProfile.Text = "Add  Patient Desease Record";
+            this.btnAddPatientProfile.Text = "Add Desease Record";
             this.btnAddPatientProfile.UseVisualStyleBackColor = false;
             this.btnAddPatientProfile.Click += new System.EventHandler(this.btnAddPatientProfile_Click);
             // 
             // btnAddPatient
             // 
-            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddPatient.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddPatient.BackColor = System.Drawing.Color.DarkCyan;
             this.btnAddPatient.FlatAppearance.BorderSize = 0;
-            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatient.Location = new System.Drawing.Point(0, 153);
+            this.btnAddPatient.Location = new System.Drawing.Point(177, 17);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(122, 65);
+            this.btnAddPatient.Size = new System.Drawing.Size(160, 52);
             this.btnAddPatient.TabIndex = 2;
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.UseVisualStyleBackColor = false;
@@ -819,40 +865,33 @@
             // 
             this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
-            this.btnUserProChange.Location = new System.Drawing.Point(763, 12);
+            this.btnUserProChange.Location = new System.Drawing.Point(1298, 12);
             this.btnUserProChange.Name = "btnUserProChange";
             this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
             this.btnUserProChange.TabIndex = 10;
             this.btnUserProChange.UseVisualStyleBackColor = true;
             this.btnUserProChange.Click += new System.EventHandler(this.btnUserProChange_Click);
             // 
-            // btnDeletePast
+            // panel13
             // 
-            this.btnDeletePast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeletePast.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnDeletePast.FlatAppearance.BorderSize = 0;
-            this.btnDeletePast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDeletePast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletePast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePast.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePast.Location = new System.Drawing.Point(176, 535);
-            this.btnDeletePast.Name = "btnDeletePast";
-            this.btnDeletePast.Size = new System.Drawing.Size(162, 48);
-            this.btnDeletePast.TabIndex = 17;
-            this.btnDeletePast.Text = "Delete Previous Appointment";
-            this.btnDeletePast.UseVisualStyleBackColor = false;
-            this.btnDeletePast.Click += new System.EventHandler(this.btnDeletePast_Click);
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Location = new System.Drawing.Point(0, 680);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1366, 88);
+            this.panel13.TabIndex = 1;
             // 
             // DoctorInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 718);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.btnUserProChange);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DoctorInterface";
             this.Text = "Doctor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -906,7 +945,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbCN;
+        private System.Windows.Forms.Label lbBlood;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbNIC;
@@ -926,13 +965,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbPID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbSearchPatients;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rbtnPrfileLiverTest;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RadioButton rbtnHaemoglobinTest;
         private System.Windows.Forms.RadioButton rbtnUrineTest;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rbtnCreatinineTest;
         private System.Windows.Forms.RadioButton rbtnLipidTest;
         private System.Windows.Forms.Button btnAddTest;
@@ -950,5 +986,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCurrentAppointments;
         private System.Windows.Forms.Button btnDeletePast;
+        private System.Windows.Forms.TextBox txtSearchPatient;
+        private System.Windows.Forms.Panel panel13;
     }
 }

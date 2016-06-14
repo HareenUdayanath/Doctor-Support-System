@@ -30,17 +30,31 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLoadPatients = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.testResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miCreatinineTest = new System.Windows.Forms.ToolStripMenuItem();
-            this.miHaemoglobinTest = new System.Windows.Forms.ToolStripMenuItem();
-            this.miLipidTest = new System.Windows.Forms.ToolStripMenuItem();
-            this.miProfileLiverTest = new System.Windows.Forms.ToolStripMenuItem();
-            this.miUrineTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cREATININEANDEGFRTESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lIPIDPROFILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROFILELIVERTESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.showTestResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cREATININEANDEGFRTESTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lIPIDPROFILEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROFILELIVERTESTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.miUpdateDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvDeseaeReports = new System.Windows.Forms.DataGridView();
             this.btnRefreshReports = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbBlood = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbCN = new System.Windows.Forms.Label();
@@ -66,6 +80,8 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeseaeReports)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -84,26 +100,11 @@
             this.panel1.Size = new System.Drawing.Size(85, 529);
             this.panel1.TabIndex = 3;
             // 
-            // btnLoadPatients
-            // 
-            this.btnLoadPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLoadPatients.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLoadPatients.FlatAppearance.BorderSize = 0;
-            this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(103, 514);
-            this.btnLoadPatients.Name = "btnLoadPatients";
-            this.btnLoadPatients.Size = new System.Drawing.Size(123, 29);
-            this.btnLoadPatients.TabIndex = 13;
-            this.btnLoadPatients.Text = "Add Test";
-            this.btnLoadPatients.UseVisualStyleBackColor = false;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testResultsToolStripMenuItem});
+            this.testResultsToolStripMenuItem,
+            this.miUpdateDetails});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(805, 24);
@@ -113,49 +114,118 @@
             // testResultsToolStripMenuItem
             // 
             this.testResultsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miCreatinineTest,
-            this.miHaemoglobinTest,
-            this.miLipidTest,
-            this.miProfileLiverTest,
-            this.miUrineTest});
+            this.addTestsToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.showTestResultsToolStripMenuItem});
             this.testResultsToolStripMenuItem.Name = "testResultsToolStripMenuItem";
             this.testResultsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.testResultsToolStripMenuItem.Text = "Test Results";
             // 
-            // miCreatinineTest
+            // addTestsToolStripMenuItem
             // 
-            this.miCreatinineTest.Name = "miCreatinineTest";
-            this.miCreatinineTest.Size = new System.Drawing.Size(272, 22);
-            this.miCreatinineTest.Text = "CREATININE AND eGFR TEST";
-            this.miCreatinineTest.Click += new System.EventHandler(this.miCreatinineTest_Click);
+            this.addTestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cREATININEANDEGFRTESTToolStripMenuItem,
+            this.hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem,
+            this.lIPIDPROFILEToolStripMenuItem,
+            this.pROFILELIVERTESTToolStripMenuItem,
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem});
+            this.addTestsToolStripMenuItem.Name = "addTestsToolStripMenuItem";
+            this.addTestsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.addTestsToolStripMenuItem.Text = "Add Tests";
             // 
-            // miHaemoglobinTest
+            // cREATININEANDEGFRTESTToolStripMenuItem
             // 
-            this.miHaemoglobinTest.Name = "miHaemoglobinTest";
-            this.miHaemoglobinTest.Size = new System.Drawing.Size(272, 22);
-            this.miHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
-            this.miHaemoglobinTest.Click += new System.EventHandler(this.miHaemoglobinTest_Click);
+            this.cREATININEANDEGFRTESTToolStripMenuItem.Name = "cREATININEANDEGFRTESTToolStripMenuItem";
+            this.cREATININEANDEGFRTESTToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.cREATININEANDEGFRTESTToolStripMenuItem.Text = "CREATININE AND eGFR TEST";
+            this.cREATININEANDEGFRTESTToolStripMenuItem.Click += new System.EventHandler(this.miAddCreatinintTest);
             // 
-            // miLipidTest
+            // hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem
             // 
-            this.miLipidTest.Name = "miLipidTest";
-            this.miLipidTest.Size = new System.Drawing.Size(272, 22);
-            this.miLipidTest.Text = "LIPID PROFILE";
-            this.miLipidTest.Click += new System.EventHandler(this.miLipidTest_Click);
+            this.hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem.Name = "hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem";
+            this.hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem.Text = "HAEMOGLOBIN A1C(%HBA1C) TEST";
+            this.hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem.Click += new System.EventHandler(this.miAddHaemoglobinTest);
             // 
-            // miProfileLiverTest
+            // lIPIDPROFILEToolStripMenuItem
             // 
-            this.miProfileLiverTest.Name = "miProfileLiverTest";
-            this.miProfileLiverTest.Size = new System.Drawing.Size(272, 22);
-            this.miProfileLiverTest.Text = "PROFILE LIVER TEST";
-            this.miProfileLiverTest.Click += new System.EventHandler(this.miProfileLiverTest_Click);
+            this.lIPIDPROFILEToolStripMenuItem.Name = "lIPIDPROFILEToolStripMenuItem";
+            this.lIPIDPROFILEToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.lIPIDPROFILEToolStripMenuItem.Text = "LIPID PROFILE";
+            this.lIPIDPROFILEToolStripMenuItem.Click += new System.EventHandler(this.miAddLipidProfileTest);
             // 
-            // miUrineTest
+            // pROFILELIVERTESTToolStripMenuItem
             // 
-            this.miUrineTest.Name = "miUrineTest";
-            this.miUrineTest.Size = new System.Drawing.Size(272, 22);
-            this.miUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
-            this.miUrineTest.Click += new System.EventHandler(this.miUrineTest_Click);
+            this.pROFILELIVERTESTToolStripMenuItem.Name = "pROFILELIVERTESTToolStripMenuItem";
+            this.pROFILELIVERTESTToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.pROFILELIVERTESTToolStripMenuItem.Text = "PROFILE LIVER TEST";
+            this.pROFILELIVERTESTToolStripMenuItem.Click += new System.EventHandler(this.miAddProfileLiverTest);
+            // 
+            // uRINEFORMICROALBUMINTESTToolStripMenuItem
+            // 
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem.Name = "uRINEFORMICROALBUMINTESTToolStripMenuItem";
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem.Text = "URINE FOR MICRO ALBUMIN TEST";
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem.Click += new System.EventHandler(this.miAddUrineTest);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(164, 6);
+            // 
+            // showTestResultsToolStripMenuItem
+            // 
+            this.showTestResultsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cREATININEANDEGFRTESTToolStripMenuItem1,
+            this.hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem,
+            this.lIPIDPROFILEToolStripMenuItem1,
+            this.pROFILELIVERTESTToolStripMenuItem1,
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem1});
+            this.showTestResultsToolStripMenuItem.Name = "showTestResultsToolStripMenuItem";
+            this.showTestResultsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.showTestResultsToolStripMenuItem.Text = "Show Test Results";
+            // 
+            // cREATININEANDEGFRTESTToolStripMenuItem1
+            // 
+            this.cREATININEANDEGFRTESTToolStripMenuItem1.Name = "cREATININEANDEGFRTESTToolStripMenuItem1";
+            this.cREATININEANDEGFRTESTToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
+            this.cREATININEANDEGFRTESTToolStripMenuItem1.Text = "CREATININE AND eGFR TEST";
+            this.cREATININEANDEGFRTESTToolStripMenuItem1.Click += new System.EventHandler(this.miShowCreatinineTest);
+            // 
+            // hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem
+            // 
+            this.hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem.Name = "hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem";
+            this.hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem.Text = "HAEMOGLOBUN A1C (%HB1C) TEST";
+            this.hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem.Click += new System.EventHandler(this.miShowHaemoglobinTests);
+            // 
+            // lIPIDPROFILEToolStripMenuItem1
+            // 
+            this.lIPIDPROFILEToolStripMenuItem1.Name = "lIPIDPROFILEToolStripMenuItem1";
+            this.lIPIDPROFILEToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
+            this.lIPIDPROFILEToolStripMenuItem1.Text = "LIPID PROFILE";
+            this.lIPIDPROFILEToolStripMenuItem1.Click += new System.EventHandler(this.miShowLipidTests);
+            // 
+            // pROFILELIVERTESTToolStripMenuItem1
+            // 
+            this.pROFILELIVERTESTToolStripMenuItem1.Name = "pROFILELIVERTESTToolStripMenuItem1";
+            this.pROFILELIVERTESTToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
+            this.pROFILELIVERTESTToolStripMenuItem1.Text = "PROFILE LIVER TEST";
+            this.pROFILELIVERTESTToolStripMenuItem1.Click += new System.EventHandler(this.miShowProfileLiverTests);
+            // 
+            // uRINEFORMICROALBUMINTESTToolStripMenuItem1
+            // 
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem1.Name = "uRINEFORMICROALBUMINTESTToolStripMenuItem1";
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem1.Text = "URINE FOR MICRO ALBUMIN TEST";
+            this.uRINEFORMICROALBUMINTESTToolStripMenuItem1.Click += new System.EventHandler(this.miShowUrineTests);
+            // 
+            // miUpdateDetails
+            // 
+            this.miUpdateDetails.Name = "miUpdateDetails";
+            this.miUpdateDetails.Size = new System.Drawing.Size(95, 20);
+            this.miUpdateDetails.Text = "Update Details";
+            this.miUpdateDetails.Click += new System.EventHandler(this.miUpdateDetails_Click);
             // 
             // dgvDeseaeReports
             // 
@@ -205,6 +275,8 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.panel10);
@@ -217,12 +289,70 @@
             this.panel5.Size = new System.Drawing.Size(396, 470);
             this.panel5.TabIndex = 18;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lbAddress);
+            this.panel2.Location = new System.Drawing.Point(18, 312);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(358, 137);
+            this.panel2.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(31, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Address :\r\n";
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Location = new System.Drawing.Point(156, 9);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(10, 13);
+            this.lbAddress.TabIndex = 13;
+            this.lbAddress.Text = "-";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lbBlood);
+            this.panel3.Location = new System.Drawing.Point(18, 164);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(358, 31);
+            this.panel3.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Blood Type :\r\n";
+            // 
+            // lbBlood
+            // 
+            this.lbBlood.AutoSize = true;
+            this.lbBlood.Location = new System.Drawing.Point(155, 9);
+            this.lbBlood.Name = "lbBlood";
+            this.lbBlood.Size = new System.Drawing.Size(10, 13);
+            this.lbBlood.TabIndex = 13;
+            this.lbBlood.Text = "-";
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel12.Controls.Add(this.label3);
             this.panel12.Controls.Add(this.lbCN);
-            this.panel12.Location = new System.Drawing.Point(18, 238);
+            this.panel12.Location = new System.Drawing.Point(18, 275);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(358, 31);
             this.panel12.TabIndex = 24;
@@ -251,7 +381,7 @@
             this.panel11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.lbNIC);
-            this.panel11.Location = new System.Drawing.Point(18, 201);
+            this.panel11.Location = new System.Drawing.Point(18, 238);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(358, 31);
             this.panel11.TabIndex = 19;
@@ -280,7 +410,7 @@
             this.panel10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.lbG);
-            this.panel10.Location = new System.Drawing.Point(18, 164);
+            this.panel10.Location = new System.Drawing.Point(18, 201);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(358, 31);
             this.panel10.TabIndex = 23;
@@ -429,9 +559,9 @@
             this.btnAddReseaseRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddReseaseRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddReseaseRecord.ForeColor = System.Drawing.Color.White;
-            this.btnAddReseaseRecord.Location = new System.Drawing.Point(241, 514);
+            this.btnAddReseaseRecord.Location = new System.Drawing.Point(505, 503);
             this.btnAddReseaseRecord.Name = "btnAddReseaseRecord";
-            this.btnAddReseaseRecord.Size = new System.Drawing.Size(136, 29);
+            this.btnAddReseaseRecord.Size = new System.Drawing.Size(136, 38);
             this.btnAddReseaseRecord.TabIndex = 19;
             this.btnAddReseaseRecord.Text = "Add Desease Record";
             this.btnAddReseaseRecord.UseVisualStyleBackColor = false;
@@ -446,7 +576,6 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnRefreshReports);
             this.Controls.Add(this.dgvDeseaeReports);
-            this.Controls.Add(this.btnLoadPatients);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -457,6 +586,10 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeseaeReports)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -479,14 +612,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLoadPatients;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem testResultsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem miCreatinineTest;
-        private System.Windows.Forms.ToolStripMenuItem miHaemoglobinTest;
-        private System.Windows.Forms.ToolStripMenuItem miLipidTest;
-        private System.Windows.Forms.ToolStripMenuItem miProfileLiverTest;
-        private System.Windows.Forms.ToolStripMenuItem miUrineTest;
         private System.Windows.Forms.DataGridView dgvDeseaeReports;
         private System.Windows.Forms.Button btnRefreshReports;
         private System.Windows.Forms.Panel panel5;
@@ -512,5 +639,25 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbPID;
         private System.Windows.Forms.Button btnAddReseaseRecord;
+        private System.Windows.Forms.ToolStripMenuItem addTestsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cREATININEANDEGFRTESTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hAEMOGLOBINA1CHBA1CTESTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lIPIDPROFILEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pROFILELIVERTESTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uRINEFORMICROALBUMINTESTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem showTestResultsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cREATININEANDEGFRTESTToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem hAEMOGLOBUNA1CHB1CTESTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lIPIDPROFILEToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pROFILELIVERTESTToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem uRINEFORMICROALBUMINTESTToolStripMenuItem1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbBlood;
+        private System.Windows.Forms.ToolStripMenuItem miUpdateDetails;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbAddress;
     }
 }

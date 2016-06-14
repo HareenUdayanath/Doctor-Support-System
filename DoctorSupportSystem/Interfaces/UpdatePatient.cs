@@ -21,6 +21,7 @@ namespace DoctorSupportSystem.Interfaces
         
         public UpdatePatient(Patient patient)
         {
+
             this.patient = patient;
             InitializeComponent();
             setPatient();
@@ -37,19 +38,28 @@ namespace DoctorSupportSystem.Interfaces
             txtDay.Text = patient.DateOfBirth.getDay().ToString();
             txtNIC.Text = patient.Nic;
             cbGender.Text = patient.Gender;
-
+            cbBloodType.Text = patient.BloodType;
+            txtCoNo.Text = patient.ContactNo;
         }
 
         private void btnUpdatePatient_Click(object sender, EventArgs e)
         {
             Patient patient = new Patient();
-    
+            int year = Int32.Parse(txtYear.Text);
+            int month = Int32.Parse(txtMonth.Text);
+            int day = Int32.Parse(txtDay.Text);
+
+            patient.DateOfBirth = new Date(year, month, day);
             String err = "";
 
             if (txtFName.Text == "")
                 err += "First Name required\n";
             if (txtLName.Text == "")
                 err += "Last Name required\n";
+            if (cbGender.SelectedItem == null)
+                err += "Select the gender\n";
+            if (cbBloodType.SelectedItem == null)
+                err += "Select the blood type\n";
             if (!Validator.isValidDateOfBirth(patient.DateOfBirth))
                 err += "Invalid Date of Birth\n";
             if (!Validator.nic(txtNIC.Text))
@@ -73,16 +83,12 @@ namespace DoctorSupportSystem.Interfaces
                 patient.PID = Convert.ToInt32(txtPID.Text);
                 patient.FirstName = txtFName.Text;
                 patient.LastName = txtLName.Text;
-                int year = Int32.Parse(txtYear.Text);
-                int month = Int32.Parse(txtMonth.Text);
-                int day = Int32.Parse(txtDay.Text);
-
-                patient.DateOfBirth = new Date(year, month, day);
+              
 
                 patient.Address = txtAddress.Text;
 
                 patient.Gender = cbGender.SelectedItem.ToString();
-
+                patient.BloodType = cbBloodType.SelectedItem.ToString();
                 int re = db.updatePatient(patient);
                 if (re == -1)
                 {

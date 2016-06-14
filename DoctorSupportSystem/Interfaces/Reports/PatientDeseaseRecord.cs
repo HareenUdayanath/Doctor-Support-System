@@ -41,6 +41,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
             lbNIC.Text = patient.Nic;
             lbDOB.Text = patient.DateOfBirth.getDate();
             lbG.Text = patient.Gender;
+            lbBlood.Text = patient.BloodType;
             lbCN.Text = patient.ContactNo;
 
         }
@@ -60,6 +61,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
                     lbNIC.Text = patient.Nic;
                     lbDOB.Text = patient.DateOfBirth.getDate();
                     lbG.Text = patient.Gender;
+                    lbBlood.Text = patient.BloodType;
                     lbCN.Text = patient.ContactNo;
                 }
                 else
@@ -73,7 +75,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
                     lbCN.Text = "-";
                 }
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException)
             {
                 patient = null;
                 lbPID.Text = "-";

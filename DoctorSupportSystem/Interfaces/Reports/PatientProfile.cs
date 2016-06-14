@@ -31,35 +31,12 @@ namespace DoctorSupportSystem.Interfaces.Reports
             lbNIC.Text = patient.Nic;
             lbDOB.Text = patient.DateOfBirth.getDate();
             lbG.Text = patient.Gender;
+            lbBlood.Text = patient.BloodType;
             lbCN.Text = patient.ContactNo;
-
+            lbAddress.Text = patient.Address;
         }
 
-
-        private void miCreatinineTest_Click(object sender, EventArgs e)
-        {
-            new HeamoglobinResults(patient.PID).ShowDialog();
-        }
-
-        private void miHaemoglobinTest_Click(object sender, EventArgs e)
-        {
-            new HeamoglobinResults(patient.PID).ShowDialog();
-        }
-
-        private void miLipidTest_Click(object sender, EventArgs e)
-        {
-            new LipidResults(patient.PID).ShowDialog();
-        }
-
-        private void miProfileLiverTest_Click(object sender, EventArgs e)
-        {
-            new ProfileLiverResults(patient.PID).ShowDialog();
-        }
-
-        private void miUrineTest_Click(object sender, EventArgs e)
-        {
-            new UrineResults(patient.PID).ShowDialog();
-        }
+        
 
         private void btnRefreshReports_Click(object sender, EventArgs e)
         {
@@ -82,11 +59,11 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 /*DataGridViewRow selectedRow = dgvDeseaeReports.Rows[currentMouseOverRow];
                 selectedPID = Convert.ToInt32(selectedRow.Cells["PID"].Value);*/
 
-                MenuItem mi1 = new MenuItem(string.Format("Show Pervious Reports", currentMouseOverRow.ToString()));
+                MenuItem mi1 = new MenuItem("Show Pervious Reports");
                 mi1.Click += new EventHandler(getDayReports);
                 m.MenuItems.Add(mi1);
 
-                MenuItem mi2 = new MenuItem(string.Format("Delete this record", currentMouseOverRow.ToString()));
+                MenuItem mi2 = new MenuItem("Delete this record");
                 mi2.Click += new EventHandler(deleteRecord);
                 m.MenuItems.Add(mi2);
 
@@ -126,5 +103,71 @@ namespace DoctorSupportSystem.Interfaces.Reports
             dgvDeseaeReports.DataSource = deseaseReports;
         }
 
+
+        private void miAddCreatinintTest(object sender, EventArgs e)
+        {
+            new CreatinineAnd_eGFR(patient.PID).ShowDialog();
+        }
+
+        private void miAddHaemoglobinTest(object sender, EventArgs e)
+        {
+            new Haemoglobin(patient.PID).ShowDialog();
+        }
+
+        private void miAddLipidProfileTest(object sender, EventArgs e)
+        {
+            new Lipid(patient.PID).ShowDialog();
+        }
+
+        private void miAddProfileLiverTest(object sender, EventArgs e)
+        {
+            new ProfileLiver(patient.PID).ShowDialog();
+        }
+
+        private void miAddUrineTest(object sender, EventArgs e)
+        {
+            new URINE_FOR_MICRO_ALBUMIN(patient.PID).ShowDialog();
+        }
+
+        private void miShowCreatinineTest(object sender, EventArgs e)
+        {
+            new UrineResults(patient.PID).ShowDialog();
+        }
+
+        private void miShowHaemoglobinTests(object sender, EventArgs e)
+        {
+            new HeamoglobinResults(patient.PID).ShowDialog();
+        }
+
+        private void miShowLipidTests(object sender, EventArgs e)
+        {
+            new LipidResults(patient.PID).ShowDialog();
+        }
+
+        private void miShowProfileLiverTests(object sender, EventArgs e)
+        {
+            new LipidResults(patient.PID).ShowDialog();
+        }
+
+        private void miShowUrineTests(object sender, EventArgs e)
+        {
+            new UrineResults(patient.PID).ShowDialog();
+        }
+
+        private void miUpdateDetails_Click(object sender, EventArgs e)
+        {
+            new UpdatePatient(patient).ShowDialog();
+
+            patient = DataBaseOperator.GetInstance().getPatient(patient.PID);
+            lbPID.Text = patient.PID.ToString();
+            lbFN.Text = patient.FirstName;
+            lbLN.Text = patient.LastName;
+            lbNIC.Text = patient.Nic;
+            lbDOB.Text = patient.DateOfBirth.getDate();
+            lbG.Text = patient.Gender;
+            lbBlood.Text = patient.BloodType;
+            lbCN.Text = patient.ContactNo;
+            lbAddress.Text = patient.Address;
+        }
     }
 }

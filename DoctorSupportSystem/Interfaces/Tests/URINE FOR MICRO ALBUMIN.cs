@@ -21,6 +21,7 @@ namespace DoctorSupportSystem.Interfaces.Tests
 
         public URINE_FOR_MICRO_ALBUMIN(int pid)
         {
+            this.pid = pid;
             InitializeComponent();
         }
 

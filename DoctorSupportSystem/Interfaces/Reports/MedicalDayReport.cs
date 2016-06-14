@@ -55,7 +55,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 DataGridViewRow selectedRow = dgvMedicines.Rows[currentMouseOverRow];
                
 
-                MenuItem mi1 = new MenuItem(string.Format("Delete Selected Row", currentMouseOverRow.ToString()));
+                MenuItem mi1 = new MenuItem("Delete Selected Row");
                 mi1.Click += new EventHandler(deleteRow);
                 m.MenuItems.Add(mi1);
 

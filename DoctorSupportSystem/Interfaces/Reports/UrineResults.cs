@@ -56,7 +56,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
                     p2.Show();
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
     }
 }

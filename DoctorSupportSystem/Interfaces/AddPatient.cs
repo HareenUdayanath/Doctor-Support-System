@@ -54,22 +54,19 @@ namespace DoctorSupportSystem.Interfaces
         {
 
             Patient patient = new Patient();
-            patient.FirstName = txtFName.Text;
-            patient.LastName = txtLName.Text;
             int year = Int32.Parse(txtYear.Text);
             int month = Int32.Parse(txtMonth.Text);
             int day = Int32.Parse(txtDay.Text);
-            Console.WriteLine("S");
             patient.DateOfBirth = new Date(year, month, day);
-            Console.WriteLine("D");
-            patient.Address = txtAddress.Text;
-
-            patient.Gender = comboBoxGender.SelectedItem.ToString();
 
             String err = "";
-
+           
             if (txtFName.Text == "")
                 err += "First Name required\n";
+            if (comboBoxGender.SelectedItem == null)
+                err += "Select the gender\n";
+            if (cbBloodType.SelectedItem == null)
+                err += "Select the blood type\n";
             if (txtLName.Text == "")
                 err += "Last Name required\n";
             if (!Validator.isValidDateOfBirth(patient.DateOfBirth))
@@ -78,7 +75,7 @@ namespace DoctorSupportSystem.Interfaces
                 err += "Invalid NIC\n";
             else
                 patient.Nic = txtNIC.Text;
-
+          
             if (!Validator.contactNumber(txtCoNo.Text))
                 err += "Invalid Contact Number\n";
             else
@@ -92,7 +89,16 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
+                
+                patient.FirstName = txtFName.Text;
+                patient.LastName = txtLName.Text;
+               
+                patient.Address = txtAddress.Text;
+                
+                patient.Gender = comboBoxGender.SelectedItem.ToString();
+                patient.BloodType = cbBloodType.SelectedItem.ToString();
                 int re = db.addPatient(patient) ;
+                
                 if (re == -1)
                 {
                     MessageBox.Show("Duplicate NIC:\n"

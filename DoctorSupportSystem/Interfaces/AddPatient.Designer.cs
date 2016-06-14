@@ -49,9 +49,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbBloodType = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCoNo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -86,7 +88,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.cbBloodType);
             this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtFName);
             this.panel1.Controls.Add(this.panel4);
@@ -101,16 +105,36 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(65, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(442, 389);
+            this.panel1.Size = new System.Drawing.Size(442, 414);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // cbBloodType
+            // 
+            this.cbBloodType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBloodType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBloodType.FormattingEnabled = true;
+            this.cbBloodType.Items.AddRange(new object[] {
+            "O-",
+            "O+",
+            "A-",
+            "A+",
+            "B-",
+            "B+",
+            "AB-",
+            "AB+",
+            "Other"});
+            this.cbBloodType.Location = new System.Drawing.Point(152, 383);
+            this.cbBloodType.Name = "cbBloodType";
+            this.cbBloodType.Size = new System.Drawing.Size(79, 21);
+            this.cbBloodType.TabIndex = 14;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.txtCoNo);
-            this.panel5.Location = new System.Drawing.Point(0, 351);
+            this.panel5.Location = new System.Drawing.Point(0, 332);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(442, 38);
             this.panel5.TabIndex = 8;
@@ -131,6 +155,15 @@
             this.txtCoNo.Name = "txtCoNo";
             this.txtCoNo.Size = new System.Drawing.Size(208, 20);
             this.txtCoNo.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(22, 386);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 13);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Blood Type :";
             // 
             // panel2
             // 
@@ -222,12 +255,13 @@
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(0, 189);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(442, 116);
+            this.panel4.Size = new System.Drawing.Size(442, 107);
             this.panel4.TabIndex = 6;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(152, 14);
+            this.txtAddress.AcceptsReturn = true;
+            this.txtAddress.Location = new System.Drawing.Point(152, 9);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(274, 92);
@@ -262,7 +296,7 @@
             // 
             // txtNIC
             // 
-            this.txtNIC.Location = new System.Drawing.Point(152, 318);
+            this.txtNIC.Location = new System.Drawing.Point(152, 303);
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(142, 20);
             this.txtNIC.TabIndex = 7;
@@ -270,7 +304,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 321);
+            this.label10.Location = new System.Drawing.Point(22, 306);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 17;
@@ -359,6 +393,7 @@
             // 
             // AddPatient
             // 
+            this.AcceptButton = this.btnAddPatient;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 492);
@@ -393,5 +428,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ComboBox cbBloodType;
+        private System.Windows.Forms.Label label12;
     }
 }

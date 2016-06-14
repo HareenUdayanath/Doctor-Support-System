@@ -19,7 +19,7 @@ namespace DoctorSupportSystem.Interfaces
         Patient patient;
         DataTable patients;
         DataTable appoinments;
-
+        int selectedPID;
 
         public AssistanceInterface()
         {
@@ -120,20 +120,20 @@ namespace DoctorSupportSystem.Interfaces
                     lbNIC.Text = patient.Nic;
                     lbDOB.Text = patient.DateOfBirth.getDate();
                     lbG.Text = patient.Gender;
-                    lbCN.Text = patient.ContactNo;
+                    lbBlood.Text = patient.BloodType;
                 }
                 else
-                {                    
+                {
                     lbPID.Text = "-";
                     lbFN.Text = "-";
                     lbLN.Text = "-";
                     lbNIC.Text = "-";
                     lbDOB.Text = "-";
                     lbG.Text = "-";
-                    lbCN.Text = "-";
+                    lbBlood.Text = "-";
                 }
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException)
             {
                 patient = null;
                 lbPID.Text = "-";
@@ -142,7 +142,7 @@ namespace DoctorSupportSystem.Interfaces
                 lbNIC.Text = "-";
                 lbDOB.Text = "-";
                 lbG.Text = "-";
-                lbCN.Text = "-";
+                lbBlood.Text = "-";
             }
         }
 
@@ -183,6 +183,42 @@ namespace DoctorSupportSystem.Interfaces
             DataBaseOperator.GetInstance().deletePreviousAppointment();
             appoinments = DataBaseOperator.GetInstance().getAllCurrentAppointments();
             dgvApplintments.DataSource = appoinments;
+        }
+
+        private void dgvPatients_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                try
+                {
+                    var hti = dgvPatients.HitTest(e.X, e.Y);
+                    dgvPatients.ClearSelection();
+                    dgvPatients.Rows[hti.RowIndex].Selected = true;
+
+                    ContextMenu m = new ContextMenu();
+
+                    int currentMouseOverRow = dgvPatients.HitTest(e.X, e.Y).RowIndex;
+                    DataGridViewRow selectedRow = dgvPatients.Rows[currentMouseOverRow];
+                    selectedPID = Convert.ToInt32(selectedRow.Cells["PID"].Value);
+
+
+                    MenuItem mi1 = new MenuItem("Update details");
+                    mi1.Click += new EventHandler(updateDetails);
+                    m.MenuItems.Add(mi1);
+
+                    m.Show(dgvPatients, new Point(e.X, e.Y));
+                }
+                catch (Exception) { }
+            }
+        }
+
+        private void updateDetails(object sender, EventArgs e)
+        {
+            int currentMouseOverRow = dgvPatients.CurrentRow.Index;
+            string selectedNIC = dgvPatients.Rows[currentMouseOverRow].Cells[6].Value.ToString();
+            new UpdatePatient(DataBaseOperator.GetInstance().getPatientByNIC(selectedNIC)).ShowDialog();
+            patients = DataBaseOperator.GetInstance().getAllPatients();
+            dgvPatients.DataSource = patients;
         }
     }
 }

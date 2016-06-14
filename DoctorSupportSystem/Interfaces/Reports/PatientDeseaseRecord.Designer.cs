@@ -58,6 +58,9 @@
             this.txtDesease = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btnAddRecord = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbBlood = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -68,6 +71,7 @@
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -75,6 +79,7 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.panel10);
@@ -86,7 +91,7 @@
             this.panel5.Controls.Add(this.cbSearchPatients);
             this.panel5.Location = new System.Drawing.Point(91, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(529, 324);
+            this.panel5.Size = new System.Drawing.Size(529, 373);
             this.panel5.TabIndex = 13;
             // 
             // panel12
@@ -94,7 +99,7 @@
             this.panel12.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel12.Controls.Add(this.label3);
             this.panel12.Controls.Add(this.lbCN);
-            this.panel12.Location = new System.Drawing.Point(27, 277);
+            this.panel12.Location = new System.Drawing.Point(27, 314);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(467, 31);
             this.panel12.TabIndex = 24;
@@ -123,7 +128,7 @@
             this.panel11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.lbNIC);
-            this.panel11.Location = new System.Drawing.Point(27, 240);
+            this.panel11.Location = new System.Drawing.Point(27, 277);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(467, 31);
             this.panel11.TabIndex = 19;
@@ -152,7 +157,7 @@
             this.panel10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.lbG);
-            this.panel10.Location = new System.Drawing.Point(27, 203);
+            this.panel10.Location = new System.Drawing.Point(27, 240);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(467, 31);
             this.panel10.TabIndex = 23;
@@ -318,7 +323,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(85, 461);
+            this.panel1.Size = new System.Drawing.Size(85, 518);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -327,7 +332,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel2.Controls.Add(this.panel17);
-            this.panel2.Location = new System.Drawing.Point(91, 342);
+            this.panel2.Location = new System.Drawing.Point(91, 391);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(529, 71);
             this.panel2.TabIndex = 14;
@@ -368,7 +373,7 @@
             this.btnAddRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRecord.ForeColor = System.Drawing.Color.White;
-            this.btnAddRecord.Location = new System.Drawing.Point(91, 420);
+            this.btnAddRecord.Location = new System.Drawing.Point(91, 477);
             this.btnAddRecord.Name = "btnAddRecord";
             this.btnAddRecord.Size = new System.Drawing.Size(123, 29);
             this.btnAddRecord.TabIndex = 15;
@@ -376,11 +381,40 @@
             this.btnAddRecord.UseVisualStyleBackColor = false;
             this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lbBlood);
+            this.panel3.Location = new System.Drawing.Point(27, 203);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(467, 31);
+            this.panel3.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Blood Type :\r\n";
+            // 
+            // lbBlood
+            // 
+            this.lbBlood.AutoSize = true;
+            this.lbBlood.Location = new System.Drawing.Point(155, 9);
+            this.lbBlood.Name = "lbBlood";
+            this.lbBlood.Size = new System.Drawing.Size(10, 13);
+            this.lbBlood.TabIndex = 13;
+            this.lbBlood.Text = "-";
+            // 
             // PatientDeseaseRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 461);
+            this.ClientSize = new System.Drawing.Size(651, 518);
             this.Controls.Add(this.btnAddRecord);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
@@ -406,6 +440,8 @@
             this.panel2.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -442,5 +478,8 @@
         private System.Windows.Forms.TextBox txtDesease;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnAddRecord;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbBlood;
     }
 }
