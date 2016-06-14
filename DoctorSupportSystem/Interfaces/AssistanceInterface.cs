@@ -220,5 +220,21 @@ namespace DoctorSupportSystem.Interfaces
             patients = DataBaseOperator.GetInstance().getAllPatients();
             dgvPatients.DataSource = patients;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new AddPatient().ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AddAppointment().ShowDialog();
+            dgvApplintments.DataSource = DataBaseOperator.GetInstance().getAllAppointments();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

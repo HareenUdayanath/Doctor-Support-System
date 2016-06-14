@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePatient));
             this.btnUpdatePatient = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbBloodType = new System.Windows.Forms.ComboBox();
@@ -58,33 +58,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 480);
-            this.panel3.TabIndex = 15;
             // 
             // btnUpdatePatient
             // 
-            this.btnUpdatePatient.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdatePatient.BackColor = System.Drawing.Color.DarkCyan;
             this.btnUpdatePatient.FlatAppearance.BorderSize = 0;
             this.btnUpdatePatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdatePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdatePatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePatient.ForeColor = System.Drawing.Color.White;
-            this.btnUpdatePatient.Location = new System.Drawing.Point(65, 430);
+            this.btnUpdatePatient.Location = new System.Drawing.Point(391, 8);
             this.btnUpdatePatient.Name = "btnUpdatePatient";
-            this.btnUpdatePatient.Size = new System.Drawing.Size(135, 44);
+            this.btnUpdatePatient.Size = new System.Drawing.Size(160, 52);
             this.btnUpdatePatient.TabIndex = 14;
             this.btnUpdatePatient.Text = "Update Patient";
             this.btnUpdatePatient.UseVisualStyleBackColor = false;
@@ -108,7 +105,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtPID);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(65, 12);
+            this.panel1.Location = new System.Drawing.Point(71, 129);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(442, 414);
             this.panel1.TabIndex = 16;
@@ -366,16 +363,67 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient ID : ";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Teal;
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Location = new System.Drawing.Point(-1, -1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(577, 62);
+            this.panel3.TabIndex = 30;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Teal;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(467, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Teal;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Teal;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(516, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(50, 50);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Controls.Add(this.btnUpdatePatient);
+            this.panel13.Location = new System.Drawing.Point(-1, 602);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(567, 71);
+            this.panel13.TabIndex = 31;
+            // 
             // UpdatePatient
             // 
             this.AcceptButton = this.btnUpdatePatient;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 480);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(819, 672);
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnUpdatePatient);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdatePatient";
             this.Text = "Update Patient";
             this.panel1.ResumeLayout(false);
@@ -388,13 +436,13 @@
             this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnUpdatePatient;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbBloodType;
@@ -424,5 +472,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPID;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panel13;
     }
 }

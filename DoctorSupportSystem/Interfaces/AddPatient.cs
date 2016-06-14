@@ -16,6 +16,9 @@ namespace DoctorSupportSystem.Interfaces
 {
     public partial class AddPatient : Form
     {
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
         DataBaseOperator db = DataBaseOperator.GetInstance();
         public AddPatient()
         {
@@ -63,7 +66,7 @@ namespace DoctorSupportSystem.Interfaces
            
             if (txtFName.Text == "")
                 err += "First Name required\n";
-            if (comboBoxGender.SelectedItem == null)
+            if (cbGender.SelectedItem == null)
                 err += "Select the gender\n";
             if (cbBloodType.SelectedItem == null)
                 err += "Select the blood type\n";
@@ -95,7 +98,7 @@ namespace DoctorSupportSystem.Interfaces
                
                 patient.Address = txtAddress.Text;
                 
-                patient.Gender = comboBoxGender.SelectedItem.ToString();
+                patient.Gender = cbGender.SelectedItem.ToString();
                 patient.BloodType = cbBloodType.SelectedItem.ToString();
                 int re = db.addPatient(patient) ;
                 
@@ -121,6 +124,46 @@ namespace DoctorSupportSystem.Interfaces
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;  // _dragging is your variable flag
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
         }
     }
 }
