@@ -250,7 +250,7 @@ namespace DoctorSupportSystem.Interfaces
             user.Gender = "Male";
             user.Nic = "123456789V";
             user.ContactNo = "123456";
-            new UpdateUser(user).Show();
+            new UpdateUser(user).ShowDialog();
         }
 
         private void dgvUsers_MouseClick(object sender, MouseEventArgs e)

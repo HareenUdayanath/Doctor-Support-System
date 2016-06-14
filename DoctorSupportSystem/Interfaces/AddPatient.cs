@@ -165,5 +165,10 @@ namespace DoctorSupportSystem.Interfaces
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
+
+        private void AddPatient_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }

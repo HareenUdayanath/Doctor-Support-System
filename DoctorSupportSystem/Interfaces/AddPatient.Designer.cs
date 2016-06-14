@@ -400,12 +400,12 @@
             // btnAddPatient
             // 
             this.btnAddPatient.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnAddPatient.FlatAppearance.BorderSize = 0;
-            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddPatient.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatient.Location = new System.Drawing.Point(389, 11);
+            this.btnAddPatient.Location = new System.Drawing.Point(382, 6);
             this.btnAddPatient.Name = "btnAddPatient";
             this.btnAddPatient.Size = new System.Drawing.Size(160, 52);
             this.btnAddPatient.TabIndex = 20;
@@ -472,20 +472,24 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.btnAddPatient);
-            this.panel13.Location = new System.Drawing.Point(0, 602);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 601);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(567, 71);
+            this.panel13.Size = new System.Drawing.Size(568, 71);
             this.panel13.TabIndex = 28;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(577, 62);
+            this.panel1.Size = new System.Drawing.Size(568, 62);
             this.panel1.TabIndex = 29;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -501,7 +505,7 @@
             this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(467, 3);
+            this.button2.Location = new System.Drawing.Point(456, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 16;
@@ -518,7 +522,7 @@
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Teal;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(516, 3);
+            this.btnClose.Location = new System.Drawing.Point(505, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);
             this.btnClose.TabIndex = 15;
@@ -547,6 +551,7 @@
             this.Name = "AddPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add New Patient";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AddPatient_Paint);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);

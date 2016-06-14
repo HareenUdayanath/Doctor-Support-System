@@ -14,7 +14,9 @@ namespace DoctorSupportSystem.Interfaces
 {
     public partial class ChangeUP : Form
     {
-
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
         User user = null;
 
         public ChangeUP(User user)
@@ -51,6 +53,41 @@ namespace DoctorSupportSystem.Interfaces
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;  // _dragging is your variable flag
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ChangeUP_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

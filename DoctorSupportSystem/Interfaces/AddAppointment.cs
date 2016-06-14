@@ -16,6 +16,9 @@ namespace DoctorSupportSystem.Interfaces
     public partial class AddAppointment : Form
     {
 
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
         DataBaseOperator db = DataBaseOperator.GetInstance();
 
 
@@ -73,6 +76,41 @@ namespace DoctorSupportSystem.Interfaces
                 //}
 
             }
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;  // _dragging is your variable flag
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel4_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void AddAppointment_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

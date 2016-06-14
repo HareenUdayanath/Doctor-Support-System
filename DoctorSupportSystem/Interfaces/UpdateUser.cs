@@ -16,6 +16,9 @@ namespace DoctorSupportSystem.Interfaces
     public partial class UpdateUser : Form
     {
 
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
         public static User user = null;
         DataBaseOperator db = DataBaseOperator.GetInstance();
 
@@ -80,6 +83,41 @@ namespace DoctorSupportSystem.Interfaces
         private void btnChangeUP_Click(object sender, EventArgs e)
         {
             new ChangeUP(UpdateUser.user).ShowDialog();
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;  // _dragging is your variable flag
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void UpdateUser_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

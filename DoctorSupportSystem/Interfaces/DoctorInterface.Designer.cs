@@ -86,14 +86,14 @@
             this.dgvApplintments = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
-            this.btnAddPatientProfile = new System.Windows.Forms.Button();
-            this.btnAddPatient = new System.Windows.Forms.Button();
-            this.btnUserProChange = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnUserProChange = new System.Windows.Forms.Button();
+            this.btnAddPatientProfile = new System.Windows.Forms.Button();
+            this.btnAddPatient = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.Patients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
@@ -167,7 +167,7 @@
             this.btnLoadPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoadPatients.BackColor = System.Drawing.Color.Teal;
             this.btnLoadPatients.FlatAppearance.BorderSize = 0;
-            this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLoadPatients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadPatients.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
@@ -284,7 +284,7 @@
             this.btnLoadUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoadUsers.BackColor = System.Drawing.Color.Teal;
             this.btnLoadUsers.FlatAppearance.BorderSize = 0;
-            this.btnLoadUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLoadUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnLoadUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadUsers.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadUsers.ForeColor = System.Drawing.Color.White;
@@ -313,7 +313,7 @@
             this.btnAddTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAddTest.BackColor = System.Drawing.Color.Teal;
             this.btnAddTest.FlatAppearance.BorderSize = 0;
-            this.btnAddTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTest.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTest.ForeColor = System.Drawing.Color.White;
@@ -710,7 +710,7 @@
             this.btnDeletePast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletePast.BackColor = System.Drawing.Color.Teal;
             this.btnDeletePast.FlatAppearance.BorderSize = 0;
-            this.btnDeletePast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnDeletePast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnDeletePast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletePast.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePast.ForeColor = System.Drawing.Color.White;
@@ -727,7 +727,7 @@
             this.btnCurrentAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCurrentAppointments.BackColor = System.Drawing.Color.Teal;
             this.btnCurrentAppointments.FlatAppearance.BorderSize = 0;
-            this.btnCurrentAppointments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCurrentAppointments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnCurrentAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCurrentAppointments.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCurrentAppointments.ForeColor = System.Drawing.Color.White;
@@ -762,7 +762,7 @@
             this.btnShowAppintments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowAppintments.BackColor = System.Drawing.Color.Teal;
             this.btnShowAppintments.FlatAppearance.BorderSize = 0;
-            this.btnShowAppintments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnShowAppintments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnShowAppintments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowAppintments.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAppintments.ForeColor = System.Drawing.Color.White;
@@ -842,72 +842,21 @@
             this.panel1.Size = new System.Drawing.Size(1366, 88);
             this.panel1.TabIndex = 1;
             // 
-            // btnAddAppointment
+            // button3
             // 
-            this.btnAddAppointment.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnAddAppointment.FlatAppearance.BorderSize = 0;
-            this.btnAddAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAppointment.ForeColor = System.Drawing.Color.White;
-            this.btnAddAppointment.Location = new System.Drawing.Point(341, 17);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(160, 52);
-            this.btnAddAppointment.TabIndex = 12;
-            this.btnAddAppointment.Text = "Add Appointment";
-            this.btnAddAppointment.UseVisualStyleBackColor = false;
-            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
-            // 
-            // btnAddPatientProfile
-            // 
-            this.btnAddPatientProfile.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnAddPatientProfile.FlatAppearance.BorderSize = 0;
-            this.btnAddPatientProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnAddPatientProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPatientProfile.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatientProfile.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatientProfile.Location = new System.Drawing.Point(505, 17);
-            this.btnAddPatientProfile.Name = "btnAddPatientProfile";
-            this.btnAddPatientProfile.Size = new System.Drawing.Size(320, 52);
-            this.btnAddPatientProfile.TabIndex = 3;
-            this.btnAddPatientProfile.Text = "Add Desease Record";
-            this.btnAddPatientProfile.UseVisualStyleBackColor = false;
-            this.btnAddPatientProfile.Click += new System.EventHandler(this.btnAddPatientProfile_Click);
-            // 
-            // btnAddPatient
-            // 
-            this.btnAddPatient.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnAddPatient.FlatAppearance.BorderSize = 0;
-            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatient.Location = new System.Drawing.Point(177, 17);
-            this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(160, 52);
-            this.btnAddPatient.TabIndex = 2;
-            this.btnAddPatient.Text = "Add Patient";
-            this.btnAddPatient.UseVisualStyleBackColor = false;
-            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
-            // 
-            // btnUserProChange
-            // 
-            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
-            this.btnUserProChange.Location = new System.Drawing.Point(954, 17);
-            this.btnUserProChange.Name = "btnUserProChange";
-            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
-            this.btnUserProChange.TabIndex = 10;
-            this.btnUserProChange.UseVisualStyleBackColor = true;
-            this.btnUserProChange.Click += new System.EventHandler(this.btnUserProChange_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.Teal;
-            this.panel13.Location = new System.Drawing.Point(0, 680);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1366, 88);
-            this.panel13.TabIndex = 1;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.Teal;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Teal;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(1190, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 15;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -943,21 +892,72 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // button3
+            // btnAddAppointment
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Teal;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1190, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 15;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAddAppointment.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAddAppointment.FlatAppearance.BorderSize = 0;
+            this.btnAddAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAppointment.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAppointment.ForeColor = System.Drawing.Color.White;
+            this.btnAddAppointment.Location = new System.Drawing.Point(341, 17);
+            this.btnAddAppointment.Name = "btnAddAppointment";
+            this.btnAddAppointment.Size = new System.Drawing.Size(160, 52);
+            this.btnAddAppointment.TabIndex = 12;
+            this.btnAddAppointment.Text = "Add Appointment";
+            this.btnAddAppointment.UseVisualStyleBackColor = false;
+            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
+            // 
+            // btnUserProChange
+            // 
+            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
+            this.btnUserProChange.Location = new System.Drawing.Point(954, 17);
+            this.btnUserProChange.Name = "btnUserProChange";
+            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
+            this.btnUserProChange.TabIndex = 10;
+            this.btnUserProChange.UseVisualStyleBackColor = true;
+            this.btnUserProChange.Click += new System.EventHandler(this.btnUserProChange_Click);
+            // 
+            // btnAddPatientProfile
+            // 
+            this.btnAddPatientProfile.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAddPatientProfile.FlatAppearance.BorderSize = 0;
+            this.btnAddPatientProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnAddPatientProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPatientProfile.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatientProfile.ForeColor = System.Drawing.Color.White;
+            this.btnAddPatientProfile.Location = new System.Drawing.Point(505, 17);
+            this.btnAddPatientProfile.Name = "btnAddPatientProfile";
+            this.btnAddPatientProfile.Size = new System.Drawing.Size(320, 52);
+            this.btnAddPatientProfile.TabIndex = 3;
+            this.btnAddPatientProfile.Text = "Add Desease Record";
+            this.btnAddPatientProfile.UseVisualStyleBackColor = false;
+            this.btnAddPatientProfile.Click += new System.EventHandler(this.btnAddPatientProfile_Click);
+            // 
+            // btnAddPatient
+            // 
+            this.btnAddPatient.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAddPatient.FlatAppearance.BorderSize = 0;
+            this.btnAddPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatient.ForeColor = System.Drawing.Color.White;
+            this.btnAddPatient.Location = new System.Drawing.Point(177, 17);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(160, 52);
+            this.btnAddPatient.TabIndex = 2;
+            this.btnAddPatient.Text = "Add Patient";
+            this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Location = new System.Drawing.Point(0, 680);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1366, 88);
+            this.panel13.TabIndex = 1;
             // 
             // DoctorInterface
             // 
