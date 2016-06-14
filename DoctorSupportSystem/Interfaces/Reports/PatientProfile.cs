@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoctorSupportSystem.Interfaces.Reports;
 
 namespace DoctorSupportSystem.Interfaces.Reports
 {
@@ -63,6 +64,10 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 mi1.Click += new EventHandler(getDayReports);
                 m.MenuItems.Add(mi1);
 
+                MenuItem mi3 = new MenuItem("Add new Day Report");
+                mi3.Click += new EventHandler(addDayReport);
+                m.MenuItems.Add(mi3);
+
                 MenuItem mi2 = new MenuItem("Delete this record");
                 mi2.Click += new EventHandler(deleteRecord);
                 m.MenuItems.Add(mi2);
@@ -70,6 +75,14 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 m.Show(dgvDeseaeReports, new Point(e.X, e.Y));
 
             }
+        }
+
+        private void addDayReport(object sender, EventArgs e)
+        {
+            DeseaseReport deseaseR = new DeseaseReport();
+            deseaseR.Rid = Convert.ToInt32(dgvDeseaeReports.SelectedRows[0].Cells[0].Value);
+            deseaseR.Desease = dgvDeseaeReports.SelectedRows[0].Cells[1].Value.ToString();
+            new MedicalDayReport(deseaseR).ShowDialog();
         }
 
         private void deleteRecord(object sender, EventArgs e)

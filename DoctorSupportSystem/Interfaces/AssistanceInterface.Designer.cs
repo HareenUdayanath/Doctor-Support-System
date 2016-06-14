@@ -47,22 +47,14 @@
             this.dgvApplintments = new System.Windows.Forms.DataGridView();
             this.btnShowAppintments = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbtnPrfileLiverTest = new System.Windows.Forms.RadioButton();
+            this.rbtnHaemoglobinTest = new System.Windows.Forms.RadioButton();
+            this.rbtnUrineTest = new System.Windows.Forms.RadioButton();
+            this.rbtnCreatinineTest = new System.Windows.Forms.RadioButton();
+            this.rbtnLipidTest = new System.Windows.Forms.RadioButton();
             this.btnAddTest = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbSearchPatients = new System.Windows.Forms.ComboBox();
-            this.btnUserProChange = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbPID = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbBlood = new System.Windows.Forms.Label();
@@ -81,28 +73,36 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.lbFN = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnPrfileLiverTest = new System.Windows.Forms.RadioButton();
-            this.rbtnHaemoglobinTest = new System.Windows.Forms.RadioButton();
-            this.rbtnUrineTest = new System.Windows.Forms.RadioButton();
-            this.rbtnCreatinineTest = new System.Windows.Forms.RadioButton();
-            this.rbtnLipidTest = new System.Windows.Forms.RadioButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbPID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbSearchPatients = new System.Windows.Forms.ComboBox();
+            this.btnUserProChange = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.Patients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.Appointments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplintments)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -338,6 +338,78 @@
             this.tabPage1.Text = "Test";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
+            this.panel2.Controls.Add(this.rbtnHaemoglobinTest);
+            this.panel2.Controls.Add(this.rbtnUrineTest);
+            this.panel2.Controls.Add(this.rbtnCreatinineTest);
+            this.panel2.Controls.Add(this.rbtnLipidTest);
+            this.panel2.Location = new System.Drawing.Point(28, 348);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(700, 169);
+            this.panel2.TabIndex = 15;
+            // 
+            // rbtnPrfileLiverTest
+            // 
+            this.rbtnPrfileLiverTest.AutoSize = true;
+            this.rbtnPrfileLiverTest.BackColor = System.Drawing.Color.White;
+            this.rbtnPrfileLiverTest.Location = new System.Drawing.Point(18, 107);
+            this.rbtnPrfileLiverTest.Name = "rbtnPrfileLiverTest";
+            this.rbtnPrfileLiverTest.Size = new System.Drawing.Size(181, 27);
+            this.rbtnPrfileLiverTest.TabIndex = 6;
+            this.rbtnPrfileLiverTest.TabStop = true;
+            this.rbtnPrfileLiverTest.Text = "PROFILE LIVER TEST";
+            this.rbtnPrfileLiverTest.UseVisualStyleBackColor = false;
+            // 
+            // rbtnHaemoglobinTest
+            // 
+            this.rbtnHaemoglobinTest.AutoSize = true;
+            this.rbtnHaemoglobinTest.BackColor = System.Drawing.Color.White;
+            this.rbtnHaemoglobinTest.Location = new System.Drawing.Point(18, 44);
+            this.rbtnHaemoglobinTest.Name = "rbtnHaemoglobinTest";
+            this.rbtnHaemoglobinTest.Size = new System.Drawing.Size(308, 27);
+            this.rbtnHaemoglobinTest.TabIndex = 4;
+            this.rbtnHaemoglobinTest.TabStop = true;
+            this.rbtnHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
+            this.rbtnHaemoglobinTest.UseVisualStyleBackColor = false;
+            // 
+            // rbtnUrineTest
+            // 
+            this.rbtnUrineTest.AutoSize = true;
+            this.rbtnUrineTest.Location = new System.Drawing.Point(18, 140);
+            this.rbtnUrineTest.Name = "rbtnUrineTest";
+            this.rbtnUrineTest.Size = new System.Drawing.Size(291, 27);
+            this.rbtnUrineTest.TabIndex = 7;
+            this.rbtnUrineTest.TabStop = true;
+            this.rbtnUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
+            this.rbtnUrineTest.UseVisualStyleBackColor = true;
+            // 
+            // rbtnCreatinineTest
+            // 
+            this.rbtnCreatinineTest.AutoSize = true;
+            this.rbtnCreatinineTest.Location = new System.Drawing.Point(18, 13);
+            this.rbtnCreatinineTest.Name = "rbtnCreatinineTest";
+            this.rbtnCreatinineTest.Size = new System.Drawing.Size(244, 27);
+            this.rbtnCreatinineTest.TabIndex = 3;
+            this.rbtnCreatinineTest.TabStop = true;
+            this.rbtnCreatinineTest.Text = "CREATININE AND eGFR TEST";
+            this.rbtnCreatinineTest.UseVisualStyleBackColor = true;
+            // 
+            // rbtnLipidTest
+            // 
+            this.rbtnLipidTest.AutoSize = true;
+            this.rbtnLipidTest.Location = new System.Drawing.Point(18, 75);
+            this.rbtnLipidTest.Name = "rbtnLipidTest";
+            this.rbtnLipidTest.Size = new System.Drawing.Size(139, 27);
+            this.rbtnLipidTest.TabIndex = 5;
+            this.rbtnLipidTest.TabStop = true;
+            this.rbtnLipidTest.Text = "LIPID PROFILE";
+            this.rbtnLipidTest.UseVisualStyleBackColor = true;
+            // 
             // btnAddTest
             // 
             this.btnAddTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -373,190 +445,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1313, 339);
             this.panel5.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Enter the patient name";
-            // 
-            // cbSearchPatients
-            // 
-            this.cbSearchPatients.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbSearchPatients.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbSearchPatients.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSearchPatients.FormattingEnabled = true;
-            this.cbSearchPatients.Location = new System.Drawing.Point(216, 18);
-            this.cbSearchPatients.Name = "cbSearchPatients";
-            this.cbSearchPatients.Size = new System.Drawing.Size(194, 27);
-            this.cbSearchPatients.TabIndex = 10;
-            this.cbSearchPatients.TextChanged += new System.EventHandler(this.cbSearchPatients_TextChanged);
-            // 
-            // btnUserProChange
-            // 
-            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
-            this.btnUserProChange.Location = new System.Drawing.Point(1282, 12);
-            this.btnUserProChange.Name = "btnUserProChange";
-            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
-            this.btnUserProChange.TabIndex = 10;
-            this.btnUserProChange.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Location = new System.Drawing.Point(-3, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1360, 88);
-            this.panel1.TabIndex = 13;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Teal;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1184, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 15;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1240, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 14;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Teal;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Teal;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1296, 15);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(50, 50);
-            this.btnClose.TabIndex = 13;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(181, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 52);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add Appointment";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(948, 17);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 52);
-            this.button4.TabIndex = 10;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DarkCyan;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(15, 17);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(160, 52);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Add Patient";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel13.BackColor = System.Drawing.Color.Teal;
-            this.panel13.Location = new System.Drawing.Point(-3, 686);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1366, 88);
-            this.panel13.TabIndex = 14;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.lbPID);
-            this.panel6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel6.Location = new System.Drawing.Point(28, 72);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(480, 52);
-            this.panel6.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(31, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 23);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "PID :\r\n";
-            // 
-            // lbPID
-            // 
-            this.lbPID.AutoSize = true;
-            this.lbPID.BackColor = System.Drawing.Color.White;
-            this.lbPID.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPID.Location = new System.Drawing.Point(155, 9);
-            this.lbPID.Name = "lbPID";
-            this.lbPID.Size = new System.Drawing.Size(16, 23);
-            this.lbPID.TabIndex = 13;
-            this.lbPID.Text = "-";
             // 
             // panel12
             // 
@@ -774,77 +662,187 @@
             this.lbFN.TabIndex = 13;
             this.lbFN.Text = "-";
             // 
-            // panel2
+            // panel6
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.rbtnPrfileLiverTest);
-            this.panel2.Controls.Add(this.rbtnHaemoglobinTest);
-            this.panel2.Controls.Add(this.rbtnUrineTest);
-            this.panel2.Controls.Add(this.rbtnCreatinineTest);
-            this.panel2.Controls.Add(this.rbtnLipidTest);
-            this.panel2.Location = new System.Drawing.Point(28, 348);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 169);
-            this.panel2.TabIndex = 15;
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.lbPID);
+            this.panel6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel6.Location = new System.Drawing.Point(28, 72);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(480, 52);
+            this.panel6.TabIndex = 18;
             // 
-            // rbtnPrfileLiverTest
+            // label2
             // 
-            this.rbtnPrfileLiverTest.AutoSize = true;
-            this.rbtnPrfileLiverTest.BackColor = System.Drawing.Color.White;
-            this.rbtnPrfileLiverTest.Location = new System.Drawing.Point(18, 107);
-            this.rbtnPrfileLiverTest.Name = "rbtnPrfileLiverTest";
-            this.rbtnPrfileLiverTest.Size = new System.Drawing.Size(181, 27);
-            this.rbtnPrfileLiverTest.TabIndex = 6;
-            this.rbtnPrfileLiverTest.TabStop = true;
-            this.rbtnPrfileLiverTest.Text = "PROFILE LIVER TEST";
-            this.rbtnPrfileLiverTest.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(31, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 23);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "PID :\r\n";
             // 
-            // rbtnHaemoglobinTest
+            // lbPID
             // 
-            this.rbtnHaemoglobinTest.AutoSize = true;
-            this.rbtnHaemoglobinTest.BackColor = System.Drawing.Color.White;
-            this.rbtnHaemoglobinTest.Location = new System.Drawing.Point(18, 44);
-            this.rbtnHaemoglobinTest.Name = "rbtnHaemoglobinTest";
-            this.rbtnHaemoglobinTest.Size = new System.Drawing.Size(308, 27);
-            this.rbtnHaemoglobinTest.TabIndex = 4;
-            this.rbtnHaemoglobinTest.TabStop = true;
-            this.rbtnHaemoglobinTest.Text = "HAEMOGLOBIN A1C (%HBA1C) TEST";
-            this.rbtnHaemoglobinTest.UseVisualStyleBackColor = false;
+            this.lbPID.AutoSize = true;
+            this.lbPID.BackColor = System.Drawing.Color.White;
+            this.lbPID.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPID.Location = new System.Drawing.Point(155, 9);
+            this.lbPID.Name = "lbPID";
+            this.lbPID.Size = new System.Drawing.Size(16, 23);
+            this.lbPID.TabIndex = 13;
+            this.lbPID.Text = "-";
             // 
-            // rbtnUrineTest
+            // label1
             // 
-            this.rbtnUrineTest.AutoSize = true;
-            this.rbtnUrineTest.Location = new System.Drawing.Point(18, 140);
-            this.rbtnUrineTest.Name = "rbtnUrineTest";
-            this.rbtnUrineTest.Size = new System.Drawing.Size(291, 27);
-            this.rbtnUrineTest.TabIndex = 7;
-            this.rbtnUrineTest.TabStop = true;
-            this.rbtnUrineTest.Text = "URINE FOR MICRO ALBUMIN TEST";
-            this.rbtnUrineTest.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Enter the patient name";
             // 
-            // rbtnCreatinineTest
+            // cbSearchPatients
             // 
-            this.rbtnCreatinineTest.AutoSize = true;
-            this.rbtnCreatinineTest.Location = new System.Drawing.Point(18, 13);
-            this.rbtnCreatinineTest.Name = "rbtnCreatinineTest";
-            this.rbtnCreatinineTest.Size = new System.Drawing.Size(244, 27);
-            this.rbtnCreatinineTest.TabIndex = 3;
-            this.rbtnCreatinineTest.TabStop = true;
-            this.rbtnCreatinineTest.Text = "CREATININE AND eGFR TEST";
-            this.rbtnCreatinineTest.UseVisualStyleBackColor = true;
+            this.cbSearchPatients.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbSearchPatients.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbSearchPatients.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSearchPatients.FormattingEnabled = true;
+            this.cbSearchPatients.Location = new System.Drawing.Point(216, 18);
+            this.cbSearchPatients.Name = "cbSearchPatients";
+            this.cbSearchPatients.Size = new System.Drawing.Size(194, 27);
+            this.cbSearchPatients.TabIndex = 10;
+            this.cbSearchPatients.TextChanged += new System.EventHandler(this.cbSearchPatients_TextChanged);
             // 
-            // rbtnLipidTest
+            // btnUserProChange
             // 
-            this.rbtnLipidTest.AutoSize = true;
-            this.rbtnLipidTest.Location = new System.Drawing.Point(18, 75);
-            this.rbtnLipidTest.Name = "rbtnLipidTest";
-            this.rbtnLipidTest.Size = new System.Drawing.Size(139, 27);
-            this.rbtnLipidTest.TabIndex = 5;
-            this.rbtnLipidTest.TabStop = true;
-            this.rbtnLipidTest.Text = "LIPID PROFILE";
-            this.rbtnLipidTest.UseVisualStyleBackColor = true;
+            this.btnUserProChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUserProChange.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProChange.Image")));
+            this.btnUserProChange.Location = new System.Drawing.Point(1282, 12);
+            this.btnUserProChange.Name = "btnUserProChange";
+            this.btnUserProChange.Size = new System.Drawing.Size(56, 52);
+            this.btnUserProChange.TabIndex = 10;
+            this.btnUserProChange.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1350, 88);
+            this.panel1.TabIndex = 13;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.Teal;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Teal;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(1174, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 15;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Teal;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(1230, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Teal;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Teal;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1286, 15);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(50, 50);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkCyan;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(181, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 52);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Add Appointment";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(938, 17);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(56, 52);
+            this.button4.TabIndex = 10;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DarkCyan;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(15, 17);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(160, 52);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Add Patient";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 684);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1350, 88);
+            this.panel13.TabIndex = 14;
             // 
             // AssistanceInterface
             // 
@@ -868,11 +866,10 @@
             this.Appointments.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplintments)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -885,8 +882,9 @@
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

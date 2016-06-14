@@ -101,5 +101,15 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 lipidGraphs1.Series["LDL / HDL"].Enabled = false;
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

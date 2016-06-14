@@ -15,6 +15,9 @@ namespace DoctorSupportSystem.Interfaces.Reports
 {
     public partial class MedicalDayReport : Form
     {
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
         private DeseaseReport deseaseReport;
         public MedicalDayReport(DeseaseReport deseaseReport)
         {
@@ -127,22 +130,57 @@ namespace DoctorSupportSystem.Interfaces.Reports
             e.Control.KeyPress += new KeyPressEventHandler(dataGridViewTextBox_KeyPress);*/
         }
 
-       /* private void dataGridViewTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Back)
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void MedicalDayReport_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;  // _dragging is your variable flag
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
             {
-                Point cellPoint = dgvMedicines.CurrentCellAddress;
-
-                if (cellPoint.Y == dgvMedicines.Rows.Count - 1 && cellPoint.Y != 0 && cellPoint.X == 1)
-                {
-
-                    if (dgvMedicines.CurrentCell.Value == null || "".Equals(dgvMedicines.CurrentCell.Value))
-                    {
-
-                        dgvMedicines.Rows.RemoveAt(dgvMedicines.Rows.Count - 1);
-                    }
-                }
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
-        }*/
+        }
+
+        /* private void dataGridViewTextBox_KeyPress(object sender, KeyPressEventArgs e)
+         {
+             if (e.KeyChar == (char)Keys.Back)
+             {
+                 Point cellPoint = dgvMedicines.CurrentCellAddress;
+
+                 if (cellPoint.Y == dgvMedicines.Rows.Count - 1 && cellPoint.Y != 0 && cellPoint.X == 1)
+                 {
+
+                     if (dgvMedicines.CurrentCell.Value == null || "".Equals(dgvMedicines.CurrentCell.Value))
+                     {
+
+                         dgvMedicines.Rows.RemoveAt(dgvMedicines.Rows.Count - 1);
+                     }
+                 }
+             }
+         }*/
     }
 }

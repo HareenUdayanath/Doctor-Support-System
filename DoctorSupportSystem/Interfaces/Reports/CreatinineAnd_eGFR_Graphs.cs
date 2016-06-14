@@ -48,5 +48,15 @@ namespace DoctorSupportSystem.Interfaces.Reports
             else
                 this.creatinineGraphs.Series["Estimated GFR"].Enabled = false;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
