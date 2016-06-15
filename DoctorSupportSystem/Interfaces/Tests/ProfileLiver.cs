@@ -105,16 +105,6 @@ namespace DoctorSupportSystem.Interfaces.Tests
             this.Close();
         }
 
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProfileLiver_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

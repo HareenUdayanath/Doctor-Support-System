@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(URINE_FOR_MICRO_ALBUMIN));
             this.btnAddResult = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtUrineAC = new System.Windows.Forms.TextBox();
@@ -255,7 +254,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 13);
+            this.label1.Location = new System.Drawing.Point(17, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(346, 29);
             this.label1.TabIndex = 17;
@@ -270,7 +269,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::DoctorSupportSystem.Properties.Resources.Minimize;
             this.button2.Location = new System.Drawing.Point(456, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
@@ -287,7 +286,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Teal;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Image = global::DoctorSupportSystem.Properties.Resources.Close3;
             this.btnClose.Location = new System.Drawing.Point(505, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);
@@ -310,7 +309,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "URINE_FOR_MICRO_ALBUMIN";
             this.Text = "URINE FOR MICRO ALBUMIN";
-            this.Load += new System.EventHandler(this.URINE_FOR_MICRO_ALBUMIN_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.URINE_FOR_MICRO_ALBUMIN_Paint);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

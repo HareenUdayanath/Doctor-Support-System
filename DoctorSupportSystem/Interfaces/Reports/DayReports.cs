@@ -34,11 +34,6 @@ namespace DoctorSupportSystem.Interfaces.Reports
             //dgvDays.DataSource = dayReports.Copy().Columns.Remove("");
         }
 
-        private void txtCondition_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvDays_MouseClick(object sender, MouseEventArgs e)
         {
             try {

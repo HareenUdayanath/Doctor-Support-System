@@ -130,9 +130,9 @@
             // 
             this.pT3.BackColor = System.Drawing.Color.RoyalBlue;
             this.pT3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pT3.BackgroundImage")));
-            this.pT3.Location = new System.Drawing.Point(230, 111);
+            this.pT3.Location = new System.Drawing.Point(228, 112);
             this.pT3.Name = "pT3";
-            this.pT3.Size = new System.Drawing.Size(36, 19);
+            this.pT3.Size = new System.Drawing.Size(48, 20);
             this.pT3.TabIndex = 24;
             this.pT3.Visible = false;
             // 
@@ -140,9 +140,9 @@
             // 
             this.pT2.BackColor = System.Drawing.Color.RoyalBlue;
             this.pT2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pT2.BackgroundImage")));
-            this.pT2.Location = new System.Drawing.Point(293, 82);
+            this.pT2.Location = new System.Drawing.Point(291, 82);
             this.pT2.Name = "pT2";
-            this.pT2.Size = new System.Drawing.Size(36, 19);
+            this.pT2.Size = new System.Drawing.Size(48, 20);
             this.pT2.TabIndex = 30;
             this.pT2.Visible = false;
             // 
@@ -150,9 +150,9 @@
             // 
             this.pT1.BackColor = System.Drawing.Color.RoyalBlue;
             this.pT1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pT1.BackgroundImage")));
-            this.pT1.Location = new System.Drawing.Point(251, 52);
+            this.pT1.Location = new System.Drawing.Point(248, 51);
             this.pT1.Name = "pT1";
-            this.pT1.Size = new System.Drawing.Size(36, 19);
+            this.pT1.Size = new System.Drawing.Size(48, 20);
             this.pT1.TabIndex = 24;
             this.pT1.Visible = false;
             // 
@@ -160,9 +160,9 @@
             // 
             this.pT4.BackColor = System.Drawing.Color.RoyalBlue;
             this.pT4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pT4.BackgroundImage")));
-            this.pT4.Location = new System.Drawing.Point(251, 143);
+            this.pT4.Location = new System.Drawing.Point(246, 142);
             this.pT4.Name = "pT4";
-            this.pT4.Size = new System.Drawing.Size(36, 19);
+            this.pT4.Size = new System.Drawing.Size(48, 20);
             this.pT4.TabIndex = 24;
             this.pT4.Visible = false;
             // 
@@ -188,7 +188,6 @@
             this.label11.Text = "< 150         (< 1.7 mmol/L)        : Desirable\r\n\r\n150 - 199   (1.7 - 2.2 mmol/L)" +
     "   : Border line high\r\n\r\n200 - 499   (2.3 - 5.6 mmol/L)   : High\r\n\r\n> 500       " +
     "  (> 5.6 mmol/L)        : Very high";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel9
             // 
@@ -206,9 +205,9 @@
             // 
             this.pCHDL2.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCHDL2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCHDL2.BackgroundImage")));
-            this.pCHDL2.Location = new System.Drawing.Point(218, 48);
+            this.pCHDL2.Location = new System.Drawing.Point(201, 51);
             this.pCHDL2.Name = "pCHDL2";
-            this.pCHDL2.Size = new System.Drawing.Size(36, 19);
+            this.pCHDL2.Size = new System.Drawing.Size(48, 20);
             this.pCHDL2.TabIndex = 30;
             this.pCHDL2.Visible = false;
             // 
@@ -227,9 +226,9 @@
             // 
             this.pCHDL1.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCHDL1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCHDL1.BackgroundImage")));
-            this.pCHDL1.Location = new System.Drawing.Point(218, 23);
+            this.pCHDL1.Location = new System.Drawing.Point(215, 20);
             this.pCHDL1.Name = "pCHDL1";
-            this.pCHDL1.Size = new System.Drawing.Size(36, 19);
+            this.pCHDL1.Size = new System.Drawing.Size(48, 20);
             this.pCHDL1.TabIndex = 30;
             this.pCHDL1.Visible = false;
             // 
@@ -262,9 +261,9 @@
             // 
             this.pCLDL1.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCLDL1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCLDL1.BackgroundImage")));
-            this.pCLDL1.Location = new System.Drawing.Point(234, 28);
+            this.pCLDL1.Location = new System.Drawing.Point(234, 27);
             this.pCLDL1.Name = "pCLDL1";
-            this.pCLDL1.Size = new System.Drawing.Size(36, 19);
+            this.pCLDL1.Size = new System.Drawing.Size(48, 20);
             this.pCLDL1.TabIndex = 30;
             this.pCLDL1.Visible = false;
             // 
@@ -272,9 +271,9 @@
             // 
             this.pCLDL3.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCLDL3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCLDL3.BackgroundImage")));
-            this.pCLDL3.Location = new System.Drawing.Point(205, 87);
+            this.pCLDL3.Location = new System.Drawing.Point(204, 88);
             this.pCLDL3.Name = "pCLDL3";
-            this.pCLDL3.Size = new System.Drawing.Size(36, 19);
+            this.pCLDL3.Size = new System.Drawing.Size(48, 20);
             this.pCLDL3.TabIndex = 24;
             this.pCLDL3.Visible = false;
             // 
@@ -304,9 +303,9 @@
             // 
             this.pCLDL2.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCLDL2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCLDL2.BackgroundImage")));
-            this.pCLDL2.Location = new System.Drawing.Point(276, 59);
+            this.pCLDL2.Location = new System.Drawing.Point(276, 58);
             this.pCLDL2.Name = "pCLDL2";
-            this.pCLDL2.Size = new System.Drawing.Size(36, 19);
+            this.pCLDL2.Size = new System.Drawing.Size(48, 20);
             this.pCLDL2.TabIndex = 24;
             this.pCLDL2.Visible = false;
             // 
@@ -329,9 +328,9 @@
             // 
             this.pCT3.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCT3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCT3.BackgroundImage")));
-            this.pCT3.Location = new System.Drawing.Point(278, 60);
+            this.pCT3.Location = new System.Drawing.Point(278, 58);
             this.pCT3.Name = "pCT3";
-            this.pCT3.Size = new System.Drawing.Size(36, 19);
+            this.pCT3.Size = new System.Drawing.Size(48, 20);
             this.pCT3.TabIndex = 23;
             this.pCT3.Visible = false;
             // 
@@ -339,9 +338,9 @@
             // 
             this.pCT2.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCT2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCT2.BackgroundImage")));
-            this.pCT2.Location = new System.Drawing.Point(204, 87);
+            this.pCT2.Location = new System.Drawing.Point(204, 88);
             this.pCT2.Name = "pCT2";
-            this.pCT2.Size = new System.Drawing.Size(36, 19);
+            this.pCT2.Size = new System.Drawing.Size(48, 20);
             this.pCT2.TabIndex = 30;
             this.pCT2.Visible = false;
             // 
@@ -349,9 +348,9 @@
             // 
             this.pCT1.BackColor = System.Drawing.Color.RoyalBlue;
             this.pCT1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pCT1.BackgroundImage")));
-            this.pCT1.Location = new System.Drawing.Point(236, 28);
+            this.pCT1.Location = new System.Drawing.Point(236, 27);
             this.pCT1.Name = "pCT1";
-            this.pCT1.Size = new System.Drawing.Size(36, 19);
+            this.pCT1.Size = new System.Drawing.Size(48, 20);
             this.pCT1.TabIndex = 30;
             this.pCT1.Visible = false;
             // 
@@ -532,7 +531,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::DoctorSupportSystem.Properties.Resources.Minimize;
             this.button2.Location = new System.Drawing.Point(1230, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
@@ -549,7 +548,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Teal;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Image = global::DoctorSupportSystem.Properties.Resources.Close3;
             this.btnClose.Location = new System.Drawing.Point(1286, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);

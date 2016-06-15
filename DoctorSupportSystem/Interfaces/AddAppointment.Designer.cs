@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAppointment));
             this.calendar = new System.Windows.Forms.MonthCalendar();
             this.selectedDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -196,6 +196,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -216,7 +217,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::DoctorSupportSystem.Properties.Resources.Minimize;
             this.button2.Location = new System.Drawing.Point(456, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
@@ -233,7 +234,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Teal;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Image = global::DoctorSupportSystem.Properties.Resources.Close3;
             this.btnClose.Location = new System.Drawing.Point(505, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);
@@ -251,6 +252,17 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(568, 71);
             this.panel5.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(24, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(211, 29);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "ADD APPOINTMENT";
             // 
             // AddAppointment
             // 
@@ -276,6 +288,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -299,5 +312,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label2;
     }
 }

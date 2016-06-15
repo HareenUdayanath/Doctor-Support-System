@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeamoglobinResults));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLoadResults = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -40,11 +40,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.p5 = new System.Windows.Forms.Panel();
-            this.p4 = new System.Windows.Forms.Panel();
-            this.p3 = new System.Windows.Forms.Panel();
-            this.p2 = new System.Windows.Forms.Panel();
-            this.p1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -63,6 +58,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.p5 = new System.Windows.Forms.Panel();
+            this.p4 = new System.Windows.Forms.Panel();
+            this.p3 = new System.Windows.Forms.Panel();
+            this.p2 = new System.Windows.Forms.Panel();
+            this.p1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -188,56 +188,6 @@
             this.panel5.Size = new System.Drawing.Size(254, 323);
             this.panel5.TabIndex = 26;
             // 
-            // p5
-            // 
-            this.p5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.p5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p5.BackgroundImage")));
-            this.p5.Location = new System.Drawing.Point(168, 197);
-            this.p5.Name = "p5";
-            this.p5.Size = new System.Drawing.Size(55, 20);
-            this.p5.TabIndex = 22;
-            this.p5.Visible = false;
-            // 
-            // p4
-            // 
-            this.p4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.p4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p4.BackgroundImage")));
-            this.p4.Location = new System.Drawing.Point(191, 150);
-            this.p4.Name = "p4";
-            this.p4.Size = new System.Drawing.Size(55, 20);
-            this.p4.TabIndex = 22;
-            this.p4.Visible = false;
-            // 
-            // p3
-            // 
-            this.p3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.p3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p3.BackgroundImage")));
-            this.p3.Location = new System.Drawing.Point(55, 103);
-            this.p3.Name = "p3";
-            this.p3.Size = new System.Drawing.Size(55, 20);
-            this.p3.TabIndex = 22;
-            this.p3.Visible = false;
-            // 
-            // p2
-            // 
-            this.p2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.p2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p2.BackgroundImage")));
-            this.p2.Location = new System.Drawing.Point(121, 60);
-            this.p2.Name = "p2";
-            this.p2.Size = new System.Drawing.Size(55, 20);
-            this.p2.TabIndex = 22;
-            this.p2.Visible = false;
-            // 
-            // p1
-            // 
-            this.p1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.p1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p1.BackgroundImage")));
-            this.p1.Location = new System.Drawing.Point(157, 10);
-            this.p1.Name = "p1";
-            this.p1.Size = new System.Drawing.Size(55, 20);
-            this.p1.TabIndex = 21;
-            this.p1.Visible = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -360,23 +310,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHaemoglobin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHaemoglobin.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHaemoglobin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHaemoglobin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHaemoglobin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHaemoglobin.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHaemoglobin.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHaemoglobin.EnableHeadersVisualStyles = false;
             this.dgvHaemoglobin.GridColor = System.Drawing.Color.White;
             this.dgvHaemoglobin.Location = new System.Drawing.Point(14, 113);
@@ -451,7 +401,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::DoctorSupportSystem.Properties.Resources.Minimize;
             this.button2.Location = new System.Drawing.Point(1246, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
@@ -468,13 +418,63 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Teal;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Image = global::DoctorSupportSystem.Properties.Resources.Close3;
             this.btnClose.Location = new System.Drawing.Point(1302, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);
             this.btnClose.TabIndex = 13;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // p5
+            // 
+            this.p5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p5.BackgroundImage")));
+            this.p5.Location = new System.Drawing.Point(168, 197);
+            this.p5.Name = "p5";
+            this.p5.Size = new System.Drawing.Size(48, 20);
+            this.p5.TabIndex = 22;
+            this.p5.Visible = false;
+            // 
+            // p4
+            // 
+            this.p4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p4.BackgroundImage")));
+            this.p4.Location = new System.Drawing.Point(191, 150);
+            this.p4.Name = "p4";
+            this.p4.Size = new System.Drawing.Size(48, 20);
+            this.p4.TabIndex = 22;
+            this.p4.Visible = false;
+            // 
+            // p3
+            // 
+            this.p3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p3.BackgroundImage")));
+            this.p3.Location = new System.Drawing.Point(55, 103);
+            this.p3.Name = "p3";
+            this.p3.Size = new System.Drawing.Size(48, 20);
+            this.p3.TabIndex = 22;
+            this.p3.Visible = false;
+            // 
+            // p2
+            // 
+            this.p2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p2.BackgroundImage = global::DoctorSupportSystem.Properties.Resources.Arrow;
+            this.p2.Location = new System.Drawing.Point(121, 60);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(55, 20);
+            this.p2.TabIndex = 22;
+            this.p2.Visible = false;
+            // 
+            // p1
+            // 
+            this.p1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.p1.BackgroundImage = global::DoctorSupportSystem.Properties.Resources.Arrow;
+            this.p1.Location = new System.Drawing.Point(157, 10);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(48, 20);
+            this.p1.TabIndex = 21;
+            this.p1.Visible = false;
             // 
             // HeamoglobinResults
             // 

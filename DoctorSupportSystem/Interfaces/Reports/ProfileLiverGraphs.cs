@@ -130,10 +130,5 @@ namespace DoctorSupportSystem.Interfaces.Reports
         {
             this.Close();
         }
-
-        private void ProfileLiverGraphs_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

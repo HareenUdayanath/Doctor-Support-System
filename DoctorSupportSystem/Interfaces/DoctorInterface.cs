@@ -414,10 +414,5 @@ namespace DoctorSupportSystem.Interfaces
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void dgvPatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

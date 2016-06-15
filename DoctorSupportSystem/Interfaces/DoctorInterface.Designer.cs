@@ -214,7 +214,6 @@
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatients.Size = new System.Drawing.Size(1322, 392);
             this.dgvPatients.TabIndex = 0;
-            this.dgvPatients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellContentClick);
             this.dgvPatients.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseClick);
             // 
             // Users
@@ -225,10 +224,10 @@
             this.Users.Controls.Add(this.dgvUsers);
             this.Users.Controls.Add(this.btnLoadUsers);
             this.Users.ForeColor = System.Drawing.Color.White;
-            this.Users.Location = new System.Drawing.Point(4, 34);
+            this.Users.Location = new System.Drawing.Point(4, 54);
             this.Users.Name = "Users";
             this.Users.Padding = new System.Windows.Forms.Padding(3);
-            this.Users.Size = new System.Drawing.Size(1334, 545);
+            this.Users.Size = new System.Drawing.Size(1334, 525);
             this.Users.TabIndex = 1;
             this.Users.Text = "Users";
             // 
@@ -302,9 +301,9 @@
             this.tabPage1.Controls.Add(this.btnAddTest);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.panel5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1334, 545);
+            this.tabPage1.Size = new System.Drawing.Size(1334, 525);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Test";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -705,9 +704,9 @@
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.btnShowAppintments);
             this.tabPage2.Controls.Add(this.dgvApplintments);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(4, 54);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1334, 545);
+            this.tabPage2.Size = new System.Drawing.Size(1334, 525);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Appointment";
             // 
@@ -858,7 +857,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Image = global::DoctorSupportSystem.Properties.Resources.user;
             this.button3.Location = new System.Drawing.Point(1190, 15);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
@@ -874,7 +873,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::DoctorSupportSystem.Properties.Resources.Minimize;
             this.button2.Location = new System.Drawing.Point(1246, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
@@ -891,7 +890,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Teal;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Image = global::DoctorSupportSystem.Properties.Resources.Close3;
             this.btnClose.Location = new System.Drawing.Point(1302, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);

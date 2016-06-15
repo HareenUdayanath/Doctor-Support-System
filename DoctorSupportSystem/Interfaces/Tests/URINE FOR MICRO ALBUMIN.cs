@@ -69,11 +69,6 @@ namespace DoctorSupportSystem.Interfaces.Tests
                        
         }
 
-        private void URINE_FOR_MICRO_ALBUMIN_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -116,16 +116,6 @@ namespace DoctorSupportSystem.Interfaces
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -134,16 +124,6 @@ namespace DoctorSupportSystem.Interfaces
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

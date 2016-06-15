@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DayReports));
             this.txtCondition = new System.Windows.Forms.TextBox();
             this.dgvDays = new System.Windows.Forms.DataGridView();
             this.dgvMedicines = new System.Windows.Forms.DataGridView();
@@ -60,7 +59,6 @@
             this.txtCondition.ReadOnly = true;
             this.txtCondition.Size = new System.Drawing.Size(514, 169);
             this.txtCondition.TabIndex = 15;
-            this.txtCondition.TextChanged += new System.EventHandler(this.txtCondition_TextChanged);
             // 
             // dgvDays
             // 
@@ -152,9 +150,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(12, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 29);
+            this.label4.Size = new System.Drawing.Size(146, 29);
             this.label4.TabIndex = 15;
-            this.label4.Text = "CREATININT AND eGFR TEST";
+            this.label4.Text = "DAY REPORTS";
             // 
             // button2
             // 
@@ -165,7 +163,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::DoctorSupportSystem.Properties.Resources.Minimize;
             this.button2.Location = new System.Drawing.Point(715, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
@@ -182,7 +180,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Teal;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Image = global::DoctorSupportSystem.Properties.Resources.Close3;
             this.btnClose.Location = new System.Drawing.Point(771, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);
