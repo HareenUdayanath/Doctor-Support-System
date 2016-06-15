@@ -32,5 +32,15 @@ namespace DoctorSupportSystem.Interfaces.Reports
             new ProfileLiverGraphs(DataBaseOperator.GetInstance()
               .getProfileliverAfterForPlot(pid, new Date(dateTimePicker1.Value))).ShowDialog();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

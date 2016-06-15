@@ -39,6 +39,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileLiverGraphs));
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbGamma = new System.Windows.Forms.CheckBox();
             this.cbAST = new System.Windows.Forms.CheckBox();
@@ -51,8 +52,13 @@
             this.cbTotPro = new System.Windows.Forms.CheckBox();
             this.profileGraphs = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileGraphs)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -67,9 +73,9 @@
             this.panel2.Controls.Add(this.cbGlobuin);
             this.panel2.Controls.Add(this.cbALbumin);
             this.panel2.Controls.Add(this.cbTotPro);
-            this.panel2.Location = new System.Drawing.Point(53, 377);
+            this.panel2.Location = new System.Drawing.Point(17, 573);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(781, 62);
+            this.panel2.Size = new System.Drawing.Size(1319, 62);
             this.panel2.TabIndex = 16;
             // 
             // cbGamma
@@ -77,9 +83,10 @@
             this.cbGamma.AutoSize = true;
             this.cbGamma.Checked = true;
             this.cbGamma.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbGamma.Location = new System.Drawing.Point(234, 26);
+            this.cbGamma.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGamma.Location = new System.Drawing.Point(1013, 16);
             this.cbGamma.Name = "cbGamma";
-            this.cbGamma.Size = new System.Drawing.Size(80, 17);
+            this.cbGamma.Size = new System.Drawing.Size(116, 27);
             this.cbGamma.TabIndex = 8;
             this.cbGamma.Text = "Gamma-GT";
             this.cbGamma.UseVisualStyleBackColor = true;
@@ -90,9 +97,10 @@
             this.cbAST.AutoSize = true;
             this.cbAST.Checked = true;
             this.cbAST.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAST.Location = new System.Drawing.Point(126, 26);
+            this.cbAST.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAST.Location = new System.Drawing.Point(1172, 16);
             this.cbAST.Name = "cbAST";
-            this.cbAST.Size = new System.Drawing.Size(95, 17);
+            this.cbAST.Size = new System.Drawing.Size(131, 27);
             this.cbAST.TabIndex = 7;
             this.cbAST.Text = "AST (S.G.O.T)";
             this.cbAST.UseVisualStyleBackColor = true;
@@ -103,9 +111,10 @@
             this.cbALT.AutoSize = true;
             this.cbALT.Checked = true;
             this.cbALT.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbALT.Location = new System.Drawing.Point(3, 26);
+            this.cbALT.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbALT.Location = new System.Drawing.Point(376, 16);
             this.cbALT.Name = "cbALT";
-            this.cbALT.Size = new System.Drawing.Size(93, 17);
+            this.cbALT.Size = new System.Drawing.Size(124, 27);
             this.cbALT.TabIndex = 6;
             this.cbALT.Text = "ALT (S.G.P.T)";
             this.cbALT.UseVisualStyleBackColor = true;
@@ -116,9 +125,10 @@
             this.cbALK_P.AutoSize = true;
             this.cbALK_P.Checked = true;
             this.cbALK_P.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbALK_P.Location = new System.Drawing.Point(607, 3);
+            this.cbALK_P.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbALK_P.Location = new System.Drawing.Point(825, 16);
             this.cbALK_P.Name = "cbALK_P";
-            this.cbALK_P.Size = new System.Drawing.Size(114, 17);
+            this.cbALK_P.Size = new System.Drawing.Size(166, 27);
             this.cbALK_P.TabIndex = 5;
             this.cbALK_P.Text = "ALK. Phosphatase";
             this.cbALK_P.UseVisualStyleBackColor = true;
@@ -129,9 +139,10 @@
             this.cbBT.AutoSize = true;
             this.cbBT.Checked = true;
             this.cbBT.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbBT.Location = new System.Drawing.Point(454, 3);
+            this.cbBT.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBT.Location = new System.Drawing.Point(656, 16);
             this.cbBT.Name = "cbBT";
-            this.cbBT.Size = new System.Drawing.Size(97, 17);
+            this.cbBT.Size = new System.Drawing.Size(145, 27);
             this.cbBT.TabIndex = 4;
             this.cbBT.Text = "Bilirubin – Total";
             this.cbBT.UseVisualStyleBackColor = true;
@@ -142,9 +153,10 @@
             this.cbAG_R.AutoSize = true;
             this.cbAG_R.Checked = true;
             this.cbAG_R.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAG_R.Location = new System.Drawing.Point(341, 3);
+            this.cbAG_R.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAG_R.Location = new System.Drawing.Point(526, 16);
             this.cbAG_R.Name = "cbAG_R";
-            this.cbAG_R.Size = new System.Drawing.Size(74, 17);
+            this.cbAG_R.Size = new System.Drawing.Size(103, 27);
             this.cbAG_R.TabIndex = 3;
             this.cbAG_R.Text = "A/G Ratio";
             this.cbAG_R.UseVisualStyleBackColor = true;
@@ -155,9 +167,10 @@
             this.cbGlobuin.AutoSize = true;
             this.cbGlobuin.Checked = true;
             this.cbGlobuin.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbGlobuin.Location = new System.Drawing.Point(234, 3);
+            this.cbGlobuin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGlobuin.Location = new System.Drawing.Point(257, 16);
             this.cbGlobuin.Name = "cbGlobuin";
-            this.cbGlobuin.Size = new System.Drawing.Size(62, 17);
+            this.cbGlobuin.Size = new System.Drawing.Size(89, 27);
             this.cbGlobuin.TabIndex = 2;
             this.cbGlobuin.Text = "Globuin";
             this.cbGlobuin.UseVisualStyleBackColor = true;
@@ -168,9 +181,10 @@
             this.cbALbumin.AutoSize = true;
             this.cbALbumin.Checked = true;
             this.cbALbumin.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbALbumin.Location = new System.Drawing.Point(126, 3);
+            this.cbALbumin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbALbumin.Location = new System.Drawing.Point(146, 16);
             this.cbALbumin.Name = "cbALbumin";
-            this.cbALbumin.Size = new System.Drawing.Size(63, 17);
+            this.cbALbumin.Size = new System.Drawing.Size(93, 27);
             this.cbALbumin.TabIndex = 1;
             this.cbALbumin.Text = "Albumin";
             this.cbALbumin.UseVisualStyleBackColor = true;
@@ -181,9 +195,10 @@
             this.cbTotPro.AutoSize = true;
             this.cbTotPro.Checked = true;
             this.cbTotPro.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbTotPro.Location = new System.Drawing.Point(3, 3);
+            this.cbTotPro.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTotPro.Location = new System.Drawing.Point(3, 16);
             this.cbTotPro.Name = "cbTotPro";
-            this.cbTotPro.Size = new System.Drawing.Size(86, 17);
+            this.cbTotPro.Size = new System.Drawing.Size(125, 27);
             this.cbTotPro.TabIndex = 0;
             this.cbTotPro.Text = "Total Protein";
             this.cbTotPro.UseVisualStyleBackColor = true;
@@ -202,7 +217,7 @@
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend1.Name = "Legend1";
             this.profileGraphs.Legends.Add(legend1);
-            this.profileGraphs.Location = new System.Drawing.Point(53, 12);
+            this.profileGraphs.Location = new System.Drawing.Point(17, 94);
             this.profileGraphs.Name = "profileGraphs";
             this.profileGraphs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.BorderWidth = 2;
@@ -279,32 +294,96 @@
             this.profileGraphs.Series.Add(series7);
             this.profileGraphs.Series.Add(series8);
             this.profileGraphs.Series.Add(series9);
-            this.profileGraphs.Size = new System.Drawing.Size(781, 359);
+            this.profileGraphs.Size = new System.Drawing.Size(1321, 473);
             this.profileGraphs.TabIndex = 15;
             this.profileGraphs.Text = "urineGraphs";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(47, 451);
-            this.panel1.TabIndex = 14;
+            this.panel1.Size = new System.Drawing.Size(1350, 88);
+            this.panel1.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 29);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "PROFILE LIVER TEST ";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Teal;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(1230, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Teal;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Teal;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1286, 15);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(50, 50);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 641);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1350, 88);
+            this.panel13.TabIndex = 23;
             // 
             // ProfileLiverGraphs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 451);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.profileGraphs);
-            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProfileLiverGraphs";
             this.Text = "ProfileLiverGraphs";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ProfileLiverGraphs_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileGraphs)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -316,12 +395,16 @@
         private System.Windows.Forms.CheckBox cbALbumin;
         private System.Windows.Forms.CheckBox cbTotPro;
         private System.Windows.Forms.DataVisualization.Charting.Chart profileGraphs;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox cbALT;
         private System.Windows.Forms.CheckBox cbALK_P;
         private System.Windows.Forms.CheckBox cbBT;
         private System.Windows.Forms.CheckBox cbAG_R;
         private System.Windows.Forms.CheckBox cbGamma;
         private System.Windows.Forms.CheckBox cbAST;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panel13;
     }
 }

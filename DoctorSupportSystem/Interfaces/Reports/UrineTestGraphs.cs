@@ -57,5 +57,15 @@ namespace DoctorSupportSystem.Interfaces.Reports
             else
                 urineGraphs.Series["Urine Albumin/Creatinine"].Enabled = false;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
