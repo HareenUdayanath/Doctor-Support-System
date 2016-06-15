@@ -35,7 +35,8 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
-                User ckUser = DataBaseOperator.GetInstance().updateUserNamePassword(this.user,txtPassword.Text,txtNewUN.Text, txtNewPW.Text);
+                User ckUser = DataBaseOperator
+                    .GetInstance().updateUserNamePassword(this.user,txtPassword.Text,txtNewUN.Text, txtNewPW.Text);
                 if (ckUser == null)
                 {
                     MessageBox.Show("Incorrect Password");

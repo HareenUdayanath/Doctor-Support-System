@@ -34,19 +34,14 @@ namespace DoctorSupportSystem.Interfaces
             this.txtFullName.Text = user.Fullname;
             this.txtNIC.Text = user.Nic;
             this.txtCoNo.Text = user.ContactNo;
-            this.comboBoxGender.Text = user.Gender;
-            if (user.Position.Equals("Doctor"))
-                this.comboboxPosition.Hide();
-            else
-                this.comboboxPosition.Text = user.Position;
+            this.comboBoxGender.Text = user.Gender;          
                
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string oldNic = user.Nic;
-            user.Fullname = txtFullName.Text;
-            user.Position = comboboxPosition.SelectedItem.ToString();
+            user.Fullname = txtFullName.Text;            
             user.Gender = comboBoxGender.SelectedItem.ToString();
 
             String err = "";           
@@ -74,7 +69,12 @@ namespace DoctorSupportSystem.Interfaces
                 else
                 {
                     MessageBox.Show("The user profile successfully updated");
-                    //new Add_User().Show();
+                    if(user.Position.Equals("Doctor"))
+                        ((DoctorInterface)this.Owner).changeUser(user);
+                    if (user.Position.Equals("Assistance"))
+                        ((AssistanceInterface)this.Owner).changeUser(user);
+                    if (user.Position.Equals("Lab Assistance"))
+                        ((LabAssistanceInterface)this.Owner).changeUser(user);
                     this.Close();
                 }
             }

@@ -45,10 +45,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -168,7 +168,7 @@
             this.btnChangeUP.Location = new System.Drawing.Point(395, 6);
             this.btnChangeUP.Name = "btnChangeUP";
             this.btnChangeUP.Size = new System.Drawing.Size(160, 52);
-            this.btnChangeUP.TabIndex = 12;
+            this.btnChangeUP.TabIndex = 6;
             this.btnChangeUP.Text = "Change";
             this.btnChangeUP.UseVisualStyleBackColor = false;
             this.btnChangeUP.Click += new System.EventHandler(this.btnChangeUP_Click);
@@ -182,7 +182,7 @@
             this.panel3.Location = new System.Drawing.Point(12, 91);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(520, 42);
-            this.panel3.TabIndex = 23;
+            this.panel3.TabIndex = 1;
             // 
             // panel6
             // 
@@ -193,7 +193,7 @@
             this.panel6.Location = new System.Drawing.Point(12, 259);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(520, 42);
-            this.panel6.TabIndex = 24;
+            this.panel6.TabIndex = 3;
             // 
             // panel7
             // 
@@ -204,7 +204,7 @@
             this.panel7.Location = new System.Drawing.Point(12, 148);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(520, 42);
-            this.panel7.TabIndex = 24;
+            this.panel7.TabIndex = 2;
             // 
             // panel8
             // 
@@ -215,7 +215,7 @@
             this.panel8.Location = new System.Drawing.Point(12, 317);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(520, 42);
-            this.panel8.TabIndex = 24;
+            this.panel8.TabIndex = 4;
             // 
             // panel9
             // 
@@ -226,7 +226,7 @@
             this.panel9.Location = new System.Drawing.Point(12, 383);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(520, 42);
-            this.panel9.TabIndex = 24;
+            this.panel9.TabIndex = 5;
             // 
             // panel1
             // 
@@ -239,10 +239,21 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(568, 60);
-            this.panel1.TabIndex = 31;
+            this.panel1.TabIndex = 7;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(11, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(388, 29);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "CHANGE USER NAME AND PASSWORD";
             // 
             // button2
             // 
@@ -257,7 +268,7 @@
             this.button2.Location = new System.Drawing.Point(456, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -274,7 +285,7 @@
             this.btnClose.Location = new System.Drawing.Point(505, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -287,21 +298,11 @@
             this.panel2.Location = new System.Drawing.Point(0, 601);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(568, 71);
-            this.panel2.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(11, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(388, 29);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "CHANGE USER NAME AND PASSWORD";
+            this.panel2.TabIndex = 6;
             // 
             // ChangeUP
             // 
+            this.AcceptButton = this.btnChangeUP;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

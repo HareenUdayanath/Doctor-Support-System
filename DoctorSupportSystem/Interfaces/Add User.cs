@@ -63,10 +63,17 @@ namespace DoctorSupportSystem.Interfaces
                 user.Position = comboboxPosition.SelectedItem.ToString();
                 user.Gender = comboBoxGender.SelectedItem.ToString();
                 user.Username = txtUserName.Text;
-                if (db.addUser(user) == -1)
+
+                int re = db.addUser(user);
+                if (re == -1)
                 {
                     MessageBox.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
+                }
+                else if (re == -4)
+                {
+                    MessageBox.Show("Duplicate Username:\n"
+                        + "This Username already exist in the database");
                 }
                 else
                 {

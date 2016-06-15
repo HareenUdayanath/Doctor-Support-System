@@ -16,16 +16,19 @@ namespace DoctorSupportSystem.Interfaces
 {
     public partial class DoctorInterface : Form
     {
-        Patient patient;
+        private Patient patient;
         int selectedPID;
 
-        DataTable users;
-        DataTable patients;
-        DataTable appoinments;
+        private DataTable users;
+        private DataTable patients;
+        private DataTable appoinments;
+        private User user;
 
-        public DoctorInterface()
+        public DoctorInterface(User user)
         {
+            
             InitializeComponent();
+            this.user = user;
             AutoCompleteStringCollection col = new AutoCompleteStringCollection();
             col.AddRange(DataBaseOperator.GetInstance().getPatientNameList());           
             txtSearchPatient.AutoCompleteCustomSource = col;
@@ -279,6 +282,7 @@ namespace DoctorSupportSystem.Interfaces
 
         private void deleteUser(object sender, EventArgs e)
         {
+          
             if (dgvUsers.Rows.Count > 0)
             {
                 DataBaseOperator.GetInstance().deleteUser(dgvUsers.SelectedRows[0].Cells[3].Value.ToString());
@@ -316,7 +320,7 @@ namespace DoctorSupportSystem.Interfaces
                 DataGridViewRow selectedRow = dgvApplintments.Rows[currentMouseOverRow];
 
 
-                MenuItem mi1 = new MenuItem("Delete Selected User");
+                MenuItem mi1 = new MenuItem("Delete Selected Appointment");
                 mi1.Click += new EventHandler(deleteAppointment);
                 m.MenuItems.Add(mi1);
 
@@ -408,11 +412,48 @@ namespace DoctorSupportSystem.Interfaces
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            new Login().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void dgvUsers_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            try {
+                if (e.Button == MouseButtons.Right)
+                {
+                    var hti = dgvUsers.HitTest(e.X, e.Y);
+                    dgvUsers.ClearSelection();
+                    dgvUsers.Rows[hti.RowIndex].Selected = true;
+
+                    ContextMenu m = new ContextMenu();
+
+                    int currentMouseOverRow = dgvUsers.HitTest(e.X, e.Y).RowIndex;
+                    DataGridViewRow selectedRow = dgvUsers.Rows[currentMouseOverRow];
+
+
+                    MenuItem mi1 = new MenuItem("Delete Selected User");
+                    mi1.Click += new EventHandler(deleteUser);
+                    m.MenuItems.Add(mi1);
+
+                    m.Show(dgvUsers, new Point(e.X, e.Y));
+
+                }
+            }
+            catch (Exception) { }
+        }
+
+        public void changeUser(User user)
+        {
+            this.user = user;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new UpdateUser(user).ShowDialog(this);
         }
     }
 }

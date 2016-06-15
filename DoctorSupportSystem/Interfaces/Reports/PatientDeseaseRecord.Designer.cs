@@ -273,9 +273,9 @@
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label21.Location = new System.Drawing.Point(13, 20);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 23);
+            this.label21.Size = new System.Drawing.Size(78, 23);
             this.label21.TabIndex = 12;
-            this.label21.Text = " Desease:\r\n";
+            this.label21.Text = " Disease:\r\n";
             // 
             // btnAddRecord
             // 
@@ -430,9 +430,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(12, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(236, 29);
+            this.label5.Size = new System.Drawing.Size(230, 29);
             this.label5.TabIndex = 15;
-            this.label5.Text = "ADD DESEASE RECORD";
+            this.label5.Text = "ADD DISEASE RECORD";
             // 
             // button2
             // 

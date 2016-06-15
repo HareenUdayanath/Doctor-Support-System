@@ -54,10 +54,10 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -94,7 +94,7 @@
             this.comboboxPosition.Location = new System.Drawing.Point(189, 6);
             this.comboboxPosition.Name = "comboboxPosition";
             this.comboboxPosition.Size = new System.Drawing.Size(269, 27);
-            this.comboboxPosition.TabIndex = 4;
+            this.comboboxPosition.TabIndex = 9;
             // 
             // btnAddUser
             // 
@@ -130,7 +130,7 @@
             this.txtFullName.Location = new System.Drawing.Point(189, 6);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(269, 27);
-            this.txtFullName.TabIndex = 0;
+            this.txtFullName.TabIndex = 1;
             // 
             // txtCoNo
             // 
@@ -138,7 +138,7 @@
             this.txtCoNo.Location = new System.Drawing.Point(189, 7);
             this.txtCoNo.Name = "txtCoNo";
             this.txtCoNo.Size = new System.Drawing.Size(269, 27);
-            this.txtCoNo.TabIndex = 2;
+            this.txtCoNo.TabIndex = 5;
             this.txtCoNo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6
@@ -159,7 +159,7 @@
             this.txtNIC.Location = new System.Drawing.Point(189, 8);
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(269, 27);
-            this.txtNIC.TabIndex = 1;
+            this.txtNIC.TabIndex = 3;
             // 
             // label7
             // 
@@ -186,7 +186,7 @@
             this.comboBoxGender.Location = new System.Drawing.Point(189, 5);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(269, 27);
-            this.comboBoxGender.TabIndex = 3;
+            this.comboBoxGender.TabIndex = 7;
             // 
             // label8
             // 
@@ -206,7 +206,7 @@
             this.txtUserName.Location = new System.Drawing.Point(189, 8);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(269, 27);
-            this.txtUserName.TabIndex = 0;
+            this.txtUserName.TabIndex = 11;
             // 
             // txtPassword
             // 
@@ -215,7 +215,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(269, 27);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 13;
             // 
             // txtCPassword
             // 
@@ -224,7 +224,7 @@
             this.txtCPassword.Name = "txtCPassword";
             this.txtCPassword.PasswordChar = '*';
             this.txtCPassword.Size = new System.Drawing.Size(269, 27);
-            this.txtCPassword.TabIndex = 2;
+            this.txtCPassword.TabIndex = 15;
             // 
             // label3
             // 
@@ -271,7 +271,7 @@
             this.panel3.Location = new System.Drawing.Point(16, 96);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(520, 42);
-            this.panel3.TabIndex = 3;
+            this.panel3.TabIndex = 0;
             // 
             // panel11
             // 
@@ -282,7 +282,7 @@
             this.panel11.Location = new System.Drawing.Point(16, 148);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(520, 42);
-            this.panel11.TabIndex = 4;
+            this.panel11.TabIndex = 2;
             // 
             // panel12
             // 
@@ -293,7 +293,7 @@
             this.panel12.Location = new System.Drawing.Point(16, 473);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(520, 42);
-            this.panel12.TabIndex = 5;
+            this.panel12.TabIndex = 12;
             // 
             // panel13
             // 
@@ -304,7 +304,7 @@
             this.panel13.Location = new System.Drawing.Point(16, 199);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(520, 42);
-            this.panel13.TabIndex = 5;
+            this.panel13.TabIndex = 4;
             // 
             // panel14
             // 
@@ -326,7 +326,7 @@
             this.panel15.Location = new System.Drawing.Point(16, 300);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(520, 42);
-            this.panel15.TabIndex = 5;
+            this.panel15.TabIndex = 8;
             // 
             // panel16
             // 
@@ -337,7 +337,7 @@
             this.panel16.Location = new System.Drawing.Point(16, 418);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(520, 42);
-            this.panel16.TabIndex = 5;
+            this.panel16.TabIndex = 10;
             // 
             // panel17
             // 
@@ -348,7 +348,7 @@
             this.panel17.Location = new System.Drawing.Point(16, 526);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(520, 42);
-            this.panel17.TabIndex = 7;
+            this.panel17.TabIndex = 14;
             // 
             // panel1
             // 
@@ -365,6 +365,17 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(11, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 29);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "ADD USER";
             // 
             // button2
             // 
@@ -410,17 +421,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(568, 71);
             this.panel2.TabIndex = 31;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(11, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 29);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "ADD USER";
             // 
             // Add_User
             // 

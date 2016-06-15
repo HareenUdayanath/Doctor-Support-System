@@ -16,15 +16,16 @@ namespace DoctorSupportSystem.Interfaces
     public partial class AssistanceInterface : Form
     {
 
-        Patient patient;
-        DataTable patients;
-        DataTable appoinments;
-        int selectedPID;
+        private Patient patient;
+        private DataTable patients;
+        private DataTable appoinments;
+        private int selectedPID;
+        private User user;
 
-        public AssistanceInterface()
+        public AssistanceInterface(User user)
         {
             InitializeComponent();
-
+            this.user = user;
             AutoCompleteStringCollection col = new AutoCompleteStringCollection();
             col.AddRange(DataBaseOperator.GetInstance().getPatientNameList());
             cbSearchPatients.AutoCompleteCustomSource = col;
@@ -235,6 +236,17 @@ namespace DoctorSupportSystem.Interfaces
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            new Login().Show();
+        }
+
+        public void changeUser(User user)
+        {
+            this.user = user;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new UpdateUser(user).ShowDialog(this);
         }
     }
 }

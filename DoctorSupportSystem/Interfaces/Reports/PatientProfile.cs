@@ -47,34 +47,36 @@ namespace DoctorSupportSystem.Interfaces.Reports
 
         private void dgvDeseaeReports_MouseClick(object sender, MouseEventArgs e)
         {
+            try {
+                if (e.Button == MouseButtons.Right)
+                {
+                    var hti = dgvDeseaeReports.HitTest(e.X, e.Y);
+                    dgvDeseaeReports.ClearSelection();
+                    dgvDeseaeReports.Rows[hti.RowIndex].Selected = true;
 
-            if (e.Button == MouseButtons.Right)
-            {
-                var hti = dgvDeseaeReports.HitTest(e.X, e.Y);
-                dgvDeseaeReports.ClearSelection();
-                dgvDeseaeReports.Rows[hti.RowIndex].Selected = true;
+                    ContextMenu m = new ContextMenu();
 
-                ContextMenu m = new ContextMenu();
+                    int currentMouseOverRow = dgvDeseaeReports.HitTest(e.X, e.Y).RowIndex;
+                    /*DataGridViewRow selectedRow = dgvDeseaeReports.Rows[currentMouseOverRow];
+                    selectedPID = Convert.ToInt32(selectedRow.Cells["PID"].Value);*/
 
-                int currentMouseOverRow = dgvDeseaeReports.HitTest(e.X, e.Y).RowIndex;
-                /*DataGridViewRow selectedRow = dgvDeseaeReports.Rows[currentMouseOverRow];
-                selectedPID = Convert.ToInt32(selectedRow.Cells["PID"].Value);*/
+                    MenuItem mi1 = new MenuItem("Show Pervious Reports");
+                    mi1.Click += new EventHandler(getDayReports);
+                    m.MenuItems.Add(mi1);
 
-                MenuItem mi1 = new MenuItem("Show Pervious Reports");
-                mi1.Click += new EventHandler(getDayReports);
-                m.MenuItems.Add(mi1);
+                    MenuItem mi3 = new MenuItem("Add new Day Report");
+                    mi3.Click += new EventHandler(addDayReport);
+                    m.MenuItems.Add(mi3);
 
-                MenuItem mi3 = new MenuItem("Add new Day Report");
-                mi3.Click += new EventHandler(addDayReport);
-                m.MenuItems.Add(mi3);
+                    MenuItem mi2 = new MenuItem("Delete this record");
+                    mi2.Click += new EventHandler(deleteRecord);
+                    m.MenuItems.Add(mi2);
 
-                MenuItem mi2 = new MenuItem("Delete this record");
-                mi2.Click += new EventHandler(deleteRecord);
-                m.MenuItems.Add(mi2);
+                    m.Show(dgvDeseaeReports, new Point(e.X, e.Y));
 
-                m.Show(dgvDeseaeReports, new Point(e.X, e.Y));
-
+                }
             }
+            catch (Exception) { }
         }
 
         private void addDayReport(object sender, EventArgs e)

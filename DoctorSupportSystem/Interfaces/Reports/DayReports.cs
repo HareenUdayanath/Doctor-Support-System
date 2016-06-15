@@ -34,21 +34,6 @@ namespace DoctorSupportSystem.Interfaces.Reports
             //dgvDays.DataSource = dayReports.Copy().Columns.Remove("");
         }
 
-        private void dgvDays_MouseClick(object sender, MouseEventArgs e)
-        {
-            try {
-                txtCondition.Text = dayReports
-                    .Select(String.Format("[Day Report ID] = '{0}' AND [Date] = '{1}'",
-                    dgvDays.SelectedRows[0].Cells[0].Value.ToString(),
-                    dgvDays.SelectedRows[0].Cells[1].Value.ToString()) )[0][2].ToString();
-                dgvMedicines.DataSource = DataBaseOperator.GetInstance()
-                    .getAllMedicines(Convert.ToInt32(dgvDays.SelectedRows[0].Cells[0].Value));
-            }
-            catch (Exception ex) {
-                Console.WriteLine(ex.ToString());
-            }
-        }
-
         private void DayReports_Load(object sender, EventArgs e)
         {
             try
@@ -99,6 +84,23 @@ namespace DoctorSupportSystem.Interfaces.Reports
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void dgvDays_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtCondition.Text = dayReports
+                    .Select(String.Format("[Day Report ID] = '{0}' AND [Date] = '{1}'",
+                    dgvDays.SelectedRows[0].Cells[0].Value.ToString(),
+                    dgvDays.SelectedRows[0].Cells[1].Value.ToString()))[0][2].ToString();
+                dgvMedicines.DataSource = DataBaseOperator.GetInstance()
+                    .getAllMedicines(Convert.ToInt32(dgvDays.SelectedRows[0].Cells[0].Value));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

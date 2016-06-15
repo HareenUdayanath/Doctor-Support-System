@@ -89,10 +89,11 @@
             this.dgvDays.Location = new System.Drawing.Point(12, 94);
             this.dgvDays.Name = "dgvDays";
             this.dgvDays.ReadOnly = true;
+            this.dgvDays.RowHeadersVisible = false;
             this.dgvDays.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDays.Size = new System.Drawing.Size(289, 502);
-            this.dgvDays.TabIndex = 16;
-            this.dgvDays.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvDays_MouseClick);
+            this.dgvDays.TabIndex = 0;
+            this.dgvDays.SelectionChanged += new System.EventHandler(this.dgvDays_SelectionChanged);
             // 
             // dgvMedicines
             // 

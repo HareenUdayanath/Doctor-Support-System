@@ -84,7 +84,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
@@ -737,7 +736,6 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -760,6 +758,7 @@
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 15;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -809,16 +808,6 @@
             this.button1.Text = "Add Appointment";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(938, 17);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 52);
-            this.button4.TabIndex = 10;
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -916,7 +905,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel6;

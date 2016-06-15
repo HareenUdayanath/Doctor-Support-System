@@ -58,22 +58,13 @@ namespace DoctorSupportSystem.Interfaces
                 MessageBox.Show(err);
             }
             else
-            {
-                /*if (db.addAppointment(appointment) == -1)
-                {
-                    MessageBox.Show("Duplicate NIC:\n"
-                        + "This NIC already exist in the database");
-                }
-                else
-                {*/
+            {               
                 appointment.Date = selectedDate;
                 appointment.Number = Convert.ToInt32(lbNumber.Text);
                 appointment.PatientName = txtPName.Text;
                 db.addAppointment(appointment);
-                MessageBox.Show("The patient successfully added to the database");
-                new AddAppointment().Show();
-                this.Close();
-                //}
+                MessageBox.Show("The patient successfully added to the database");               
+                this.Close();           
 
             }
         }

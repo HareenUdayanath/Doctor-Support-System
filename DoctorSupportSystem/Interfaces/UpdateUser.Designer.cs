@@ -30,8 +30,6 @@
         {
             this.txtNIC = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
-            this.comboboxPosition = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtCoNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,17 +42,15 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -74,31 +70,6 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(248, 27);
             this.txtFullName.TabIndex = 8;
-            // 
-            // comboboxPosition
-            // 
-            this.comboboxPosition.BackColor = System.Drawing.Color.Silver;
-            this.comboboxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboboxPosition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboboxPosition.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboboxPosition.Items.AddRange(new object[] {
-            "Assistance",
-            "Lab Assistance"});
-            this.comboboxPosition.Location = new System.Drawing.Point(219, 8);
-            this.comboboxPosition.Name = "comboboxPosition";
-            this.comboboxPosition.Size = new System.Drawing.Size(248, 27);
-            this.comboboxPosition.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(23, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 23);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Position:";
             // 
             // txtCoNo
             // 
@@ -216,7 +187,7 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.txtNIC);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(30, 171);
+            this.panel7.Location = new System.Drawing.Point(30, 185);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(520, 42);
             this.panel7.TabIndex = 15;
@@ -227,7 +198,7 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.txtCoNo);
-            this.panel8.Location = new System.Drawing.Point(30, 239);
+            this.panel8.Location = new System.Drawing.Point(30, 271);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(520, 42);
             this.panel8.TabIndex = 16;
@@ -238,21 +209,10 @@
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.comboBoxGender);
-            this.panel9.Location = new System.Drawing.Point(30, 312);
+            this.panel9.Location = new System.Drawing.Point(30, 355);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(520, 42);
             this.panel9.TabIndex = 17;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.comboboxPosition);
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Location = new System.Drawing.Point(30, 382);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(520, 42);
-            this.panel10.TabIndex = 18;
             // 
             // panel2
             // 
@@ -269,6 +229,17 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(24, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 29);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "UPDATE USER DETAILS";
             // 
             // button2
             // 
@@ -316,17 +287,6 @@
             this.panel3.Size = new System.Drawing.Size(568, 71);
             this.panel3.TabIndex = 32;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 29);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "UPDATE PATIENT DETAILS";
-            // 
             // UpdateUser
             // 
             this.AcceptButton = this.btnUpdate;
@@ -336,7 +296,6 @@
             this.ClientSize = new System.Drawing.Size(568, 672);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -353,8 +312,6 @@
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -371,15 +328,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboboxPosition;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnChangeUP;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnClose;
