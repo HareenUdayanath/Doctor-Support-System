@@ -26,9 +26,8 @@ namespace DoctorSupportSystem.Interfaces
             User user = db.getUser(txtUserName.Text,txtPassWord.Text);
             if (user != null)
             {
-                //Form userForm = UserFactory.getUserInterface(user);
-                //userForm.Show();
-                new UpdateUser(user).Show();
+                Form userForm = UserFactory.getUserInterface(user);
+                userForm.Show();               
                 this.Close();
             }
             else

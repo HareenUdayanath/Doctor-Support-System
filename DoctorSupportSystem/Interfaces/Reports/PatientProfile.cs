@@ -182,5 +182,10 @@ namespace DoctorSupportSystem.Interfaces.Reports
             lbCN.Text = patient.ContactNo;
             lbAddress.Text = patient.Address;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

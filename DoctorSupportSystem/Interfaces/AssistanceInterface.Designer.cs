@@ -114,11 +114,12 @@
             this.tabControl1.Controls.Add(this.Appointments);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(80, 30);
+            this.tabControl1.ItemSize = new System.Drawing.Size(150, 50);
             this.tabControl1.Location = new System.Drawing.Point(10, 93);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1328, 578);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
             // Patients
@@ -128,10 +129,10 @@
             this.Patients.Controls.Add(this.txtSearchPatients);
             this.Patients.Controls.Add(this.btnLoadPatients);
             this.Patients.Controls.Add(this.dgvPatients);
-            this.Patients.Location = new System.Drawing.Point(4, 34);
+            this.Patients.Location = new System.Drawing.Point(4, 54);
             this.Patients.Name = "Patients";
             this.Patients.Padding = new System.Windows.Forms.Padding(3);
-            this.Patients.Size = new System.Drawing.Size(1320, 540);
+            this.Patients.Size = new System.Drawing.Size(1320, 520);
             this.Patients.TabIndex = 0;
             this.Patients.Text = "Patients";
             // 
@@ -162,7 +163,7 @@
             this.btnLoadPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadPatients.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadPatients.ForeColor = System.Drawing.Color.White;
-            this.btnLoadPatients.Location = new System.Drawing.Point(993, 482);
+            this.btnLoadPatients.Location = new System.Drawing.Point(993, 462);
             this.btnLoadPatients.Name = "btnLoadPatients";
             this.btnLoadPatients.Size = new System.Drawing.Size(320, 52);
             this.btnLoadPatients.TabIndex = 3;
@@ -202,7 +203,7 @@
             this.dgvPatients.ReadOnly = true;
             this.dgvPatients.RowHeadersVisible = false;
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPatients.Size = new System.Drawing.Size(1310, 373);
+            this.dgvPatients.Size = new System.Drawing.Size(1310, 353);
             this.dgvPatients.TabIndex = 2;
             this.dgvPatients.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPatients_MouseClick);
             // 
@@ -215,10 +216,10 @@
             this.Appointments.Controls.Add(this.label9);
             this.Appointments.Controls.Add(this.dgvApplintments);
             this.Appointments.Controls.Add(this.btnShowAppintments);
-            this.Appointments.Location = new System.Drawing.Point(4, 34);
+            this.Appointments.Location = new System.Drawing.Point(4, 54);
             this.Appointments.Name = "Appointments";
             this.Appointments.Padding = new System.Windows.Forms.Padding(3);
-            this.Appointments.Size = new System.Drawing.Size(1320, 540);
+            this.Appointments.Size = new System.Drawing.Size(1320, 520);
             this.Appointments.TabIndex = 1;
             this.Appointments.Text = "Appointments";
             // 
@@ -231,7 +232,7 @@
             this.btnDeletePast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletePast.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePast.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePast.Location = new System.Drawing.Point(341, 482);
+            this.btnDeletePast.Location = new System.Drawing.Point(341, 462);
             this.btnDeletePast.Name = "btnDeletePast";
             this.btnDeletePast.Size = new System.Drawing.Size(320, 52);
             this.btnDeletePast.TabIndex = 19;
@@ -248,7 +249,7 @@
             this.btnCurrentAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCurrentAppointments.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCurrentAppointments.ForeColor = System.Drawing.Color.White;
-            this.btnCurrentAppointments.Location = new System.Drawing.Point(667, 482);
+            this.btnCurrentAppointments.Location = new System.Drawing.Point(667, 462);
             this.btnCurrentAppointments.Name = "btnCurrentAppointments";
             this.btnCurrentAppointments.Size = new System.Drawing.Size(320, 52);
             this.btnCurrentAppointments.TabIndex = 18;
@@ -306,7 +307,7 @@
             this.dgvApplintments.ReadOnly = true;
             this.dgvApplintments.RowHeadersVisible = false;
             this.dgvApplintments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvApplintments.Size = new System.Drawing.Size(1310, 373);
+            this.dgvApplintments.Size = new System.Drawing.Size(1310, 353);
             this.dgvApplintments.TabIndex = 10;
             // 
             // btnShowAppintments
@@ -318,7 +319,7 @@
             this.btnShowAppintments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowAppintments.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAppintments.ForeColor = System.Drawing.Color.White;
-            this.btnShowAppintments.Location = new System.Drawing.Point(993, 482);
+            this.btnShowAppintments.Location = new System.Drawing.Point(993, 462);
             this.btnShowAppintments.Name = "btnShowAppintments";
             this.btnShowAppintments.Size = new System.Drawing.Size(320, 52);
             this.btnShowAppintments.TabIndex = 9;
@@ -331,9 +332,9 @@
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.btnAddTest);
             this.tabPage1.Controls.Add(this.panel5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1320, 540);
+            this.tabPage1.Size = new System.Drawing.Size(1320, 520);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Test";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -419,7 +420,7 @@
             this.btnAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTest.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTest.ForeColor = System.Drawing.Color.White;
-            this.btnAddTest.Location = new System.Drawing.Point(993, 477);
+            this.btnAddTest.Location = new System.Drawing.Point(993, 457);
             this.btnAddTest.Name = "btnAddTest";
             this.btnAddTest.Size = new System.Drawing.Size(320, 52);
             this.btnAddTest.TabIndex = 14;

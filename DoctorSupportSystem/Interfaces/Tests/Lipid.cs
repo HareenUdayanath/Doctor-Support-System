@@ -16,6 +16,9 @@ namespace DoctorSupportSystem.Interfaces.Tests
 {
     public partial class Lipid : Form
     {
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
         private int pid;
         public Lipid(int pid)
         {
@@ -83,6 +86,46 @@ namespace DoctorSupportSystem.Interfaces.Tests
             }
 
            
+        }
+
+        private void Lipid_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;  // _dragging is your variable flag
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel5_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void panel5_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void Lipid_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

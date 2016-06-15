@@ -36,14 +36,16 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +54,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(401, 167);
+            this.label1.Location = new System.Drawing.Point(348, 332);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 23);
             this.label1.TabIndex = 0;
@@ -64,7 +66,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(401, 213);
+            this.label2.Location = new System.Drawing.Point(351, 378);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 23);
             this.label2.TabIndex = 1;
@@ -73,18 +75,18 @@
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(493, 166);
+            this.txtUserName.Location = new System.Drawing.Point(453, 332);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(219, 27);
+            this.txtUserName.Size = new System.Drawing.Size(314, 27);
             this.txtUserName.TabIndex = 2;
             // 
             // txtPassWord
             // 
             this.txtPassWord.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassWord.Location = new System.Drawing.Point(493, 212);
+            this.txtPassWord.Location = new System.Drawing.Point(453, 378);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '*';
-            this.txtPassWord.Size = new System.Drawing.Size(219, 27);
+            this.txtPassWord.Size = new System.Drawing.Size(314, 27);
             this.txtPassWord.TabIndex = 3;
             // 
             // btnLogin
@@ -95,9 +97,9 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(392, 265);
+            this.btnLogin.Location = new System.Drawing.Point(352, 431);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(320, 52);
+            this.btnLogin.Size = new System.Drawing.Size(415, 52);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -105,6 +107,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label1);
@@ -125,6 +128,15 @@
             this.panel3.Size = new System.Drawing.Size(1366, 88);
             this.panel3.TabIndex = 7;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Location = new System.Drawing.Point(-2, -638);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1366, 88);
+            this.panel2.TabIndex = 8;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Teal;
@@ -141,15 +153,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Location = new System.Drawing.Point(-2, -638);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1366, 88);
-            this.panel2.TabIndex = 8;
-            // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -161,15 +164,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1366, 88);
             this.panel4.TabIndex = 9;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel5.BackColor = System.Drawing.Color.Teal;
-            this.panel5.Location = new System.Drawing.Point(-2, -638);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1366, 88);
-            this.panel5.TabIndex = 8;
             // 
             // button1
             // 
@@ -186,6 +180,24 @@
             this.button1.TabIndex = 9;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel5.BackColor = System.Drawing.Color.Teal;
+            this.panel5.Location = new System.Drawing.Point(-2, -638);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1366, 88);
+            this.panel5.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DoctorSupportSystem.Properties.Resources.Logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(352, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(415, 310);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -205,6 +217,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +236,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
