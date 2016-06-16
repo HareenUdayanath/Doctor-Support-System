@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoctorSupportSystem.Interfaces.Other;
 
 namespace DoctorSupportSystem.Interfaces
 {
@@ -32,7 +33,7 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
-                MessageBox.Show("Invalid Username or Password");
+                CustomMessageBox.Show("Invalid Username or Password");
                 this.txtPassWord.Text = "";
                 this.txtUserName.Text = "";
             }

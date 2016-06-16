@@ -115,8 +115,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 }
                 else
                 {
-                    MessageBox.Show("The Day Report successfully added to the database");
-                    new Add_User().Show();
+                    MessageBox.Show("The Day Report successfully added to the database");                   
                     this.Close();
                 }
             }
