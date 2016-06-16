@@ -33,9 +33,13 @@ namespace DoctorSupportSystem.Interfaces
             }
             else
             {
-                CustomMessageBox.Show("Invalid Username or Password");
+                if(DataBaseOperator.isconnectionError)
+                    CustomMessageBox.Show("Could not connect to the database\nCheck your database connection");
+                else
+                    CustomMessageBox.Show("Invalid Username or Password");
                 this.txtPassWord.Text = "";
                 this.txtUserName.Text = "";
+                this.txtUserName.Focus();
             }
         }
 

@@ -105,7 +105,9 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 dayReport.Condition = txtCondition.Text;
                 for(int i = 0 ; i < dgvMedicines.Rows.Count ; i++)
                 {
-                    dayReport.addMedicine(dgvMedicines.Rows[i].Cells[1].Value.ToString());
+                    object val = dgvMedicines.Rows[i].Cells[1].Value;
+                    if(val!=null && val.ToString()!="")
+                        dayReport.addMedicine(val.ToString());
                 }
 
                 if (DataBaseOperator.GetInstance().addDayReport(dayReport) == -1)
