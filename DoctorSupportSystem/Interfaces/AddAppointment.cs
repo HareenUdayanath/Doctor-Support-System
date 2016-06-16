@@ -1,5 +1,6 @@
 ﻿using DoctorSupportSystem.DataBase;
 using DoctorSupportSystem.Help;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Models;
 using System;
 using System.Collections.Generic;
@@ -55,7 +56,7 @@ namespace DoctorSupportSystem.Interfaces
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {               
@@ -63,7 +64,7 @@ namespace DoctorSupportSystem.Interfaces
                 appointment.Number = Convert.ToInt32(lbNumber.Text);
                 appointment.PatientName = txtPName.Text;
                 db.addAppointment(appointment);
-                MessageBox.Show("The patient successfully added to the database");               
+                MBOX.Show("The patient successfully added to the database");               
                 this.Close();           
 
             }

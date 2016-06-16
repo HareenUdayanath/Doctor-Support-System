@@ -1,5 +1,6 @@
 ﻿using DoctorSupportSystem.DataBase;
 using DoctorSupportSystem.Help;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Models;
 using System;
 using System.Collections.Generic;
@@ -55,7 +56,7 @@ namespace DoctorSupportSystem.Interfaces
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {
@@ -67,17 +68,17 @@ namespace DoctorSupportSystem.Interfaces
                 int re = db.addUser(user);
                 if (re == -1)
                 {
-                    MessageBox.Show("Duplicate NIC:\n"
+                    MBOX.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
                 }
                 else if (re == -4)
                 {
-                    MessageBox.Show("Duplicate Username:\n"
+                    MBOX.Show("Duplicate Username:\n"
                         + "This Username already exist in the database");
                 }
                 else
                 {
-                    MessageBox.Show("The user successfully added to the database");                    
+                    MBOX.Show("The user successfully added to the database");                    
                     this.Close();
                 }
             }

@@ -1,4 +1,5 @@
 ﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Models;
 using System;
 using System.Collections.Generic;
@@ -104,7 +105,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {
@@ -112,13 +113,13 @@ namespace DoctorSupportSystem.Interfaces.Reports
                 dr.Pid = Convert.ToInt32(lbPID.Text);
                 if (DataBaseOperator.GetInstance().addDeseaseReport(dr) == 1)
                 {
-                    MessageBox.Show("The desease report successfully added to the database");  
+                    MBOX.Show("The desease report successfully added to the database");  
                                       
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Something went wrong....");
+                    MBOX.Show("Something went wrong....");
                    
                 }
             }

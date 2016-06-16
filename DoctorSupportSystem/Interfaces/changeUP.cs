@@ -1,4 +1,5 @@
 ﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Models;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace DoctorSupportSystem.Interfaces
            
             if (txtNewCPW.Text != txtNewPW.Text)
             {
-                MessageBox.Show("Confirm Password Does not match");                
+                MBOX.Show("Confirm Password Does not match");                
             }
             else
             {
@@ -39,13 +40,13 @@ namespace DoctorSupportSystem.Interfaces
                     .GetInstance().updateUserNamePassword(this.user,txtPassword.Text,txtNewUN.Text, txtNewPW.Text);
                 if (ckUser == null)
                 {
-                    MessageBox.Show("Incorrect Password");
+                    MBOX.Show("Incorrect Password");
                 }
                 else
                 {
                     this.user = ckUser;
                     UpdateUser.user = ckUser;
-                    MessageBox.Show("Update is successfull");
+                    MBOX.Show("Update is successfull");
                     this.Close();
                 }
             }

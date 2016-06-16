@@ -1,4 +1,5 @@
 ﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Interfaces.Reports;
 using DoctorSupportSystem.Interfaces.Tests;
 using DoctorSupportSystem.Models;
@@ -70,14 +71,14 @@ namespace DoctorSupportSystem.Interfaces
                 if (patient != null)
                     new CreatinineAnd_eGFR(patient.PID).ShowDialog();
                 else
-                    MessageBox.Show("Select the Patient");
+                    MBOX.Show("Select the Patient");
             }
             else if (this.rbtnHaemoglobinTest.Checked)
             {
                 if (patient != null)
                     new Haemoglobin(patient.PID).ShowDialog();
                 else
-                    MessageBox.Show("Select the Patient");
+                    MBOX.Show("Select the Patient");
 
             }
             else if (this.rbtnLipidTest.Checked)
@@ -85,7 +86,7 @@ namespace DoctorSupportSystem.Interfaces
                 if (patient != null)
                     new Lipid(patient.PID).ShowDialog();
                 else
-                    MessageBox.Show("Select the Patient");
+                    MBOX.Show("Select the Patient");
 
             }
             else if (this.rbtnPrfileLiverTest.Checked)
@@ -93,7 +94,7 @@ namespace DoctorSupportSystem.Interfaces
                 if (patient != null)
                     new ProfileLiver(patient.PID).ShowDialog();
                 else
-                    MessageBox.Show("Select the Patient");
+                    MBOX.Show("Select the Patient");
 
             }
             else if (this.rbtnUrineTest.Checked)
@@ -101,16 +102,16 @@ namespace DoctorSupportSystem.Interfaces
                 if (patient != null)
                     new URINE_FOR_MICRO_ALBUMIN(patient.PID).ShowDialog();
                 else
-                    MessageBox.Show("Select the Patient");
+                    MBOX.Show("Select the Patient");
 
             }
             else if (lbPID.Text.Equals("-"))
             {
-                MessageBox.Show("Select the Patient");
+                MBOX.Show("Select the Patient");
             }
             else
             {
-                MessageBox.Show("Select the Test");
+                MBOX.Show("Select the Test");
             }
         }
 

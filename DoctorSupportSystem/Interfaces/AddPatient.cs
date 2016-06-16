@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DoctorSupportSystem.DataBase;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.Help;
-
+using DoctorSupportSystem.Interfaces.Other;
 
 namespace DoctorSupportSystem.Interfaces
 {
@@ -88,7 +88,7 @@ namespace DoctorSupportSystem.Interfaces
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {
@@ -104,12 +104,12 @@ namespace DoctorSupportSystem.Interfaces
                 
                 if (re == -1)
                 {
-                    MessageBox.Show("Duplicate NIC:\n"
+                    MBOX.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
                 }
                 else if(re == 1)
                 {
-                    MessageBox.Show("The patient successfully added to the database");                    
+                    MBOX.Show("The patient successfully added to the database");                    
                     this.Close();
                 }
 

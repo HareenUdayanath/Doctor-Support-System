@@ -1,5 +1,6 @@
 ﻿using DoctorSupportSystem.DataBase;
 using DoctorSupportSystem.Help;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.Models.Test;
 using System;
@@ -70,17 +71,17 @@ namespace DoctorSupportSystem.Interfaces.Tests
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {
                 if (DataBaseOperator.GetInstance().addLipidTest(test) != 1)
                 {
-                    MessageBox.Show("Error");
+                    MBOX.Show("Error");
                 }
                 else
                 {
-                    MessageBox.Show("Test is added successfully");
+                    MBOX.Show("Test is added successfully");
                     this.Close();
                 }
             }

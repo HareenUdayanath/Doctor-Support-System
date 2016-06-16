@@ -11,6 +11,7 @@ using DoctorSupportSystem.Models.Test;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.DataBase;
 using DoctorSupportSystem.Help;
+using DoctorSupportSystem.Interfaces.Other;
 
 namespace DoctorSupportSystem.Interfaces.Tests
 {
@@ -48,17 +49,17 @@ namespace DoctorSupportSystem.Interfaces.Tests
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {
                 if (DataBaseOperator.GetInstance().addCreatinineTest(test) != 1)
                 {
-                    MessageBox.Show("Error");
+                    MBOX.Show("Error");
                 }
                 else
                 {
-                    MessageBox.Show("Test is added successfully");
+                    MBOX.Show("Test is added successfully");
                     this.Close();
                 }
             }

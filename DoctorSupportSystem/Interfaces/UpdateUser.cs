@@ -1,5 +1,6 @@
 ﻿using DoctorSupportSystem.DataBase;
 using DoctorSupportSystem.Help;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Models;
 using System;
 using System.Collections.Generic;
@@ -57,18 +58,18 @@ namespace DoctorSupportSystem.Interfaces
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {
                 if (db.updateUser(user,oldNic) == -1)
                 {
-                    MessageBox.Show("Duplicate NIC:\n"
+                    MBOX.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
                 }
                 else
                 {
-                    MessageBox.Show("The user profile successfully updated");
+                    MBOX.Show("The user profile successfully updated");
                     if(user.Position.Equals("Doctor"))
                         ((DoctorInterface)this.Owner).changeUser(user);
                     if (user.Position.Equals("Assistance"))

@@ -1,4 +1,5 @@
 ﻿using DoctorSupportSystem.DataBase;
+using DoctorSupportSystem.Interfaces.Other;
 using DoctorSupportSystem.Models;
 using DoctorSupportSystem.Models.Test;
 using System;
@@ -98,7 +99,7 @@ namespace DoctorSupportSystem.Interfaces.Reports
 
             if (err != "")
             {
-                MessageBox.Show(err);
+                MBOX.Show(err);
             }
             else
             {
@@ -112,12 +113,12 @@ namespace DoctorSupportSystem.Interfaces.Reports
 
                 if (DataBaseOperator.GetInstance().addDayReport(dayReport) == -1)
                 {
-                    MessageBox.Show("Duplicate NIC:\n"
+                    MBOX.Show("Duplicate NIC:\n"
                         + "This NIC already exist in the database");
                 }
                 else
                 {
-                    MessageBox.Show("The Day Report successfully added to the database");                   
+                    MBOX.Show("The Day Report successfully added to the database");                   
                     this.Close();
                 }
             }
