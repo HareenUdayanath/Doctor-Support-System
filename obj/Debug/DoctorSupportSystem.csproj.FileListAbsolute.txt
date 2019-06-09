@@ -1,0 +1,9 @@
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\bin\Debug\DoctorSupportSystem.exe.config
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\bin\Debug\DoctorSupportSystem.exe
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\bin\Debug\DoctorSupportSystem.pdb
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\obj\Debug\DoctorSupportSystem.csprojResolveAssemblyReference.cache
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\obj\Debug\DoctorSupportSystem.Form1.resources
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\obj\Debug\DoctorSupportSystem.Properties.Resources.resources
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\obj\Debug\DoctorSupportSystem.csproj.GenerateResource.Cache
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\obj\Debug\DoctorSupportSystem.exe
+c:\users\asus\documents\visual studio 2013\Projects\DoctorSupportSystem\DoctorSupportSystem\obj\Debug\DoctorSupportSystem.pdb
